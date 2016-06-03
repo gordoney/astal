@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 3/0//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/3.0/template-install.dtd">
+<extension version="3.0"
+type="template"
+client="site">
+
+	<name>astal</name>
+	<version>1.0</version>
+	<creationDate>06/2016</creationDate>
+	<author>Bolonikov Sergei</author>
+	<authorEmail>sergeibolonikov@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<copyright>GNU/GPL</copyright>
+	<description>astal</description>
+	
+	<files>
+		<folder>css</folder>
+		<filename>index.php</filename>
+	</files>
+	
+	<positions>
+		<position>header_left</position>
+		<position>header_right</position>
+	</positions>
+	
+</extension>

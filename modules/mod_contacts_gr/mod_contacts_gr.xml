@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>Модуль контактов</name>
+	<author>Sergei Bolonikov</author>
+	<creationDate>2016</creationDate>
+	<copyright></copyright>
+	<license></license>
+	<authorEmail>sergeibolonikov@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0</version>
+	<description>Модуль контактов</description>
+	<files>
+		<filename module="mod_contacts_gr">mod_contacts_gr.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_contacts_gr.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="contacts"
+					type="Repeatable"
+					description="Контент"
+					label="Контент">
+					<fieldset name="contacts_block" repeat="true">			
+						<field name="contact_type" type="list" default="" label="Выберите тип контактов" description="">
+							<option value="landline">Городской номер</option>
+							<option value="velcom">Velcom</option>
+							<option value="mts">Mts</option>
+							<option value="life">Life</option>
+							<option value="skype">Skype</option>
+							<option value="mail">Mail</option>
+						</field>
+						<field name="contact_text" type="text"
+							label="Контакт" />					
+					</fieldset>
+				</field>				
+			</fieldset>
+		</fields>
+	</config>
+</extension>
