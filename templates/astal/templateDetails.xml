@@ -21,6 +21,8 @@ client="site">
 	<positions>
 		<position>header_left</position>
 		<position>header_right</position>
+		<position>header_bottom_left</position>
+		<position>header_bottom_right</position>
 	</positions>
 	
 </extension>

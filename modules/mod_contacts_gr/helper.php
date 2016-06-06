@@ -18,11 +18,11 @@ abstract class modContactsGrHelper
 			}
 			if ($nameFields == 'contact_type') {
 				foreach ($fields as $key=>$field) {
-					$contacts[$key]['contact_img'] = dirname(__FILE__).'/img/'.$field.'.png';
+					$contacts[$key]['contact_img'] = '/modules/mod_contacts_gr/img/'.$field.'.png';
 				}
 			}
 		}
-		print_r($contacts);
+
 		return $contacts;
 	}
 }

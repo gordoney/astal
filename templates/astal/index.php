@@ -33,6 +33,7 @@ $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,
 	<jdoc:include type="head" />
 	<link rel="stylesheet/less" type="text/css" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/style.less" />
 	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
@@ -49,7 +50,6 @@ $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,
 					<jdoc:include type="modules" name="header_left" style="none" />
 				</div>
 				<div class="header header_right col-xs-9 hidden-sm hidden-md hidden-lg">
-					<jdoc:include type="modules" name="header_right" style="none" />
 				</div>
 			</div>
 		 
@@ -61,6 +61,14 @@ $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,
 					<jdoc:include type="modules" name="header_right" style="none" />
 				</div>
 			</div>
+			<div class="row">
+				<div class="header header_bottom_left col-xs-12 col-sm-9 col-md-9 col-lg-9">
+					<jdoc:include type="modules" name="header_bottom_left" style="none" />
+				</div>
+				<div class="header header_bottom_right hidden-xs col-sm-3 col-md-3 col-lg-3">
+					<jdoc:include type="modules" name="header_bottom_right" style="none" />
+				</div>
+			</div>			
 		</div>
 	</div>		
 	

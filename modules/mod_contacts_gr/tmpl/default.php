@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 <div class="mod_contacts_gr">
 	<?php foreach ($contacts as $contact) { ?>
 		<div class="contact">
-			<?php echo $contact['contact_text']; ?><img src="" alt="">
+			<?php echo $contact['contact_text']; ?><img src="<?php echo $contact['contact_img']; ?>" alt="">
 		</div>
 	<? } ?>
 </div>
