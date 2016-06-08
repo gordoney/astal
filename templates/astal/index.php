@@ -7,23 +7,23 @@
 
 defined('_JEXEC') or die; 
 
-/* ÒÓı‡ÌˇÂÏ Ë ÓÚÍÎ˛˜‡ÂÏ ƒÊÛÏÎÓ‚ÒÍËÂ ÒÍËÔÚ˚ */
+/* —Å–æ—Ö—Ä–∞–Ω—è–µ–º –∏ –æ—Ç–∫–ª—é—á–∞–µ–º –î–∂—É–º–ª–æ–≤—Å–∫–∏–µ —Å–∫—Ä–∏–ø—Ç—ã */
 $joomlaScripts = $this->_scripts;
 $joomlaScript = $this->_script['text/javascript'];
 $this->_scripts = array();
 $this->_script = array();
 
-/* Ó·˙ˇ‚ÎˇÂÏ Í‡ÒÚÓÏÌ˚Â ÒÍËÔÚ˚ */
+/* –æ–±—ä—è–≤–ª—è–µ–º –∫–∞—Å—Ç–æ–º–Ω—ã–µ —Å–∫—Ä–∏–ø—Ç—ã */
 $document = JFactory::getDocument();
 $document->addScript('http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
 $document->addScript($this->baseurl.'/templates/'.$this->template.'/js/bootstrap.min.js');
 $document->addScript($this->baseurl.'/templates/'.$this->template.'/js/slick.min.js');
 $document->addScript($this->baseurl.'/templates/'.$this->template.'/js/custom.js');
 $customScripts = $this->_scripts;
-$this->_scripts = array();
-$this->_script = array();
+/*$this->_scripts = array();
+$this->_script = array();*/
 
-/* Ó·˙ˇ‚ÎˇÂÏ Í‡ÒÚÓÏÌ˚Â ÒÚËÎË */
+/* –æ–±—ä—è–≤–ª—è–µ–º –∫–∞—Å—Ç–æ–º–Ω—ã–µ —Å—Ç–∏–ª–∏ */
 $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/bootstrap.min.css');
 $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/slick.css');
 $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=cyrillic');
@@ -58,10 +58,10 @@ $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,
 				<div class="header header_left hidden-xs col-sm-8 col-md-5 col-lg-5">
 					<jdoc:include type="modules" name="header_left" style="none" />
 				</div>
-				<div class="header header_center col-sm-24 col-sm-16 col-md-14 col-lg-14">
+				<div class="header header_center col-xs-24 col-sm-16 col-md-14 col-lg-14">
 					<jdoc:include type="modules" name="header_center" style="none" />
 				</div>
-				<div class="header header_right col-sm-24 col-sm-24 col-md-5 col-lg-5">
+				<div class="header header_right col-xs-24 col-sm-24 col-md-5 col-lg-5">
 					<jdoc:include type="modules" name="header_right" style="none" />
 				</div>
 			</div>
@@ -82,14 +82,14 @@ $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,
 	
 	<?php if ($this->countModules('before_content_without_container')) { ?>
 		<div id="before_content_without_container">
-			<jdoc:include type="modules" name="before_content_without_container" style="none" />
+			<jdoc:include type="modules" name="before_content_without_container" style="xhtml" />
 		</div>	
 	<?php } ?>
 	
 	
 	<?php if ($this->countModules('after_content_without_container')) { ?>
 		<div id="after_content_without_container">
-			<jdoc:include type="modules" name="after_content_without_container" style="none" />
+			<jdoc:include type="modules" name="after_content_without_container" style="xhtml" />
 		</div>		
 	<?php } ?>
 	
@@ -99,27 +99,42 @@ $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,
 				<div class="row">
 					<div class="col-sm-24 col-sm-24 col-md-24 col-lg-24">
 						<jdoc:include type="modules" name="after_content" style="xhtml" />
-					<div>
+					</div>
 				</div>
 			</div>
 		</div>		
 	<?php } ?>	
 	
-	<div id="content" class="<?php if (JURI::current() == JURI::base()) { echo 'mainpage'; } ?>">
-		<div class="container-fluid clearfix">
-
-		</div>
-	</div>	
-	
     <div id="footer">
-        <div class="container-fluid clearfix">
-
+        <div class="container-fluid">
+			<div class="row">
+				<div class="footer footer_top col-sm-24 col-sm-24 col-md-24 col-lg-24">
+					<jdoc:include type="modules" name="footer_top" style="none" />
+				</div>				
+			</div>
+			<div class="row">
+				<div class="footer footer_left col-xs-24 col-sm-5 col-md-5 col-lg-5">
+					<jdoc:include type="modules" name="footer_left" style="none" />
+				</div>		
+				<div class="footer footer_center col-xs-24 col-sm-7 col-md-7 col-lg-5">
+					<jdoc:include type="modules" name="footer_center" style="none" />
+				</div>	
+				<div class="footer footer_right col-xs-24 col-sm-12 col-md-12 col-lg-14">
+					<jdoc:include type="modules" name="footer_right" style="none" />
+					<div class="medialine">
+						<?php if(JURI::current() !== JURI::base()){?>
+							<span>–†–∞–∑—Ä–∞–±–æ—Ç–∫–∞ —Å–∞–π—Ç–∞ - </span><a target="_blank" rel="nofollow" href="http://www.medialine.by/">Media Line</a>
+						<?php } else { ?>	
+							<span>–†–∞–∑—Ä–∞–±–æ—Ç–∫–∞ —Å–∞–π—Ç–∞ - </span><a target="_blank" href="http://www.medialine.by/">Media Line</a>
+						<?php } ?>
+					</div>
+				</div>					
+			</div>
 		</div>	
-	</div>		
-
-	<?php foreach ($customScripts as $scriptFile=>$paramFile) { ?>
+	</div>	
+	<?php /*foreach ($customScripts as $scriptFile=>$paramFile) { ?>
 		<script type="text/javascript" src="<?php echo $scriptFile; ?>"></script>
-	<?php } ?>
+	<?php }*/ ?>
 
 </body>
 </html>

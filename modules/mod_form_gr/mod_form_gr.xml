@@ -64,8 +64,8 @@
 					label="Включить в модальном окне" />
 				<field name="modal_btn_text" type="text"
 					label="Текст на кнопке" />
-				<field name="modal_btn_img" type="media"
-					label="Картинка на кнопке" />
+				<field name="modal_btn_class" type="text"
+					label="Класс ссылки" />
 			</fieldset>	
 		</fields>
 	</config>

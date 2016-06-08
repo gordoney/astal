@@ -14,6 +14,11 @@ jQuery(document).ready(function() {
 			jQuery(this).addClass('active');
 			jQuery('.slick_slider').slick('slickGoTo', jQuery(this).index());
 		});
+		
+		jQuery('.mod_slider_gr').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+			jQuery('.mod_slider_gr .dot').removeClass('active');
+			jQuery('.mod_slider_gr .dot').eq(nextSlide).addClass('active');
+		});		
 	}		
 	
 	slick_slider_init();

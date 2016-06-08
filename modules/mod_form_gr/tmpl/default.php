@@ -13,11 +13,8 @@ defined('_JEXEC') or die;
 <div class="mod_form_gr">
 	<?php if ($params->get('modal_on')) { ?>
 
-		<div class="modal_form_btn" data-toggle="modal" data-target="#modal_form<?php echo $module->id; ?>">
+		<div class="modal_form_btn<?php echo ' '.$params->get('modal_btn_class'); ?>" data-toggle="modal" data-target="#modal_form<?php echo $module->id; ?>">
 			<span><?php echo $params->get('modal_btn_text'); ?></span>
-			<?php if ($params->get('modal_btn_img')) { ?>
-				<img src="<?php echo $params->get('modal_btn_img'); ?>" alt="">
-			<?php } ?>
 		</div>
 
 		<div class="modal fade" id="modal_form<?php echo $module->id; ?>" tabindex="-1" role="dialog" aria-hidden="true">

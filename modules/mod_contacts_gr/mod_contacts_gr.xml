@@ -33,12 +33,26 @@
 							<option value="life">Life</option>
 							<option value="skype">Skype</option>
 							<option value="mail">Mail</option>
+							<option value="address">Адрес</option>
 						</field>
 						<field name="contact_text" type="text"
-							label="Контакт" />					
+							label="Контакт" />	
+						<field name="mapx" type="text"
+							label="Координаты x" />		
+						<field name="mapy" type="text"
+							label="Координаты y" />	
+						<field name="zoom" type="text"
+							label="zoom" />								
 					</fieldset>
 				</field>				
 			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+			</fieldset>	
 		</fields>
 	</config>
 </extension>

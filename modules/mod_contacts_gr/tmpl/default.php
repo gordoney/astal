@@ -13,9 +13,19 @@ defined('_JEXEC') or die;
 	<div class="container-fluid">
 	<div class="row">
 		<?php foreach ($contacts as $contact) { ?>
-			<div class="contact col-xs-24 col-sm-24 col-md-8 col-lg-8">
-				<?php echo $contact['contact_text']; ?><img src="<?php echo $contact['contact_img']; ?>" alt="">
-			</div>
+			<?php if ($contact['contact_type'] == 'landline') { ?>
+				<div class="contact col-xs-24 col-sm-24 col-md-8 col-lg-8">
+					<?php echo $contact['contact_text']; ?><i class="icon-phone-call"></i>
+				</div>
+			<?php } else if ($contact['contact_type'] == 'address') { ?>
+				<div class="contact address col-xs-24 col-sm-24 col-md-24 col-lg-24">
+					<?php echo $contact['contact_text']; ?><i class="icon-placeholder"></i>
+				</div>			
+			<?php } else { ?>
+				<div class="contact col-xs-24 col-sm-24 col-md-8 col-lg-8">
+					<?php echo $contact['contact_text']; ?><img src="<?php echo $contact['contact_img']; ?>" alt="">
+				</div>					
+			<?php } ?>
 		<? } ?>
 	</div>
 	</div>

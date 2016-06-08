@@ -27,6 +27,10 @@ client="site">
 		<position>before_content_without_container</position>
 		<position>after_content_without_container</position>
 		<position>after_content</position>
+		<position>footer_top</position>
+		<position>footer_left</position>
+		<position>footer_center</position>
+		<position>footer_right</position>
 	</positions>
 	
 </extension>
