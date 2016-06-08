@@ -16,7 +16,7 @@ defined('_JEXEC') or die;
 				<img src="<?php echo $slide['img']; ?>" alt="" style="width: 100%;">
 				<?php if ($slide['text1'] || $slide['text2']) { ?>
 					<div class="wrapper">
-						<div class="container">
+						<div class="container-fluid">
 							<div class="text">
 								<div><span><?php echo $slide['text1']; ?></span></div>
 								<div><span><?php echo $slide['text2']; ?></span></div>
@@ -27,7 +27,7 @@ defined('_JEXEC') or die;
 			</div>
 		<?php } ?>
 	</div>
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="dots">
 				<?php for ($i=1; $i<=count($slides); $i++) { ?>

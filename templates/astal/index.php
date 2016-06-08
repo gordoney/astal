@@ -41,7 +41,7 @@ $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,
 <body>
 
 	<div id="header" class="navbar " role="navigation">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle menu_mobile_button" data-toggle="collapse" data-target="#bs-top-navbar-collapse-1">
 					<span class="sr-only">Menu</span>
@@ -86,11 +86,24 @@ $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,
 		</div>	
 	<?php } ?>
 	
+	
 	<?php if ($this->countModules('after_content_without_container')) { ?>
-		<div id="after_content">
+		<div id="after_content_without_container">
 			<jdoc:include type="modules" name="after_content_without_container" style="none" />
 		</div>		
 	<?php } ?>
+	
+	<?php if ($this->countModules('after_content')) { ?>
+		<div id="after_content">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-24 col-sm-24 col-md-24 col-lg-24">
+						<jdoc:include type="modules" name="after_content" style="xhtml" />
+					<div>
+				</div>
+			</div>
+		</div>		
+	<?php } ?>	
 	
 	<div id="content" class="<?php if (JURI::current() == JURI::base()) { echo 'mainpage'; } ?>">
 		<div class="container-fluid clearfix">

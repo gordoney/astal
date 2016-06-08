@@ -10,7 +10,7 @@
 defined('_JEXEC') or die;
 ?>
 <div class="mod_info_gr">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="block1 col-xs-24 col-sm-24 col-md-12 col-lg-12">
 				<div class="name"><?php echo $params->get('name1'); ?></div>
@@ -20,7 +20,8 @@ defined('_JEXEC') or die;
 				<div class="inner">
 					<div class="name"><?php echo $params->get('name2'); ?></div>
 					<div class="text"><?php echo $params->get('text2'); ?></div>
-					<i class="icon-handshake"></i>
+					<div class="button"><a href="<?php echo $params->get('readmore'); ?>"><i class="icon-handshake"></i><?php echo JText :: _('MOD_INFO_GR_READMORE'); ?></a></div>
+					<i class="icon-handshake background"></i>
 				</div>
 			</div>
 		</div>

@@ -25,7 +25,8 @@
 				<field name="name1" type="text" label="Заголовок 1-ого блока" />	
 				<field name="text1" type="editor" filter="safehtml" label="Текст 1-ого блока" />	
 				<field name="name2" type="text" label="Заголовок 2-ого блока" />
-				<field name="text2" type="editor" filter="safehtml" label="Текст 2-ого блока" />										
+				<field name="text2" type="editor" filter="safehtml" label="Текст 2-ого блока" />
+				<field name="readmore" type="text" label="Ссылка подробнее" />										
 			</fieldset>
 		</fields>
 	</config>
