@@ -16,13 +16,16 @@ $this->_script = array();
 /* объ€вл€ем кастомные скрипты */
 $document = JFactory::getDocument();
 $document->addScript('http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
-$document->addScript('//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js');
+$document->addScript($this->baseurl.'/templates/'.$this->template.'/js/bootstrap.min.js');
+$document->addScript($this->baseurl.'/templates/'.$this->template.'/js/slick.min.js');
+$document->addScript($this->baseurl.'/templates/'.$this->template.'/js/custom.js');
 $customScripts = $this->_scripts;
 $this->_scripts = array();
 $this->_script = array();
 
 /* объ€вл€ем кастомные стили */
-$document->addStyleSheet('//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css');
+$document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/bootstrap.min.css');
+$document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/slick.css');
 $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=cyrillic');
 //$document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/style.css');
 ?>
@@ -46,43 +49,46 @@ $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<div class="header header_left col-xs-3 hidden-sm hidden-md hidden-lg">
+				<div class="header header_left col-xs-18 hidden-sm hidden-md hidden-lg">
 					<jdoc:include type="modules" name="header_left" style="none" />
-				</div>
-				<div class="header header_right col-xs-9 hidden-sm hidden-md hidden-lg">
 				</div>
 			</div>
 		 
 			<div class="row">
-				<div class="header header_left hidden-xs col-sm-3 col-md-3 col-lg-3">
+				<div class="header header_left hidden-xs col-sm-8 col-md-5 col-lg-5">
 					<jdoc:include type="modules" name="header_left" style="none" />
 				</div>
-				<div class="header header_right hidden-xs col-sm-9 col-md-9 col-lg-9">
+				<div class="header header_center col-sm-24 col-sm-16 col-md-14 col-lg-14">
+					<jdoc:include type="modules" name="header_center" style="none" />
+				</div>
+				<div class="header header_right col-sm-24 col-sm-24 col-md-5 col-lg-5">
 					<jdoc:include type="modules" name="header_right" style="none" />
 				</div>
 			</div>
-			<div class="row">
-				<div class="header header_bottom_left col-xs-12 col-sm-9 col-md-9 col-lg-9">
-					<jdoc:include type="modules" name="header_bottom_left" style="none" />
-				</div>
-				<div class="header header_bottom_right hidden-xs col-sm-3 col-md-3 col-lg-3">
-					<jdoc:include type="modules" name="header_bottom_right" style="none" />
+			<div class="wrapper">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="header header_bottom_left col-xs-24 col-sm-24 col-md-18 col-lg-18">
+							<jdoc:include type="modules" name="header_bottom_left" style="none" />
+						</div>
+						<div class="header header_bottom_right col-xs-24 col-sm-24 col-md-6 col-lg-6">
+							<jdoc:include type="modules" name="header_bottom_right" style="none" />
+						</div>
+					</div>	
 				</div>
 			</div>			
 		</div>
 	</div>		
 	
-    <div id="top_menu">
-        <div class="container-fluid text-center">
-		    
+	<?php if ($this->countModules('before_content_without_container')) { ?>
+		<div id="before_content_without_container">
+			<jdoc:include type="modules" name="before_content_without_container" style="none" />
 		</div>	
-	</div>	
+	<?php } ?>
 	
-	<?php if ($this->countModules('slider')) { ?>
-		<div id="slider">
-			<div class="container-fluid">
-				
-			</div>	
+	<?php if ($this->countModules('after_content_without_container')) { ?>
+		<div id="after_content">
+			<jdoc:include type="modules" name="after_content_without_container" style="none" />
 		</div>		
 	<?php } ?>
 	

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>Модуль информации</name>
+	<author>Sergei Bolonikov</author>
+	<creationDate>2016</creationDate>
+	<copyright></copyright>
+	<license></license>
+	<authorEmail>sergeibolonikov@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0</version>
+	<description>Модуль информации</description>
+	<files>
+		<folder>tmpl</folder>
+		<filename module="mod_info_gr">mod_info_gr.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_info_gr.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="name1" type="text" label="Заголовок 1-ого блока" />	
+				<field name="text1" type="editor" filter="safehtml" label="Текст 1-ого блока" />	
+				<field name="name2" type="text" label="Заголовок 2-ого блока" />
+				<field name="text2" type="editor" filter="safehtml" label="Текст 2-ого блока" />										
+			</fieldset>
+		</fields>
+	</config>
+</extension>

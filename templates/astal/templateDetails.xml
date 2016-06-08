@@ -20,9 +20,12 @@ client="site">
 	
 	<positions>
 		<position>header_left</position>
+		<position>header_center</position>
 		<position>header_right</position>
 		<position>header_bottom_left</position>
 		<position>header_bottom_right</position>
+		<position>before_content_without_container</position>
+		<position>after_content_without_container</position>
 	</positions>
 	
 </extension>

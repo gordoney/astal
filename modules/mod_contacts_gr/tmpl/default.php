@@ -10,9 +10,13 @@
 defined('_JEXEC') or die;
 ?>
 <div class="mod_contacts_gr">
-	<?php foreach ($contacts as $contact) { ?>
-		<div class="contact">
-			<?php echo $contact['contact_text']; ?><img src="<?php echo $contact['contact_img']; ?>" alt="">
-		</div>
-	<? } ?>
+	<div class="container-fluid">
+	<div class="row">
+		<?php foreach ($contacts as $contact) { ?>
+			<div class="contact col-xs-24 col-sm-24 col-md-8 col-lg-8">
+				<?php echo $contact['contact_text']; ?><img src="<?php echo $contact['contact_img']; ?>" alt="">
+			</div>
+		<? } ?>
+	</div>
+	</div>
 </div>
