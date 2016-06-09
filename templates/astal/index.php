@@ -8,10 +8,10 @@
 defined('_JEXEC') or die; 
 
 /* сохраняем и отключаем Джумловские скрипты */
-$joomlaScripts = $this->_scripts;
+/*$joomlaScripts = $this->_scripts;
 $joomlaScript = $this->_script['text/javascript'];
 $this->_scripts = array();
-$this->_script = array();
+$this->_script = array();*/
 
 /* объявляем кастомные скрипты */
 $document = JFactory::getDocument();
@@ -86,6 +86,17 @@ $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,
 		</div>	
 	<?php } ?>
 	
+	<?php if ($this->countModules('before_content')) { ?>
+		<div id="before_content">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-24 col-sm-24 col-md-24 col-lg-24">
+						<jdoc:include type="modules" name="before_content" style="xhtml" />
+					</div>
+				</div>
+			</div>
+		</div>		
+	<?php } ?>	
 	
 	<?php if ($this->countModules('after_content_without_container')) { ?>
 		<div id="after_content_without_container">
@@ -97,7 +108,7 @@ $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,
 		<div id="after_content">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-sm-24 col-sm-24 col-md-24 col-lg-24">
+					<div class="col-xs-24 col-sm-24 col-md-24 col-lg-24">
 						<jdoc:include type="modules" name="after_content" style="xhtml" />
 					</div>
 				</div>
@@ -108,7 +119,7 @@ $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,
     <div id="footer">
         <div class="container-fluid">
 			<div class="row">
-				<div class="footer footer_top col-sm-24 col-sm-24 col-md-24 col-lg-24">
+				<div class="footer footer_top col-xs-24 col-sm-24 col-md-24 col-lg-24">
 					<jdoc:include type="modules" name="footer_top" style="none" />
 				</div>				
 			</div>

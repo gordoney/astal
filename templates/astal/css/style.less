@@ -200,6 +200,61 @@ h3 {
 	}		
 }
 
+/* module second menu (модуль второго меню) */
+.mod_second_menu_gr {
+	position: absolute;
+	top: -170px;
+	padding-right: 15px;
+
+	.menu_col:nth-child(odd) .menu_item:first-child, .menu_col:nth-child(even) .menu_item:last-child {
+		background-color: @color2;
+	}
+	.menu_col:nth-child(even) .menu_item:first-child, .menu_col:nth-child(odd) .menu_item:last-child {
+		background-color: lighten(@color2,20%);
+	}
+	.menu_col {
+		padding: 0;
+		height: 150px;
+		.menu_item {
+			height: 50%;
+			color: white;
+			display: block;
+			
+			a {
+				display: table-cell;
+				vertical-align: middle;
+				height: 75px;
+				color: white;
+				padding: 0 20px;
+				width: 1000px;
+			}
+			a:hover {
+				background-color: @color1;
+			}
+		}
+	}
+	.menu_col:first-child .menu_item{
+		height: 100%;
+		line-height: 100%;
+		
+		a {
+			height: 150px;
+			padding: 0 10px 0 60px;
+			line-height: 1.5;
+			position: relative;
+			
+			&:before {
+				content: "\e901";
+				font-family: 'icomoon' !important;
+				position: absolute;
+				top: 43px;
+				left: 8px;
+				font-size: 45px;
+			}
+		}
+	}
+}
+
 
 /* header (шапка) */
 .header_left {
@@ -233,6 +288,8 @@ h3 {
 }
 .header_bottom_left {
 	padding: 0;
+	position: relative;
+	z-index: 4;
 	
 	.mod_menu_top {
 		padding: 0;
@@ -281,6 +338,9 @@ h3 {
 }
 .header_bottom_right {
 	background-color: lighten(@color2, 4%);
+	position: relative;
+	z-index: 4;
+		
 	.search {
 		text-align: right;
 		padding-top: 8px;
@@ -440,7 +500,9 @@ h3 {
 /* slider (слайдер) */
 #before_content_without_container {
 	.mod_slider_gr {
+		margin-bottom: 50px;
 		position: relative;
+		top: -46px;
 	
 		.dots {
 			position: absolute;
@@ -456,6 +518,8 @@ h3 {
 			border-radius: 100%;
 			cursor: pointer;	
 			margin-bottom: 8px;
+			position: relative;
+			left: 15px;
 		}
 		.dot.active {
 			background-color: @color4;
@@ -495,6 +559,8 @@ h3 {
 @media (min-width: 481px) and (max-width: 979px) {
 	#before_content_without_container {
 		.mod_slider_gr {
+			top: 0px;
+		
 			.dots {
 				display: none;
 			}	
@@ -504,6 +570,8 @@ h3 {
 @media (max-width: 480px) { 
 	#before_content_without_container {
 		.mod_slider_gr {
+			top: 0px;
+			
 			.dots {
 				display: none;
 			}		

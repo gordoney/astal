@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>Модуль второго меню</name>
+	<author>Sergei Bolonikov</author>
+	<creationDate>2016</creationDate>
+	<copyright></copyright>
+	<license></license>
+	<authorEmail>sergeibolonikov@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0</version>
+	<description>Модуль второго меню</description>
+	<files>
+		<folder>tmpl</folder>
+		<filename module="mod_second_menu_gr">mod_second_menu_gr.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_second_menu_gr.xml</filename>
+		<filename>helper.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="menu"
+					type="Repeatable"
+					description="Контент"
+					label="Контент">
+					<fieldset name="menu_block" repeat="true">		
+						<field name="text" type="text"
+							label="Название раздела" />
+						<field name="url" type="text"
+							label="Ссылка" />							
+					</fieldset>
+				</field>				
+			</fieldset>
+		</fields>
+	</config>
+</extension>
