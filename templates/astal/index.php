@@ -7,21 +7,12 @@
 
 defined('_JEXEC') or die; 
 
-/* сохраняем и отключаем Джумловские скрипты */
-/*$joomlaScripts = $this->_scripts;
-$joomlaScript = $this->_script['text/javascript'];
-$this->_scripts = array();
-$this->_script = array();*/
-
 /* объявляем кастомные скрипты */
 $document = JFactory::getDocument();
 $document->addScript('http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
 $document->addScript($this->baseurl.'/templates/'.$this->template.'/js/bootstrap.min.js');
 $document->addScript($this->baseurl.'/templates/'.$this->template.'/js/slick.min.js');
 $document->addScript($this->baseurl.'/templates/'.$this->template.'/js/custom.js');
-$customScripts = $this->_scripts;
-/*$this->_scripts = array();
-$this->_script = array();*/
 
 /* объявляем кастомные стили */
 $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/bootstrap.min.css');
@@ -98,6 +89,17 @@ $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,
 		</div>		
 	<?php } ?>	
 	
+	<div id="content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-24 col-sm-24 col-md-24 col-lg-24">
+					<jdoc:include type="message" />
+					<jdoc:include type="component" />
+				</div>
+			</div>
+		</div>
+	</div>		
+	
 	<?php if ($this->countModules('after_content_without_container')) { ?>
 		<div id="after_content_without_container">
 			<jdoc:include type="modules" name="after_content_without_container" style="xhtml" />
@@ -143,9 +145,6 @@ $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,
 			</div>
 		</div>	
 	</div>	
-	<?php /*foreach ($customScripts as $scriptFile=>$paramFile) { ?>
-		<script type="text/javascript" src="<?php echo $scriptFile; ?>"></script>
-	<?php }*/ ?>
 
 </body>
 </html>
