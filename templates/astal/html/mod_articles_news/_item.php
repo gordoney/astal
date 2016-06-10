@@ -18,14 +18,35 @@ $item_heading = $params->get('item_heading', 'h4');
 	</div>
 	
 	<?php if ($params->get('item_title')) : ?>
+	
+		<?php $stringLimit = 80;
+		$symbolsPattern = array('.',',','!','?',':',';','/');
+		$originalString = strip_tags($item->title);
+		$originalLength = strlen($item->title);
+					   
+		if ($originalLength > $stringLimit) {
+			$processedString = mb_substr($originalString, 0, $stringLimit, 'UTF-8'); 
+			$numb = mb_strrpos($processedString, ' ', 'UTF-8');
+			$resultString = mb_substr($processedString, 0, $numb, 'UTF-8');
+			$resultLength = strlen($resultString);
+			if (in_array($resultString[$resultLength-1],   $symbolsPattern)) {
+				$resultString[$resultLength-1] = '.';
+				$resultString .= '..';
+			} else {
+				$resultString .= '...';
+			}
+		} else {
+			$resultString = $originalString;
+		}
+		?>	
 
 		<<?php echo $item_heading; ?> class="newsflash-title<?php echo $params->get('moduleclass_sfx'); ?>">
 		<?php if ($params->get('link_titles') && $item->link != '') : ?>
 			<a href="<?php echo $item->link; ?>">
-				<?php echo $item->title; ?>
+				<?php echo $resultString; ?>
 			</a>
 		<?php else : ?>
-			<?php echo $item->title; ?>
+			<?php echo $resultString; ?>
 		<?php endif; ?>
 		</<?php echo $item_heading; ?>>
 

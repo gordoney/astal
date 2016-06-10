@@ -30,7 +30,7 @@ $basePath = JPATH_THEMES . '/astal/html/layouts';
 	<?php echo JLayoutHelper::render('content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'above'), $basePath); ?>
 <?php endif; ?>
 
-<?php echo JLayoutHelper::render('joomla.content.blog_style_default_item_title', $this->item); ?>
+<?php echo JLayoutHelper::render('content.blog_style_default_item_title', $this->item, $basepath); ?>
 
 <?php if ($canEdit || $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
 	<?php echo JLayoutHelper::render('joomla.content.icons', array('params' => $params, 'item' => $this->item, 'print' => false)); ?>
