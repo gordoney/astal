@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>Страница контактов</name>
+	<author>Sergei Bolonikov</author>
+	<creationDate>2016</creationDate>
+	<copyright></copyright>
+	<license></license>
+	<authorEmail>sergeibolonikov@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0</version>
+	<description>Страница контактов</description>
+	<files>
+		<folder>tmpl</folder>
+		<filename module="mod_page_contacts_gr">mod_page_contacts_gr.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_page_contacts_gr.xml</filename>
+		<filename>helper.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="block1" type="editor" filter="safehtml"
+					label="Адрес" />
+				<field name="contacts"
+					type="Repeatable"
+					description="Контакты"
+					label="Контакты">
+					<fieldset name="contacts_block" repeat="true">		
+						<field name="contact_type" type="list" default="" label="Выберите тип контактов" description="">
+							<option value="landline">Городской номер</option>
+							<option value="velcom">Velcom</option>
+							<option value="mts">Mts</option>
+							<option value="life">Life</option>
+							<option value="skype">Skype</option>
+							<option value="mail">Mail</option>
+							<option value="address">Адрес</option>
+						</field>
+						<field name="contact_text" type="text"
+							label="Контакт" />								
+					</fieldset>
+				</field>	
+				<field name="block3" type="editor" filter="safehtml"
+					label="Содержание 3-его блока" />
+				<field name="block4" type="editor" filter="safehtml"
+					label="Содержание 4-ого блока" />					
+			</fieldset>
+		</fields>
+	</config>
+</extension>

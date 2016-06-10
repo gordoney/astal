@@ -32,6 +32,7 @@ client="site">
 		<position>footer_left</position>
 		<position>footer_center</position>
 		<position>footer_right</position>
+		<position>content</position>
 	</positions>
 	
 </extension>

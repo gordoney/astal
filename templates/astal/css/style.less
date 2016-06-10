@@ -103,6 +103,10 @@
     content: "\e906";
 	font-family: 'icomoon' !important;
 }
+.icon-envelope:after {
+    content: "\e907";
+	font-family: 'icomoon' !important;
+}
 
 body {
 	font-family: @base-font-family;
@@ -152,6 +156,12 @@ h3 {
 
 /* form (форма) */
 .mod_form_gr {	
+	.head {
+		font-size: 45px;
+		font-weight: 300;
+		padding-bottom: 30px;
+		padding-top: 20px;
+	}
 	.modal_form_btn {
 		cursor: pointer;
 		color: @font-color1;
@@ -167,6 +177,89 @@ h3 {
 			max-width: 18px;
 		}
 	}	
+	.fields {
+		padding: 0;
+	}
+	.field {
+		padding-bottom: 10px;
+
+		input, textarea {
+			width: 90%;
+		}		
+		input {
+			height: 40px;
+		}
+		textarea {
+			height: 90px;
+		}
+	}
+	.send {
+		button {
+			border: 1px solid @color1;
+			color: @font-color1;
+			height: 40px;
+			width: 100%;
+			font-size: 18px;
+			font-weight: 300;
+			background-color: @color4;
+			.transition(0.2s);
+		}
+		button:hover {
+			color: @font-color4;
+			background-color: @color1;
+		}	
+		button:hover span:before{
+			border-left: 1px solid @color4;
+		}	
+		i {
+			font-size: 22px;
+			position: relative;
+			top: 1px;
+		}
+		span {
+			position: relative;
+			top: -2px;
+		}
+		span:before {
+			content: '';
+			display: inline-block;
+			border-left: 1px solid @color1;
+			height: 10px;	
+			margin: 0 20px;
+			vertical-align: middle;
+			position: relative;
+			top: -2px;
+			.transition(0.2s);
+		}
+	}
+	.file {
+		label {
+			margin-top: 10px;
+			margin-bottom: 20px;
+			cursor: pointer;
+			font-weight: 300;
+			
+			span {
+				color: @font-color1;
+				border-bottom: 1px solid @font-color1;
+				display: inline-block;
+				.transition(0.2s);
+			}	
+			i {
+				margin-right: 5px;
+				color: @font-color1;
+				position: relative;
+				top: 2px;
+			}
+		}
+		label:hover span {
+				border-bottom: 1px solid @font-color4;
+		}		
+		input {
+			display: none;
+		}
+	}
+	
 }
 
 
@@ -292,6 +385,39 @@ h3 {
 	}
 	a {
 		color: @font-color2;
+	}
+}
+
+
+/* module page contacts (страница контактов) */
+.mod_page_contacts_gr {
+	.block {
+		padding: 0;
+	}
+	.info {
+		.name {
+			height: 50px;
+		
+			i {
+				color: @font-color1;
+				font-size: 22px;
+				margin-right: 8px;
+				position: relative;
+				top: 5px;
+			}		
+		}
+		.content {
+			padding-left: 30px;
+		}
+		.contact {
+			padding-bottom: 10px;
+			
+			img {
+				position: relative;
+				top: -3px;
+				left: 5px;
+			}
+		}
 	}
 }
 
@@ -859,7 +985,6 @@ h3 {
 .footer_right {
 	text-align: right;
 	line-height: 1.2;
-	position: relative;
 	
 	.address {
 		font-weight: 300;
@@ -879,9 +1004,9 @@ h3 {
 		right: 0;
 		bottom: -10px;
 		color: @color3;
+		z-index: -1;
 	}
 	&>div {
-		position: relative;
 		z-index: 5;
 	}
 	.modal_map .modal-content {

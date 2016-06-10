@@ -54,6 +54,8 @@
 						</field>
 						<field name="title" type="text"
 							label="Название поля" />	
+						<field name="placeholder" type="text"
+							label="Плейсхолдер" />
 						<field name="required" type="checkbox"
 							label="Обязательное" />						
 					</fieldset>

@@ -89,16 +89,28 @@ $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,
 		</div>		
 	<?php } ?>	
 	
-	<div id="content">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xs-24 col-sm-24 col-md-24 col-lg-24">
-					<jdoc:include type="message" />
-					<jdoc:include type="component" />
+	<?php if ($this->countModules('content')) { ?>
+		<div id="content">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-24 col-sm-24 col-md-24 col-lg-24">
+						<jdoc:include type="modules" name="content" style="xhtml" />
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>		
+	<?php } else { ?>
+		<div id="content">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-24 col-sm-24 col-md-24 col-lg-24">
+						<jdoc:include type="message" />
+						<jdoc:include type="component" />
+					</div>
+				</div>
+			</div>
+		</div>		
+	<?php } ?>
 	
 	<?php if ($this->countModules('after_content_without_container')) { ?>
 		<div id="after_content_without_container">

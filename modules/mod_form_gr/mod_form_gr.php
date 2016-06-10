@@ -21,7 +21,7 @@ $fields = modFormGrHelper::getFields($params);
 
 $existRequire = modFormGrHelper::checkRequire($fields);
 
-$quantityFields = count($fieldTitleArr);
+$quantityFields = count($fields);
 
 ?>
 
