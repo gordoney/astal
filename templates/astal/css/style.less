@@ -125,6 +125,9 @@ a:hover, a:focus {
 .container-fluid {
 	max-width: 1180px;
 }
+h2 {
+	margin: 5px 0;
+}
 h3 {
 	font-size: 45px;
 	font-weight: 300;
@@ -142,14 +145,15 @@ h3 {
 	color: @font-color4;
 	text-shadow: none;
 }
+.article-info-term {
+	display: none;
+}
 .page-header {
-	margin: 10px 0;
-	border-bottom: none;
+	margin: 0;
+	border-bottom: 0;
 	
 	h2 {
-		font-size: 45px;
 		font-weight: 300;
-		margin-top: 0;
 	}
 }
 
@@ -418,6 +422,13 @@ h3 {
 				left: 5px;
 			}
 		}
+	}
+	.page-header {
+		margin: 10px 0;
+		border-bottom: none;
+		font-size: 45px;
+		font-weight: 300;
+		margin-top: 0;
 	}
 }
 
@@ -880,6 +891,19 @@ h3 {
 	line-height: 1.4;
 	font-weight: 300;
 
+	.module_name {
+		padding-bottom: 20px;
+	}
+	.module_name a{
+		font-size: 45px;
+		font-weight: 300;
+		color: @font-color2;
+		border-bottom: none;
+	}
+	.module_name a:hover{
+		color: @font-color1;
+		border-bottom: none;
+	}
 	.single_news {
 		padding: 0 50px 40px 0;
 	}
@@ -1241,4 +1265,84 @@ h3 {
 			}
 		}
 	}	
+}
+
+
+/* blog news (блог новостей) */
+.subheading-category_blog {
+	font-size: 45px;
+	font-weight: 300;
+}
+.blog {
+	margin-left: -100px;
+
+	.items-row.cols-3 {
+		
+		.span4 {
+			padding-left: 100px;
+			padding-top: 30px;
+			height: 260px;
+			float: left;
+			width: 33.3%;
+		}
+	}
+	.page-header {
+		border-bottom: none;
+		margin: 0;
+		
+		h2 {
+			font-size: 14px;
+		}
+		a {
+			color: @font-color5;
+			line-height: 1.4;
+			border-bottom: 1px solid lighten(@font-color5, 40%);
+		}
+		a:hover {
+			color: @font-color1;
+			border-bottom: 1px solid transparent;
+		}
+	}
+}
+.article-info.muted {
+	display: inline-block;
+	background-color: @color3;
+	margin: 0;
+	padding: 5px 20px;
+	font-size: 12px;
+	font-weight: 300;
+	margin-bottom: 10px;
+}
+
+
+/* pagination (пагинация) */
+.pagination {
+	display: block;
+
+	.counter,.pagination-start, .pagination-prev, .pagination-next, .pagination-end {
+		display: none;
+	}
+	ul {
+		list-style: none;
+		text-align: center;
+	}
+	li {
+		display: inline-block;
+		margin: 0 5px;
+		
+		span {
+			height: 45px;
+			width: 45px;
+			background-color: @color1;
+			color: @font-color4;
+			display: inline-block;
+			padding-top: 12px;
+		}
+		a {
+			height: 45px;
+			width: 45px;
+			display: inline-block;
+			padding-top: 12px;
+		}
+	}
 }

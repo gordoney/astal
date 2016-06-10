@@ -10,6 +10,7 @@
 defined('_JEXEC') or die;
 ?>
 <div class="newsflash<?php echo $moduleclass_sfx; ?> mod_articles_news">
+	<div class="module_name"><a href="/novosti"><?php echo JText :: _('MOD_ARTICLES_NEWS_ALL'); ?></a></div>
 	<div class="container-fluid">
 		<div class="row">
 			<?php foreach ($list as $item) : ?>
