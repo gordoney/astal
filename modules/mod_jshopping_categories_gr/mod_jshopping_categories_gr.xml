@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+    type="module"
+    version="1.6.0"
+    client="site"
+    method="upgrade">
+<name>Jshopping Categories Gr</name> 
+	<creationDate>20.12.2012</creationDate>
+    <author>gray</author>
+    <copyright></copyright>
+    <license>Open Source License, GNU GPL</license>
+    <version>1</version>
+	<description>Показывает категории</description>
+	<files>
+	<filename module="mod_jshopping_categories_gr">mod_jshopping_categories_gr.php</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+	</files>   
+    <config>
+        <fields name="params">
+            <fieldset name="basic">  
+                               
+            </fieldset> 
+        </fields>
+    </config>     
+</extension>

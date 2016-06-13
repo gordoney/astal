@@ -19,6 +19,8 @@ $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/boot
 $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/slick.css');
 $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=cyrillic');
 //$document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/style.css');
+/*$postData = JFactory::getApplication()->input;
+print_r($postData);*/
 ?>
 
 <!DOCTYPE html>

@@ -30,6 +30,11 @@
     filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
     -webkit-filter: grayscale(0%);
 }
+.page-name() {
+	font-size: 45px;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
 
 @font-face {
     font-family: 'icomoon';
@@ -159,6 +164,39 @@ h3 {
 	h2 {
 		font-weight: 300;
 	}
+}
+.page_head {
+	font-size: 45px;
+	font-weight: 300;
+	margin: 0;
+	padding: 0 0 20px 0;
+}
+@media (min-width: 481px) and (max-width: 979px) {
+	.page_head {
+		font-size: 34px;
+	}
+}
+@media (max-width: 480px) {  
+	.page_head {
+		font-size: 26px;
+	}
+}
+.fog {
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+	position: absolute;
+	bottom: 0;
+	height: 200px;
+	z-index: 1;
+	width: 100%;
+	opacity: 1;
+	.transition(0.4s);
+}
+.hide_fog {
+	opacity: 0;
+	z-index: -1;
 }
 
 
@@ -1272,6 +1310,74 @@ h3 {
 }
 
 
+/* category list (список товаров) */
+.jshop_list_category {
+	padding-bottom: 20px;
+	
+	.row {
+		margin-left: -30px;
+	}
+	.jshop_categ {
+		padding: 0;
+		padding-left: 15px;
+	}
+	.category {
+		display: inline-block;
+		background-color: @color3;
+		text-align: center;
+		padding: 30px 10px;
+		height: 210px;
+		width: 100%;
+	}
+	.image img {
+		height: 110px;
+		margin-bottom: 20px;
+	}
+	a {
+		color: @font-color2;
+	}
+	a:hover {
+		color: @font-color1;
+	}
+	.page_head {
+		font-size: 45px;
+		font-weight: 300;
+	}
+	.category_description {
+		margin-bottom: 80px;
+		position: relative;
+	}
+	.readmore {
+		position: absolute;
+		display: inline-block;
+		color: @font-color1;
+		border: 1px solid @color1;
+		padding: 7px 15px;
+		cursor: pointer;
+		.transition(0.2s);
+		bottom: -50px;
+	}
+	.cut {
+		height: 200px;
+		overflow: hidden;
+	}
+	.readmore:hover {
+		background-color: @color1;
+		color: @font-color4;
+	}
+	.category_img img {
+		width: 100%;
+	}
+}
+@media (min-width: 1200px) {
+	.jshop_list_category {
+		.col-lg-5.jshop_categ {
+			width: 20%;
+		}
+	}
+}
+
+
 /* blog news (блог новостей) */
 .subheading-category_blog {
 	font-size: 45px;
@@ -1402,5 +1508,20 @@ h3 {
 			position: relative;
 			top: 1px;
 		}
+	}
+	.img_button {
+		display: inline-block;
+		margin-bottom: 20px;
+		cursor: pointer;
+	}
+	.modal-dialog {
+		text-align: center;
+	}
+	.cat_thumb img{
+		max-width: 100%;
+		margin-bottom: 20px;
+	}
+	.cat_name, h2 {
+		.page-name();
 	}
 }

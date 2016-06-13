@@ -21,7 +21,7 @@ print $this->_tmp_maincategory_html_start;
         <?php print $this->category->description?>
     </div>
 
-    <div class="jshop_list_category">
+    <div>
     <?php if (count($this->categories)) : ?>
     
 		<div class="container-fluid">
