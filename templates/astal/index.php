@@ -12,11 +12,13 @@ $document = JFactory::getDocument();
 $document->addScript('http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
 $document->addScript($this->baseurl.'/templates/'.$this->template.'/js/bootstrap.min.js');
 $document->addScript($this->baseurl.'/templates/'.$this->template.'/js/slick.min.js');
+$document->addScript($this->baseurl.'/templates/'.$this->template.'/js/jquery.colorbox-min.js');
 $document->addScript($this->baseurl.'/templates/'.$this->template.'/js/custom.js');
 
 /* объявляем кастомные стили */
 $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/bootstrap.min.css');
 $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/slick.css');
+$document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/colorbox.css');
 $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=cyrillic');
 //$document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/style.css');
 /*$postData = JFactory::getApplication()->input;
@@ -31,8 +33,14 @@ print_r($postData);*/
 	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-
+<?php $app = JFactory::getApplication();
+$menu = $app->getMenu();
+$activeMenu = $menu->getActive();
+ ?>
+<body class="<?php echo $activeMenu->params['pageclass_sfx']; ?>">
+	
+	<div class="background-fix"></div>
+	
 	<div id="header" class="navbar " role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">

@@ -15,7 +15,7 @@ $qtyFieldsInFirstBlock = round(count($fields)/2);
 	<?php if ($params->get('modal_on')) { ?>
 
 		<div class="modal_form_btn<?php echo ' '.$params->get('modal_btn_class'); ?>" data-toggle="modal" data-target="#modal_form<?php echo $module->id; ?>">
-			<span><?php echo $params->get('modal_btn_text'); ?></span>
+			<?php echo $params->get('modal_btn_text'); ?>
 		</div>
 
 		<div class="modal fade" id="modal_form<?php echo $module->id; ?>" tabindex="-1" role="dialog" aria-hidden="true">

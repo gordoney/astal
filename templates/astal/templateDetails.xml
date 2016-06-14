@@ -33,6 +33,7 @@ client="site">
 		<position>footer_center</position>
 		<position>footer_right</position>
 		<position>content</position>
+		<position>jshop_product</position>
 	</positions>
 	
 </extension>

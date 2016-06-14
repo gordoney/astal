@@ -14,11 +14,11 @@ defined('_JEXEC') or die;
 		<div class="row">
 			<?php foreach ($menu as $key=>$item) { ?>
 				<?php if ($key==0) { ?>
-					<div class="menu_col hidden-xs hidden-sm hidden-md col-lg-4">
+					<div class="menu_col hidden-xs hidden-sm col-md-4 col-lg-4">
 						<div class="menu_item"><a href="<?php echo $item['url']; ?>"><?php echo $item['text']; ?></a></div>
 					</div>
 				<?php } else if ($key%2!=0) { ?>
-					<div class="menu_col hidden-xs hidden-sm hidden-md col-lg-5">
+					<div class="menu_col hidden-xs hidden-sm col-md-5 col-lg-5">
 						<div class="menu_item"><a href="<?php echo $item['url']; ?>"><?php echo $item['text']; ?></a></div>
 				<?php } else if ($key%2==0) { ?>
 						<div class="menu_item"><a href="<?php echo $item['url']; ?>"><?php echo $item['text']; ?></a></div>

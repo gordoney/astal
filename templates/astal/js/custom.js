@@ -38,6 +38,39 @@ jQuery(document).ready(function() {
 		});
 	}
 	
+	function parallax_handler() {
+		if (jQuery('body').hasClass('page_catalog')) {
+			var heightBackground = jQuery('.mod_background_gr').height();
+			var heightMenuToTop = jQuery('.mod_second_menu_gr').position().top;
+			parallaxMenu ();
+			
+			jQuery(window).scroll(function () {
+				parallaxMenu ();
+			});	
+			
+			function parallaxMenu () {
+				var heightToTop = jQuery(window).scrollTop();
+				if (heightToTop < 280) {
+					jQuery('.mod_background_gr').css('height', heightBackground - heightToTop/1.3);
+					jQuery('.mod_second_menu_gr').css('top', heightMenuToTop - heightToTop/2);
+				} else {
+					jQuery('.mod_background_gr').css('height', heightBackground - 280/1.3);
+					jQuery('.mod_second_menu_gr').css('top', heightMenuToTop - 280/2);				
+				}				
+			}
+		}
+	}
+	
+	function modal_overlay_fix() {
+		jQuery('.modal-dialog').parent().on('show.bs.modal', function(e){ 
+			jQuery(e.relatedTarget.attributes['data-target'].value).appendTo('body'); 
+		})	
+	}
+	
+	jQuery(".colorbox_gallery").colorbox({rel:'colorbox_gallery'});
+	
 	slick_slider_handler();
 	catalog_handler();
+	parallax_handler();
+	modal_overlay_fix();
 });

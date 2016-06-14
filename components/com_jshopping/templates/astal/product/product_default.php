@@ -13,7 +13,7 @@ include(dirname(__FILE__)."/load.js.php");
 <div class="jshop productfull" id="comjshop">
     <form name="product" method="post" action="<?php print $this->action?>" enctype="multipart/form-data" autocomplete="off">
     
-        <h1><?php print $this->product->name?><?php if ($this->config->show_product_code){?> <span class="jshop_code_prod">(<?php print _JSHOP_EAN?>: <span id="product_code"><?php print $this->product->getEan();?></span>)</span><?php }?></h1>
+        <h1 class="page_head"><?php print $this->product->name?><?php if ($this->config->show_product_code){?> <span class="jshop_code_prod">(<?php print _JSHOP_EAN?>: <span id="product_code"><?php print $this->product->getEan();?></span>)</span><?php }?></h1>
         
         <?php print $this->_tmp_product_html_start;?>
         
@@ -21,10 +21,43 @@ include(dirname(__FILE__)."/load.js.php");
 
         <?php include(dirname(__FILE__)."/ratingandhits.php");?>
 
+		<div class="container-fluid top_info">
+			<div class="row">
+				<div class="col-xs-24 col-sm-24 col-md-10 col-lg-10 left">
+					<?php print $this->_tmp_product_html_before_image;?>
+					<div id='list_product_image_middle' class="main_image">
+						<?php print $this->_tmp_product_html_body_image?>
+
+							<a class="colorbox_gallery" id="main_image_full_<?php print $this->images[0]->image_id?>" href="<?php print $this->image_product_path?>/<?php print $this->images[0]->image_full;?>" title="<?php print htmlspecialchars($this->images[0]->_title)?>">
+								<img id = "main_image_<?php print $this->images[0]->image_id?>" src = "<?php print $this->image_product_path?>/<?php print $this->images[0]->image_full;?>" alt="<?php print htmlspecialchars($this->images[0]->_title)?>" title="<?php print htmlspecialchars($this->images[0]->_title)?>" />
+							</a>
+
+					</div>		
+					<?php print $this->_tmp_product_html_after_image;?>	
+
+					<?php print $this->_tmp_product_html_before_image_thumb;?>
+					
+					<span id='list_product_image_thumb' class="thumb_images">
+						<?php if ( (count($this->images)>1) && count($this->images)) {?>
+							<?php foreach($this->images as $k=>$image){?>
+								<a href="<?php print $this->image_product_path?>/<?php print $image->image_full;?>" class="colorbox_gallery"><img class="jshop_img_thumb" src="<?php print $this->image_product_path?>/<?php print $image->image_thumb?>" alt="<?php print htmlspecialchars($image->_title)?>" title="<?php print htmlspecialchars($image->_title)?>" /></a>
+							<?php }?>
+						<?php }?>
+					</span>
+					
+					<?php print $this->_tmp_product_html_after_image_thumb;?>
+					
+				</div>
+				<div class="col-xs-24 col-sm-24 col-md-offset-1 col-md-13 col-lg-offset-1 col-lg-13 right">
+					<div class="jshop_prod_description">
+						<?php print $this->product->description; ?>
+					</div>    				
+				</div>
+			</div>
+		</div>
+		
         <div class="row-fluid jshop">
             <div class="span4 image_middle">
-            
-                <?php print $this->_tmp_product_html_before_image;?>
                 
                 <?php if ($product->label_id){?>
                     <div class="product_label">
@@ -46,26 +79,6 @@ include(dirname(__FILE__)."/load.js.php");
                     <?php } ?>
                 <?php }?>
 
-                <span id='list_product_image_middle'>
-                    <?php print $this->_tmp_product_html_body_image?>
-                    
-                    <?php if(!count($this->images)){?>
-                        <img id = "main_image" src = "<?php print $this->image_product_path?>/<?php print $this->noimage?>" alt = "<?php print htmlspecialchars($this->product->name)?>" />
-                    <?php }?>
-                    
-                    <?php foreach($this->images as $k=>$image){?>
-                        <a class="lightbox" id="main_image_full_<?php print $image->image_id?>" href="<?php print $this->image_product_path?>/<?php print $image->image_full;?>" <?php if ($k!=0){?>style="display:none"<?php }?> title="<?php print htmlspecialchars($image->_title)?>">
-                            <img id = "main_image_<?php print $image->image_id?>" src = "<?php print $this->image_product_path?>/<?php print $image->image_name;?>" alt="<?php print htmlspecialchars($image->_title)?>" title="<?php print htmlspecialchars($image->_title)?>" />
-                            <div class="text_zoom">
-                                <img src="<?php print $this->path_to_image?>search.png" alt="zoom" />
-                                <?php print _JSHOP_ZOOM_IMAGE?>
-                            </div>
-                        </a>
-                    <?php }?>
-                </span>
-                
-                <?php print $this->_tmp_product_html_after_image;?>
-
                 <?php if ($this->config->product_show_manufacturer_logo && $this->product->manufacturer_info->manufacturer_logo!=""){?>
                 <div class="manufacturer_logo">
                     <a href="<?php print SEFLink('index.php?option=com_jshopping&controller=manufacturer&task=view&manufacturer_id='.$this->product->product_manufacturer_id, 2);?>">
@@ -76,17 +89,6 @@ include(dirname(__FILE__)."/load.js.php");
             </div>
             
             <div class = "span8 jshop_img_description">
-                <?php print $this->_tmp_product_html_before_image_thumb;?>
-                
-                <span id='list_product_image_thumb'>
-                    <?php if ( (count($this->images)>1) || (count($this->videos) && count($this->images)) ) {?>
-                        <?php foreach($this->images as $k=>$image){?>
-                            <img class="jshop_img_thumb" src="<?php print $this->image_product_path?>/<?php print $image->image_thumb?>" alt="<?php print htmlspecialchars($image->_title)?>" title="<?php print htmlspecialchars($image->_title)?>" onclick="showImage(<?php print $image->image_id?>)" />
-                        <?php }?>
-                    <?php }?>
-                </span>
-                
-                <?php print $this->_tmp_product_html_after_image_thumb;?>
                 
                 <?php if (count($this->videos)){?>
                     <?php foreach($this->videos as $k=>$video){?>
@@ -100,11 +102,7 @@ include(dirname(__FILE__)."/load.js.php");
                 
                 <?php print $this->_tmp_product_html_after_video;?>                
             </div>
-        </div>
-
-        <div class="jshop_prod_description">
-            <?php print $this->product->description; ?>
-        </div>        
+        </div>    
 
         <?php if ($this->product->product_url!=""){?>
             <div class="prod_url">
@@ -324,7 +322,36 @@ include(dirname(__FILE__)."/load.js.php");
             </div>
         <?php }?>
         
-        <?php print $this->_tmp_product_html_after_buttons;?>
+		<div class="container-fluid bottom_info">
+			<div class="row">
+				<div class="col-xs-24 col-sm-24 col-md-10 col-lg-10 left">
+					<div class="block_head"><?php echo JText :: _('COM_JSHOPPING_PRODUCT_CHAR'); ?></div>
+					<?php print $this->_tmp_product_html_after_buttons;?>
+				</div>
+				
+				<div class="col-xs-24 col-sm-24 col-md-offset-1 col-md-13 col-lg-offset-1 col-lg-13 right">
+					<div class="file">
+						<div class="contaier-fluid">
+							<div class="row">
+								<div class="col-xs-24 col-sm-24 col-md-24 col-lg-10 left_button">
+									<?php include(dirname(__FILE__)."/demofiles.php");?>
+								</div>
+								<div class="col-xs-24 col-sm-24 col-md-24 col-lg-14 right_button">
+									<?php jimport( 'joomla.application.module.helper' ); 
+									$modules = JModuleHelper::getModules('jshop_product');
+									$attribs['style'] = 'none';
+									foreach($modules as $module) {
+										echo JModuleHelper::renderModule($module, $attribs);
+									} ?>
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php print $this->_tmp_product_html_before_related;
+					include(dirname(__FILE__)."/related.php"); ?>	
+				</div>
+			</div>
+		</div>
 
         <input type="hidden" name="to" id='to' value="cart" />
         <input type="hidden" name="product_id" id="product_id" value="<?php print $this->product->product_id?>" />
@@ -332,8 +359,6 @@ include(dirname(__FILE__)."/load.js.php");
     </form>
 
     <?php print $this->_tmp_product_html_before_demofiles; ?>
-    
-    <div id="list_product_demofiles"><?php include(dirname(__FILE__)."/demofiles.php");?></div>
     
     <?php if ($this->config->product_show_button_back){?>
         <div class="button_back">
@@ -344,9 +369,6 @@ include(dirname(__FILE__)."/load.js.php");
     <?php
         print $this->_tmp_product_html_before_review;
         include(dirname(__FILE__)."/review.php");
-        
-        print $this->_tmp_product_html_before_related;
-        include(dirname(__FILE__)."/related.php");
     ?>
     
     <?php print $this->_tmp_product_html_end;?>

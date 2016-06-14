@@ -47,14 +47,8 @@ $pathCategory = $db->loadAssoc();
           $row = $this->images[$index]; ?>
       <div class="col-md-<?php echo (int) ((12 / $column)*2); ?>">
 <?php     if(!$row->show_elems): ?>
-          <span class="img_button" data-toggle="modal" data-target="#gal<?php echo $row->id; ?>">
-            <img src="<?php echo $row->thumb_src; ?>" <?php echo $row->imgwh; ?> alt="<?php echo $row->imgtitle; ?>" /></span>
-			
-			<div class="modal fade" id="gal<?php echo $row->id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-dialog">
-					<img src="/images/joomgallery/details/<?php echo $row->catpath; ?>/<?php echo $row->imgfilename; ?>" alt="<?php echo $row->imgtitle; ?>" />
-				</div>
-			</div>			
+		
+			<a href="/images/joomgallery/details/<?php echo $row->catpath; ?>/<?php echo $row->imgfilename; ?>" class="colorbox_gallery cat_thumb"><img src="/images/joomgallery/thumbnails/<?php echo $row->catpath; ?>/<?php echo $row->imgfilename; ?>" alt="<?php echo $row->imgtitle; ?>" /></a>
 			
 <?php     else: ?>
         <div class="thumbnail">

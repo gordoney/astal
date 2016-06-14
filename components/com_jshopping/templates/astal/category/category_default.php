@@ -17,10 +17,14 @@ print $this->_tmp_category_html_start;
 
 	<div class="container-fluid">
 		<div class="row">
-			<div class="category_img col-xs-24 col-sm-24 col-md-10 col-lg-10">
-				<img src="<?php print $this->image_category_path;?>/<?php print $this->category->category_image; ?>" alt="">
-			</div>			
-			<div class="category_description col-xs-24 col-sm-24 col-md-offset-2 col-md-12 col-lg-offset-2 col-lg-12">
+			<?php if ($this->category->category_image) { ?>
+				<div class="category_img col-xs-24 col-sm-24 col-md-10 col-lg-10">
+					<img src="<?php print $this->image_category_path;?>/<?php print $this->category->category_image; ?>" alt="">
+				</div>			
+				<div class="category_description col-xs-24 col-sm-24 col-md-offset-2 col-md-12 col-lg-offset-2 col-lg-12">
+			<?php } else { ?>
+				<div class="category_description col-xs-24 col-sm-24 col-md-24 col-lg-24">
+			<?php } ?>
 				<div class="cut">
 					<div class="uncut"><?php print $this->category->description?></div>
 					<div class="fog"></div>

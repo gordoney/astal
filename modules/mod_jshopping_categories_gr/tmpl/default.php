@@ -1,6 +1,5 @@
 <div class="mod_jshopping_categories_gr mainpage_category"> 
 	<div class="shophead"><?php echo JText :: _('MOD_JSHOPPING_CATEGORIES_GR_HEAD'); ?></div>
-	<div class="jshop_list_category">
     <?php if ($categories) : ?>
     
 		<div class="container-fluid">
@@ -90,5 +89,4 @@
 		</div>
         
     <?php endif; ?>
-    </div>
 </div>
