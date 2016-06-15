@@ -10,6 +10,7 @@
 defined('_JEXEC') or die;
 ?>
 <div class="mod_page_contacts_gr">
+	<div class="page_head"><?php echo JText :: _('MOD_PAGE_CONTACTS_NAME'); ?></div>
 	<div class="info">
 		<div class="container-fluid">
 			<div class="row">

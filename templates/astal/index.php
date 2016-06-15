@@ -39,7 +39,7 @@ $activeMenu = $menu->getActive();
  ?>
 <body class="<?php echo $activeMenu->params['pageclass_sfx']; ?>">
 	
-	<div class="background-fix"></div>
+	<?php  ?><div class="background-fix"></div>
 	
 	<div id="header" class="navbar " role="navigation">
 		<div class="container-fluid">
@@ -97,7 +97,7 @@ $activeMenu = $menu->getActive();
 				</div>
 			</div>
 		</div>		
-	<?php } ?>	
+	<?php } ?>
 	
 	<?php if ($this->countModules('content')) { ?>
 		<div id="content">

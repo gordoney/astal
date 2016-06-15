@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>Модуль схемы</name>
+	<author>Sergei Bolonikov</author>
+	<creationDate>2016</creationDate>
+	<copyright></copyright>
+	<license></license>
+	<authorEmail>sergeibolonikov@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0</version>
+	<description>Модуль схемы</description>
+	<files>
+		<filename module="mod_scheme_gr">mod_scheme_gr.php</filename>
+		<filename>mod_scheme_gr.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="url-cell-sort" type="text"
+					label="Ссылка Решётки в ассортименте" />	
+				<field name="desc-cell-sort" type="editor" filter="safehtml"
+					label="Описание Решётки в ассортименте" />	
+					
+				<field name="url-cell-trap" type="text"
+					label="Ссылка Решётки трапа" />	
+				<field name="desc-cell-trap" type="editor" filter="safehtml"
+					label="Описание Решётки трапа" />	
+					
+				<field name="url-trap" type="text"
+					label="Ссылка Трапа" />
+				<field name="desc-trap" type="editor" filter="safehtml"
+					label="Описание Трапа" />
+					
+				<field name="url-lotok-all" type="text"
+					label="Ссылка Лотка" />
+				<field name="desc-lotok-all" type="editor" filter="safehtml"
+					label="Описание Лотка" />
+					
+				<field name="url-lotok" type="text"
+					label="Ссылка Лотка щелевого" />
+				<field name="desc-lotok" type="editor" filter="safehtml"
+					label="Описание Лотка щелевого" />					
+			</fieldset>
+		</fields>
+	</config>
+</extension>

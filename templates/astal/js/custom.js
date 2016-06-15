@@ -67,10 +67,23 @@ jQuery(document).ready(function() {
 		})	
 	}
 	
+	function scheme_handler() {
+		jQuery('.mod_scheme_gr .name').mouseenter(function() {
+			var active = jQuery(this).closest('.elem');
+			jQuery('.elem').not(active).addClass('hover');
+			active.addClass('hover_active');
+		});
+		jQuery('.mod_scheme_gr .name').mouseleave(function() {
+			jQuery('.elem').removeClass('hover');
+			jQuery('.elem').removeClass('hover_active');
+		});
+	}
+	
 	jQuery(".colorbox_gallery").colorbox({rel:'colorbox_gallery'});
 	
 	slick_slider_handler();
 	catalog_handler();
 	parallax_handler();
 	modal_overlay_fix();
+	scheme_handler();
 });

@@ -17,11 +17,16 @@ print $this->_tmp_category_html_start;
 
 	<div class="container-fluid">
 		<div class="row">
-			<?php if ($this->category->category_image) { ?>
-				<div class="category_img col-xs-24 col-sm-24 col-md-10 col-lg-10">
-					<img src="<?php print $this->image_category_path;?>/<?php print $this->category->category_image; ?>" alt="">
+			<?php jimport( 'joomla.application.module.helper' ); 
+			$modules = JModuleHelper::getModules('jshop_category');
+			$attribs['style'] = 'none'; ?>
+			<?php if ($modules) { ?>
+				<div class="category_img hidden-xs hidden-sm hidden-md col-lg-10">
+					<?php foreach($modules as $module) {
+						echo JModuleHelper::renderModule($module, $attribs);
+					} ?>
 				</div>			
-				<div class="category_description col-xs-24 col-sm-24 col-md-offset-1 col-md-13 col-lg-offset-1 col-lg-13">
+				<div class="category_description col-xs-24 col-sm-24 col-md-24 col-lg-offset-1 col-lg-13">
 			<?php } else { ?>
 				<div class="category_description col-xs-24 col-sm-24 col-md-24 col-lg-24">
 			<?php } ?>

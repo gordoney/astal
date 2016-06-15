@@ -72,7 +72,7 @@
 							<?php if ($category['child']) { ?>
 								<div class="sub_category">
 									<div class="parent_category_name">
-										<?php print $category['name']?>
+										<a href="<?php echo $category['category_link']; ?>"><?php print $category['name']?></a>
 									</div>	
 									<?php foreach ($category['child'] as $subCategory) { ?>
 										<div class="sub_category_name">
