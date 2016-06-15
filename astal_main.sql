@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 10 2016 г., 15:56
+-- Время создания: Июн 15 2016 г., 12:38
 -- Версия сервера: 5.5.48
 -- Версия PHP: 5.5.33
 
@@ -35,14 +35,14 @@ CREATE TABLE IF NOT EXISTS `hu0fn_assets` (
   `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The unique name for the asset.\n',
   `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The descriptive title for the asset.',
   `rules` varchar(5120) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'JSON encoded access control.'
-) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=107 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `hu0fn_assets`
 --
 
 INSERT INTO `hu0fn_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `title`, `rules`) VALUES
-(1, 0, 0, 167, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
+(1, 0, 0, 203, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
 (2, 1, 1, 2, 1, 'com_admin', 'com_admin', '{}'),
 (3, 1, 3, 6, 1, 'com_banners', 'com_banners', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (4, 1, 7, 8, 1, 'com_cache', 'com_cache', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
@@ -59,25 +59,25 @@ INSERT INTO `hu0fn_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 (15, 1, 61, 62, 1, 'com_media', 'com_media', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":{"5":1}}'),
 (16, 1, 63, 64, 1, 'com_menus', 'com_menus', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (17, 1, 65, 66, 1, 'com_messages', 'com_messages', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
-(18, 1, 67, 134, 1, 'com_modules', 'com_modules', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(19, 1, 135, 138, 1, 'com_newsfeeds', 'com_newsfeeds', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(20, 1, 139, 140, 1, 'com_plugins', 'com_plugins', '{"core.admin":{"7":1},"core.manage":[],"core.edit":[],"core.edit.state":[]}'),
-(21, 1, 141, 142, 1, 'com_redirect', 'com_redirect', '{"core.admin":{"7":1},"core.manage":[]}'),
-(22, 1, 143, 144, 1, 'com_search', 'com_search', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
-(23, 1, 145, 146, 1, 'com_templates', 'com_templates', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(24, 1, 147, 150, 1, 'com_users', 'com_users', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(26, 1, 151, 152, 1, 'com_wrapper', 'com_wrapper', '{}'),
+(18, 1, 67, 146, 1, 'com_modules', 'com_modules', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(19, 1, 147, 150, 1, 'com_newsfeeds', 'com_newsfeeds', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(20, 1, 151, 152, 1, 'com_plugins', 'com_plugins', '{"core.admin":{"7":1},"core.manage":[],"core.edit":[],"core.edit.state":[]}'),
+(21, 1, 153, 154, 1, 'com_redirect', 'com_redirect', '{"core.admin":{"7":1},"core.manage":[]}'),
+(22, 1, 155, 156, 1, 'com_search', 'com_search', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
+(23, 1, 157, 158, 1, 'com_templates', 'com_templates', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(24, 1, 159, 162, 1, 'com_users', 'com_users', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(26, 1, 163, 164, 1, 'com_wrapper', 'com_wrapper', '{}'),
 (27, 8, 18, 21, 2, 'com_content.category.2', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
 (28, 3, 4, 5, 2, 'com_banners.category.3', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (29, 7, 14, 15, 2, 'com_contact.category.4', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(30, 19, 136, 137, 2, 'com_newsfeeds.category.5', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(32, 24, 148, 149, 1, 'com_users.category.7', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(33, 1, 153, 154, 1, 'com_finder', 'com_finder', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
-(34, 1, 155, 156, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{"core.admin":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
-(35, 1, 157, 158, 1, 'com_tags', 'com_tags', '{"core.admin":[],"core.manage":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
-(36, 1, 159, 160, 1, 'com_contenthistory', 'com_contenthistory', '{}'),
-(37, 1, 161, 162, 1, 'com_ajax', 'com_ajax', '{}'),
-(38, 1, 163, 164, 1, 'com_postinstall', 'com_postinstall', '{}'),
+(30, 19, 148, 149, 2, 'com_newsfeeds.category.5', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(32, 24, 160, 161, 1, 'com_users.category.7', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(33, 1, 165, 166, 1, 'com_finder', 'com_finder', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
+(34, 1, 167, 168, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{"core.admin":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
+(35, 1, 169, 170, 1, 'com_tags', 'com_tags', '{"core.admin":[],"core.manage":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
+(36, 1, 171, 172, 1, 'com_contenthistory', 'com_contenthistory', '{}'),
+(37, 1, 173, 174, 1, 'com_ajax', 'com_ajax', '{}'),
+(38, 1, 175, 176, 1, 'com_postinstall', 'com_postinstall', '{}'),
 (39, 18, 68, 69, 2, 'com_modules.module.1', 'Main Menu', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (40, 18, 70, 71, 2, 'com_modules.module.2', 'Login', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (41, 18, 72, 73, 2, 'com_modules.module.3', 'Popular Articles', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
@@ -113,7 +113,7 @@ INSERT INTO `hu0fn_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 (71, 18, 122, 123, 2, 'com_modules.module.99', 'Cоциальные кнопки', '{"core.delete":[],"core.edit":[],"core.edit.state":[],"module.edit.frontend":[]}'),
 (72, 18, 124, 125, 2, 'com_modules.module.100', 'Контакты (футер)', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"module.edit.frontend":[]}'),
 (73, 18, 126, 127, 2, 'com_modules.module.101', 'Модуль второго меню', '{"core.delete":[],"core.edit":[],"core.edit.state":[],"module.edit.frontend":[]}'),
-(74, 1, 165, 166, 1, 'com_jshopping', 'jshopping', '{}'),
+(74, 1, 177, 178, 1, 'com_jshopping', 'jshopping', '{}'),
 (75, 18, 128, 129, 2, 'com_modules.module.102', 'Страница контактов', '{"core.delete":[],"core.edit":[],"core.edit.state":[],"module.edit.frontend":[]}'),
 (76, 18, 130, 131, 2, 'com_modules.module.103', 'Карта в контактах', '{"core.delete":[],"core.edit":[],"core.edit.state":[],"module.edit.frontend":[]}'),
 (77, 18, 132, 133, 2, 'com_modules.module.104', 'Форма обратной связи', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"module.edit.frontend":[]}'),
@@ -125,7 +125,25 @@ INSERT INTO `hu0fn_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 (83, 62, 39, 40, 3, 'com_content.article.10', 'Сообщаем отличную новость - на нашем сайте появился каталог продукции компании АТТ Inox Drain2. (3)', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}'),
 (84, 62, 41, 42, 3, 'com_content.article.11', 'Сообщаем отличную новость - на нашем сайте появился каталог продукции компании АТТ Inox Drain2. (4)', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}'),
 (85, 62, 43, 44, 3, 'com_content.article.12', 'Сообщаем отличную новость - на нашем сайте появился каталог продукции компании АТТ Inox Drain1. (4)', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}'),
-(86, 62, 45, 46, 3, 'com_content.article.13', 'Сообщаем отличную новость - на нашем сайте появился каталог продукции компании АТТ Inox Drain. (4)', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}');
+(86, 62, 45, 46, 3, 'com_content.article.13', 'Сообщаем отличную новость - на нашем сайте появился каталог продукции компании АТТ Inox Drain. (4)', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}'),
+(87, 18, 134, 135, 2, 'com_modules.module.105', 'JoomGallery News', '{}'),
+(88, 1, 179, 202, 1, 'com_joomgallery', 'JoomGallery', '{}'),
+(89, 88, 180, 189, 2, 'com_joomgallery.category.2', 'Категория 1', '{"joom.upload":[],"joom.upload.inown":[],"core.create":{"6":1,"3":1},"joom.create.inown":[],"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
+(90, 88, 190, 195, 2, 'com_joomgallery.category.3', 'Категория 2', '{"joom.upload":[],"joom.upload.inown":[],"core.create":{"6":1,"3":1},"joom.create.inown":[],"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
+(91, 89, 181, 182, 3, 'com_joomgallery.image.1', 'Фото_1', '{}'),
+(92, 89, 183, 184, 3, 'com_joomgallery.image.2', 'Фото_2', '{}'),
+(93, 89, 185, 186, 3, 'com_joomgallery.image.3', 'Фото_3', '{}'),
+(94, 90, 191, 192, 3, 'com_joomgallery.image.4', 'Фото_1', '{}'),
+(95, 97, 199, 200, 3, 'com_joomgallery.image.5', 'Фото_2', '{"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(96, 90, 193, 194, 3, 'com_joomgallery.image.6', 'Фото_3', '{}'),
+(97, 88, 196, 201, 2, 'com_joomgallery.category.4', 'Категория 3', '{"joom.upload":[],"joom.upload.inown":[],"core.create":{"6":1,"3":1},"joom.create.inown":[],"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
+(98, 97, 197, 198, 3, 'com_joomgallery.image.7', 'foto_1', '{}'),
+(100, 89, 187, 188, 3, 'com_joomgallery.image.8', 'катег_1', '{}'),
+(102, 18, 136, 137, 2, 'com_modules.module.107', 'Категории на главной', '{"core.delete":[],"core.edit":[],"core.edit.state":[],"module.edit.frontend":[]}'),
+(103, 18, 138, 139, 2, 'com_modules.module.108', 'Форма запроса коммерческого предложения', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"module.edit.frontend":[]}'),
+(104, 18, 140, 141, 2, 'com_modules.module.109', 'Картинка в шапке каталога', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"module.edit.frontend":[]}'),
+(105, 18, 142, 143, 2, 'com_modules.module.110', 'Модуль вывода картинки бекграундом', '{"core.delete":[],"core.edit":[],"core.edit.state":[],"module.edit.frontend":[]}'),
+(106, 18, 144, 145, 2, 'com_modules.module.111', 'Модуль схемы', '{"core.delete":[],"core.edit":[],"core.edit.state":[],"module.edit.frontend":[]}');
 
 -- --------------------------------------------------------
 
@@ -363,7 +381,7 @@ CREATE TABLE IF NOT EXISTS `hu0fn_content` (
 --
 
 INSERT INTO `hu0fn_content` (`id`, `asset_id`, `title`, `alias`, `introtext`, `fulltext`, `state`, `catid`, `created`, `created_by`, `created_by_alias`, `modified`, `modified_by`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `images`, `urls`, `attribs`, `version`, `ordering`, `metakey`, `metadesc`, `access`, `hits`, `metadata`, `featured`, `language`, `xreference`) VALUES
-(1, 58, 'Материал в разработке', 'material-v-razrabotke', '<p>Данный материал находится в разработке</p>', '', 1, 2, '2016-06-06 11:47:59', 684, '', '2016-06-06 11:47:59', 0, 0, '0000-00-00 00:00:00', '2016-06-06 11:47:59', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 2, '', '', 1, 349, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', ''),
+(1, 58, 'Материал в разработке', 'material-v-razrabotke', '<p>Данный материал находится в разработке</p>', '', 1, 2, '2016-06-06 11:47:59', 684, '', '2016-06-06 11:47:59', 0, 684, '2016-06-10 13:24:41', '2016-06-06 11:47:59', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 2, '', '', 1, 360, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', ''),
 (2, 63, 'Сообщаем отличную новость - на нашем сайте появился каталог продукции компании АТТ Inox Drain.', 'soobshchaem-otlichnuyu-novost-na-nashem-sajte-poyavilsya-katalog-produktsii-kompanii-att-inox-drainn', '<p>Компания АТТ Inox Drain является ведущим производителем систем водоотвода из нержавеющей стали.В основе предлагаемых решений лежат следующие принципы:</p>\r\n', '\r\n<p>Компания АТТ Inox Drain является ведущим производителем систем водоотвода из нержавеющей стали.В основе предлагаемых решений лежат следующие принципы: Компания АТТ Inox Drain является ведущим производителем систем водоотвода из нержавеющей стали.В основе предлагаемых решений лежат следующие принципы: Компания АТТ Inox Drain является ведущим производителем систем водоотвода из нержавеющей стали.В основе предлагаемых решений лежат следующие принципы:</p>', 1, 8, '2016-06-08 07:17:59', 684, '', '2016-06-08 07:57:42', 684, 684, '2016-06-08 07:58:56', '2016-06-08 07:17:59', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 4, 1, '', '', 1, 0, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', ''),
 (3, 64, 'Сообщаем отличную новость - на нашем сайте появился каталог продукции компании АТТ Inox Drain1.', 'soobshchaem-otlichnuyu-novost-na-nashem-sajte-poyavilsya-katalog-produktsii-kompanii-att-inox-drain1', '<p>Компания АТТ Inox Drain является ведущим производителем систем водоотвода из нержавеющей стали.В основе предлагаемых решений лежат следующие принципы:</p>\r\n', '\r\n<p>Компания АТТ Inox Drain является ведущим производителем систем водоотвода из нержавеющей стали.В основе предлагаемых решений лежат следующие принципы: Компания АТТ Inox Drain является ведущим производителем систем водоотвода из нержавеющей стали.В основе предлагаемых решений лежат следующие принципы: Компания АТТ Inox Drain является ведущим производителем систем водоотвода из нержавеющей стали.В основе предлагаемых решений лежат следующие принципы:</p>', 1, 8, '2016-06-08 07:18:53', 684, '', '2016-06-08 07:58:45', 684, 684, '2016-06-08 07:58:53', '2016-06-08 07:18:53', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 4, 0, '', '', 1, 1, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', ''),
 (4, 65, 'Сообщаем отличную новость - на нашем сайте появился каталог продукции компании АТТ Inox Drain2.', 'soobshchaem-otlichnuyu-novost-na-nashem-sajte-poyavilsya-katalog-produktsii-kompanii-att-inox-drain', '<p>Компания АТТ Inox Drain является ведущим производителем систем водоотвода из нержавеющей стали.В основе предлагаемых решений лежат следующие принципы:</p>\r\n', '\r\n<p>Компания АТТ Inox Drain является ведущим производителем систем водоотвода из нержавеющей стали.В основе предлагаемых решений лежат следующие принципы: Компания АТТ Inox Drain является ведущим производителем систем водоотвода из нержавеющей стали.В основе предлагаемых решений лежат следующие принципы: Компания АТТ Inox Drain является ведущим производителем систем водоотвода из нержавеющей стали.В основе предлагаемых решений лежат следующие принципы:</p>', 1, 8, '2016-06-08 07:19:03', 684, '', '2016-06-08 07:59:11', 684, 0, '0000-00-00 00:00:00', '2016-06-08 07:19:03', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":false,"urlatext":"","targeta":"","urlb":false,"urlbtext":"","targetb":"","urlc":false,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_tags":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 3, 0, '', '', 1, 15, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', ''),
@@ -487,7 +505,7 @@ CREATE TABLE IF NOT EXISTS `hu0fn_extensions` (
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `ordering` int(11) DEFAULT '0',
   `state` int(11) DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=10016 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10025 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `hu0fn_extensions`
@@ -526,7 +544,7 @@ INSERT INTO `hu0fn_extensions` (`extension_id`, `name`, `type`, `element`, `fold
 (32, 'com_postinstall', 'component', 'com_postinstall', '', 1, 1, 1, 1, '{"name":"com_postinstall","type":"component","creationDate":"September 2013","author":"Joomla! Project","copyright":"(C) 2005 - 2016 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.2.0","description":"COM_POSTINSTALL_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (101, 'SimplePie', 'library', 'simplepie', '', 0, 1, 1, 1, '{"name":"SimplePie","type":"library","creationDate":"2004","author":"SimplePie","copyright":"Copyright (c) 2004-2009, Ryan Parman and Geoffrey Sneddon","authorEmail":"","authorUrl":"http:\\/\\/simplepie.org\\/","version":"1.2","description":"LIB_SIMPLEPIE_XML_DESCRIPTION","group":"","filename":"simplepie"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (102, 'phputf8', 'library', 'phputf8', '', 0, 1, 1, 1, '{"name":"phputf8","type":"library","creationDate":"2006","author":"Harry Fuecks","copyright":"Copyright various authors","authorEmail":"hfuecks@gmail.com","authorUrl":"http:\\/\\/sourceforge.net\\/projects\\/phputf8","version":"0.5","description":"LIB_PHPUTF8_XML_DESCRIPTION","group":"","filename":"phputf8"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(103, 'Joomla! Platform', 'library', 'joomla', '', 0, 1, 1, 1, '{"name":"Joomla! Platform","type":"library","creationDate":"2008","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2016 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"https:\\/\\/www.joomla.org","version":"13.1","description":"LIB_JOOMLA_XML_DESCRIPTION","group":"","filename":"joomla"}', '{"mediaversion":"a7eb8a4a8636c29deab03c6d340e65c9"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(103, 'Joomla! Platform', 'library', 'joomla', '', 0, 1, 1, 1, '{"name":"Joomla! Platform","type":"library","creationDate":"2008","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2016 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"https:\\/\\/www.joomla.org","version":"13.1","description":"LIB_JOOMLA_XML_DESCRIPTION","group":"","filename":"joomla"}', '{"mediaversion":"5acdd0b2000ee28a2b2a9d67e82ab055"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (104, 'IDNA Convert', 'library', 'idna_convert', '', 0, 1, 1, 1, '{"name":"IDNA Convert","type":"library","creationDate":"2004","author":"phlyLabs","copyright":"2004-2011 phlyLabs Berlin, http:\\/\\/phlylabs.de","authorEmail":"phlymail@phlylabs.de","authorUrl":"http:\\/\\/phlylabs.de","version":"0.8.0","description":"LIB_IDNA_XML_DESCRIPTION","group":"","filename":"idna_convert"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (105, 'FOF', 'library', 'fof', '', 0, 1, 1, 1, '{"name":"FOF","type":"library","creationDate":"2015-04-22 13:15:32","author":"Nicholas K. Dionysopoulos \\/ Akeeba Ltd","copyright":"(C)2011-2015 Nicholas K. Dionysopoulos","authorEmail":"nicholas@akeebabackup.com","authorUrl":"https:\\/\\/www.akeebabackup.com","version":"2.4.3","description":"LIB_FOF_XML_DESCRIPTION","group":"","filename":"fof"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (106, 'PHPass', 'library', 'phpass', '', 0, 1, 1, 1, '{"name":"PHPass","type":"library","creationDate":"2004-2006","author":"Solar Designer","copyright":"","authorEmail":"solar@openwall.com","authorUrl":"http:\\/\\/www.openwall.com\\/phpass\\/","version":"0.3","description":"LIB_PHPASS_XML_DESCRIPTION","group":"","filename":"phpass"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -620,7 +638,7 @@ INSERT INTO `hu0fn_extensions` (`extension_id`, `name`, `type`, `element`, `fold
 (449, 'plg_authentication_cookie', 'plugin', 'cookie', 'authentication', 0, 1, 1, 0, '{"name":"plg_authentication_cookie","type":"plugin","creationDate":"July 2013","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2016 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"PLG_AUTH_COOKIE_XML_DESCRIPTION","group":"","filename":"cookie"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (450, 'plg_twofactorauth_yubikey', 'plugin', 'yubikey', 'twofactorauth', 0, 0, 1, 0, '{"name":"plg_twofactorauth_yubikey","type":"plugin","creationDate":"September 2013","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2016 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.2.0","description":"PLG_TWOFACTORAUTH_YUBIKEY_XML_DESCRIPTION","group":"","filename":"yubikey"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (451, 'plg_search_tags', 'plugin', 'tags', 'search', 0, 1, 1, 0, '{"name":"plg_search_tags","type":"plugin","creationDate":"March 2014","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2016 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"PLG_SEARCH_TAGS_XML_DESCRIPTION","group":"","filename":"tags"}', '{"search_limit":"50","show_tagged_items":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(452, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '{"name":"plg_system_updatenotification","type":"plugin","creationDate":"May 2015","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2016 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.5.0","description":"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION","group":"","filename":"updatenotification"}', '{"lastrun":1465558412}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(452, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '{"name":"plg_system_updatenotification","type":"plugin","creationDate":"May 2015","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2016 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.5.0","description":"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION","group":"","filename":"updatenotification"}', '{"lastrun":1465969929}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (453, 'plg_editors-xtd_module', 'plugin', 'module', 'editors-xtd', 0, 1, 1, 0, '{"name":"plg_editors-xtd_module","type":"plugin","creationDate":"October 2015","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2016 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.5.0","description":"PLG_MODULE_XML_DESCRIPTION","group":"","filename":"module"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (454, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '{"name":"plg_system_stats","type":"plugin","creationDate":"November 2013","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2016 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.5.0","description":"PLG_SYSTEM_STATS_XML_DESCRIPTION","group":"","filename":"stats"}', '{"mode":3,"lastrun":1464953040,"unique_id":"2072d4667a56af98316aef913ea7f41ac3979bf7","interval":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (503, 'beez3', 'template', 'beez3', '', 0, 1, 1, 0, '{"name":"beez3","type":"template","creationDate":"25 November 2009","author":"Angie Radtke","copyright":"Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.","authorEmail":"a.radtke@derauftritt.de","authorUrl":"http:\\/\\/www.der-auftritt.de","version":"3.1.0","description":"TPL_BEEZ3_XML_DESCRIPTION","group":"","filename":"templateDetails"}', '{"wrapperSmall":"53","wrapperLarge":"72","sitetitle":"","sitedescription":"","navposition":"center","templatecolor":"nature"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -645,7 +663,15 @@ INSERT INTO `hu0fn_extensions` (`extension_id`, `name`, `type`, `element`, `fold
 (10012, 'Search - JoomShopping', 'plugin', 'joomshopping', 'search', 0, 0, 1, 0, '{"name":"Search - JoomShopping","type":"plugin","creationDate":"12.10.2012","author":"MAXXmarketing GmbH","copyright":"","authorEmail":"marketing@maxx-marketing.net","authorUrl":"http:\\/\\/www.webdesigner-profi.de","version":"4.0.1","description":"Allows Searching of JoomShopping Component","group":"","filename":"joomshopping"}', '{"search_limit":"50"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10013, 'PLG_JOOMLA_OPTIONS', 'plugin', 'joomla_options', 'system', 0, 1, 1, 0, '{"name":"PLG_JOOMLA_OPTIONS","type":"plugin","creationDate":"Mart 2013","author":"Fedor Vlasenko","copyright":"Copyright (C) 2013 Fregate Studio.","authorEmail":"vlasenkofedor@mail.ru","authorUrl":"fregate.org.ua","version":"0.0.1","description":"PLG_JOOMLA_OPTIONS_XML_DESCRIPTION","group":"","filename":"joomla_options"}', '{"disable_mootools":"1","disable_jquery":"1","disable_bootstrap":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10014, 'Страница контактов', 'module', 'mod_page_contacts_gr', '', 0, 1, 0, 0, '{"name":"\\u0421\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u0430 \\u043a\\u043e\\u043d\\u0442\\u0430\\u043a\\u0442\\u043e\\u0432","type":"module","creationDate":"2016","author":"Sergei Bolonikov","copyright":"","authorEmail":"sergeibolonikov@gmail.com","authorUrl":"","version":"1.0","description":"\\u0421\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u0430 \\u043a\\u043e\\u043d\\u0442\\u0430\\u043a\\u0442\\u043e\\u0432","group":"","filename":"mod_page_contacts_gr"}', '[]', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(10015, 'mod_yandexmap', 'module', 'mod_yandexmap', '', 0, 1, 0, 0, '{"name":"mod_yandexmap","type":"module","creationDate":"November 2015","author":"Lange D.M.","copyright":"Copyright (C) www.medialine.by","authorEmail":"dlange@medialine.by","authorUrl":"www.medialine.by","version":"1.0.0","description":"\\u041c\\u043e\\u0434\\u0443\\u043b\\u044c \\u0432\\u044b\\u0432\\u043e\\u0434\\u0438\\u0442 \\u044f\\u043d\\u0434\\u0435\\u043a\\u0441 \\u043a\\u0430\\u0440\\u0442\\u0443","group":"","filename":"mod_yandexmap"}', '{"zoom":"12","marker_link_text":"\\u041f\\u043e\\u0434\\u0440\\u043e\\u0431\\u043d\\u0435\\u0435","markers_list":"","map_width":"100%","cache":"1","cache_time":"900","cachemode":"static"}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
+(10015, 'mod_yandexmap', 'module', 'mod_yandexmap', '', 0, 1, 0, 0, '{"name":"mod_yandexmap","type":"module","creationDate":"November 2015","author":"Lange D.M.","copyright":"Copyright (C) www.medialine.by","authorEmail":"dlange@medialine.by","authorUrl":"www.medialine.by","version":"1.0.0","description":"\\u041c\\u043e\\u0434\\u0443\\u043b\\u044c \\u0432\\u044b\\u0432\\u043e\\u0434\\u0438\\u0442 \\u044f\\u043d\\u0434\\u0435\\u043a\\u0441 \\u043a\\u0430\\u0440\\u0442\\u0443","group":"","filename":"mod_yandexmap"}', '{"zoom":"12","marker_link_text":"\\u041f\\u043e\\u0434\\u0440\\u043e\\u0431\\u043d\\u0435\\u0435","markers_list":"","map_width":"100%","cache":"1","cache_time":"900","cachemode":"static"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10016, 'JoomGallery', 'component', 'com_joomgallery', '', 1, 1, 0, 0, '{"name":"JoomGallery","type":"component","creationDate":"2016\\/06\\/09","author":"JoomGallery::ProjectTeam","copyright":"This component is released under the GNU\\/GPL License","authorEmail":"team@joomgallery.net","authorUrl":"http:\\/\\/www.joomgallery.net","version":"3.3.2","description":"JoomGallery 3 is a native Joomla! 3.x gallery component","group":"","filename":"joomgallery"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10017, 'JoomGallery ru-RU', 'file', 'JoomGalleryru-RU', '', 0, 1, 0, 0, '{"name":"JoomGallery ru-RU","type":"file","creationDate":"2013-06-16","author":"JoomGallery::ProjectTeam","copyright":"Copyright (C) 2008 - 2013 JoomGallery::ProjectTeam. All rights reserved.","authorEmail":"team@joomgallery.net","authorUrl":"http:\\/\\/www.joomgallery.net\\/","version":"3.1","description":"\\n    <div align=\\"center\\">\\n      <table border=\\"0\\" width=\\"100%\\">\\n        <tr>\\n          <td width=\\"100%\\" colspan=\\"2\\">\\n            <div align=\\"center\\">\\n              <h3>Russian Translation for JoomGallery 3.x<\\/h3>\\n              <br \\/><strong>by: <a href=\\"https:\\/\\/www.transifex.com\\/projects\\/p\\/joomgallery3\\/language\\/ru_RU\\/\\" target=\\"_blank\\">JoomGallery::TranslationTeam::Russian<\\/a><\\/strong>\\n              <br \\/>(based on a translation by: Hermann Maurer, mikenike (EXIF) and Michael Grigorev (IPTC))\\n            <\\/div>\\n            <hr \\/>\\n          <\\/td>\\n        <\\/tr>\\n        <tr>\\n          <td width=\\"25%\\"><u><strong>Translated areas:<\\/strong><\\/u><\\/td>\\n          <td width=\\"75%\\">Administrator (Backend) and Website (Frontend) incl. EXIF- and IPTC-Tags<\\/td>\\n        <\\/tr>\\n        <tr>\\n          <td width=\\"25%\\"><u><strong>Translation version:<\\/strong><\\/u><\\/td>\\n          <td width=\\"75%\\">3.1<\\/td>\\n        <\\/tr>\\n        <td width=\\"100%\\" colspan=\\"2\\"><hr \\/><\\/td>\\n        <tr>\\n          <td width=\\"25%\\"><u><strong>JoomGallery-Website:<\\/strong><\\/u><\\/td>\\n          <td width=\\"75%\\"><a href=\\"http:\\/\\/www.en.joomgallery.net\\" target=\\"_blank\\">http:\\/\\/www.en.joomgallery.net<\\/a><\\/td>\\n        <\\/tr>\\n        <\\/tr>\\n        <td width=\\"100%\\" colspan=\\"2\\"><hr \\/><\\/td>\\n        <tr>\\n      <\\/table>\\n    <\\/div>","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10018, 'BootOne: Responsive Layout for JoomGallery', 'file', 'BootOneResponsiveLayoutforJoomGallery', '', 0, 1, 0, 0, '{"name":"BootOne: Responsive Layout for JoomGallery","type":"file","creationDate":"2015\\/05\\/20","author":"JoomGallery::ProjectTeam","copyright":"This component is released under the GNU\\/GPL License","authorEmail":"team@joomgallery.net","authorUrl":"http:\\/\\/www.joomgallery.net","version":"1.0 ALPHA","description":"BootOne: Responsive Layout for JoomGallery","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10020, 'Jshopping Categories Gr', 'module', 'mod_jshopping_categories_gr', '', 0, 1, 0, 0, '{"name":"Jshopping Categories Gr","type":"module","creationDate":"20.12.2012","author":"gray","copyright":"","authorEmail":"","authorUrl":"","version":"1","description":"\\u041f\\u043e\\u043a\\u0430\\u0437\\u044b\\u0432\\u0430\\u0435\\u0442 \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438","group":"","filename":"mod_jshopping_categories_gr"}', '{"show_image":"0","sort":"id","ordering":"asc"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10021, 'JoomShopping Second Description For Product', 'plugin', 'second_description_for_product', 'jshoppingproducts', 0, 1, 1, 0, '{"creationDate":"18.02.2015","author":"MAXXmarketing GmbH","authorEmail":"marketing@maxx-marketing.net","authorUrl":"http://www.webdesigner-profi.de","version":"1.0.1"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10022, 'JoomShopping Second Description For Product', 'plugin', 'second_description_for_product', 'jshoppingadmin', 0, 1, 1, 0, '{"creationDate":"18.02.2015","author":"MAXXmarketing GmbH","authorEmail":"marketing@maxx-marketing.net","authorUrl":"http://www.webdesigner-profi.de","version":"1.0.1"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10023, 'Модуль вывода картинки бекграундом', 'module', 'mod_background_gr', '', 0, 1, 0, 0, '{"name":"\\u041c\\u043e\\u0434\\u0443\\u043b\\u044c \\u0432\\u044b\\u0432\\u043e\\u0434\\u0430 \\u043a\\u0430\\u0440\\u0442\\u0438\\u043d\\u043a\\u0438 \\u0431\\u0435\\u043a\\u0433\\u0440\\u0430\\u0443\\u043d\\u0434\\u043e\\u043c","type":"module","creationDate":"2016","author":"Sergei Bolonikov","copyright":"","authorEmail":"sergeibolonikov@gmail.com","authorUrl":"","version":"1.0","description":"\\u041c\\u043e\\u0434\\u0443\\u043b\\u044c \\u0432\\u044b\\u0432\\u043e\\u0434\\u0430 \\u043a\\u0430\\u0440\\u0442\\u0438\\u043d\\u043a\\u0438 \\u0431\\u0435\\u043a\\u0433\\u0440\\u0430\\u0443\\u043d\\u0434\\u043e\\u043c","group":"","filename":"mod_background_gr"}', '[]', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10024, 'Модуль схемы', 'module', 'mod_scheme_gr', '', 0, 1, 0, 0, '{"name":"\\u041c\\u043e\\u0434\\u0443\\u043b\\u044c \\u0441\\u0445\\u0435\\u043c\\u044b","type":"module","creationDate":"2016","author":"Sergei Bolonikov","copyright":"","authorEmail":"sergeibolonikov@gmail.com","authorUrl":"","version":"1.0","description":"\\u041c\\u043e\\u0434\\u0443\\u043b\\u044c \\u0441\\u0445\\u0435\\u043c\\u044b","group":"","filename":"mod_scheme_gr"}', '[]', '', '', 0, '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1124,6 +1150,556 @@ CREATE TABLE IF NOT EXISTS `hu0fn_finder_types` (
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `hu0fn_joomgallery`
+--
+
+CREATE TABLE IF NOT EXISTS `hu0fn_joomgallery` (
+  `id` int(11) NOT NULL,
+  `asset_id` int(10) NOT NULL DEFAULT '0',
+  `catid` int(11) NOT NULL DEFAULT '0',
+  `imgtitle` text NOT NULL,
+  `alias` varchar(255) NOT NULL DEFAULT '',
+  `imgauthor` varchar(50) DEFAULT NULL,
+  `imgtext` text NOT NULL,
+  `imgdate` datetime NOT NULL,
+  `hits` int(11) NOT NULL DEFAULT '0',
+  `downloads` int(11) NOT NULL DEFAULT '0',
+  `imgvotes` int(11) NOT NULL DEFAULT '0',
+  `imgvotesum` int(11) NOT NULL DEFAULT '0',
+  `access` tinyint(3) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `hidden` tinyint(1) NOT NULL DEFAULT '0',
+  `featured` tinyint(1) NOT NULL DEFAULT '0',
+  `imgfilename` varchar(255) NOT NULL DEFAULT '',
+  `imgthumbname` varchar(255) NOT NULL DEFAULT '',
+  `checked_out` int(11) NOT NULL DEFAULT '0',
+  `owner` int(11) unsigned NOT NULL DEFAULT '0',
+  `approved` tinyint(1) NOT NULL DEFAULT '0',
+  `useruploaded` tinyint(1) NOT NULL DEFAULT '0',
+  `ordering` int(11) NOT NULL DEFAULT '0',
+  `params` text NOT NULL,
+  `metakey` text NOT NULL,
+  `metadesc` text NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `hu0fn_joomgallery`
+--
+
+INSERT INTO `hu0fn_joomgallery` (`id`, `asset_id`, `catid`, `imgtitle`, `alias`, `imgauthor`, `imgtext`, `imgdate`, `hits`, `downloads`, `imgvotes`, `imgvotesum`, `access`, `published`, `hidden`, `featured`, `imgfilename`, `imgthumbname`, `checked_out`, `owner`, `approved`, `useruploaded`, `ordering`, `params`, `metakey`, `metadesc`) VALUES
+(1, 91, 2, 'Фото_1', 'foto-1-1', '', '', '2016-06-10 13:47:28', 1, 0, 0, 0, 1, 1, 0, 0, '_1_20160610_1470990721.jpg', '_1_20160610_1470990721.jpg', 0, 0, 1, 0, 1, '', '', ''),
+(2, 92, 2, 'Фото_2', 'foto-2-2', '', '', '2016-06-10 13:47:28', 1, 0, 0, 0, 1, 1, 0, 0, '_2_20160610_1751237316.jpg', '_2_20160610_1751237316.jpg', 0, 0, 1, 0, 2, '', '', ''),
+(3, 93, 2, 'Фото_3', 'foto-3-3', '', '', '2016-06-10 13:47:28', 1, 0, 0, 0, 1, 1, 0, 0, '_3_20160610_1677941306.jpg', '_3_20160610_1677941306.jpg', 0, 0, 1, 0, 3, '', '', ''),
+(4, 94, 3, 'Фото_1', 'foto-1-4', '', '', '2016-06-10 13:48:40', 3, 0, 0, 0, 1, 1, 0, 0, '_1_20160610_2081301745.jpg', '_1_20160610_2081301745.jpg', 0, 0, 1, 0, 1, '', '', ''),
+(5, 95, 4, 'Фото_2', 'foto-2-5', '', '', '2016-06-10 13:48:40', 0, 0, 0, 0, 1, 1, 0, 0, '_2_20160610_1532069038.jpg', '_2_20160610_1532069038.jpg', 0, 0, 1, 0, 2, '', '', ''),
+(6, 96, 3, 'Фото_3', 'foto-3-6', '', '', '2016-06-10 13:48:40', 0, 0, 0, 0, 1, 1, 0, 0, '_3_20160610_1813049062.jpg', '_3_20160610_1813049062.jpg', 0, 0, 1, 0, 2, '', '', ''),
+(7, 98, 4, 'foto_1', 'foto-1-7', '', '', '2016-06-13 08:34:50', 0, 0, 0, 0, 1, 1, 0, 0, 'foto_1_20160613_1893435614.jpg', 'foto_1_20160613_1893435614.jpg', 0, 0, 1, 0, 1, '', '', ''),
+(8, 100, 2, 'катег_1', 'kateg-1-8', '', '', '2016-06-13 08:43:25', 0, 0, 0, 0, 1, 1, 0, 0, '_1_20160613_1335694954.jpg', '_1_20160613_1335694954.jpg', 0, 0, 1, 0, 4, '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `hu0fn_joomgallery_category_details`
+--
+
+CREATE TABLE IF NOT EXISTS `hu0fn_joomgallery_category_details` (
+  `id` int(11) NOT NULL,
+  `details_key` varchar(255) NOT NULL,
+  `details_value` text NOT NULL,
+  `ordering` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `hu0fn_joomgallery_catg`
+--
+
+CREATE TABLE IF NOT EXISTS `hu0fn_joomgallery_catg` (
+  `cid` int(11) NOT NULL,
+  `asset_id` int(10) NOT NULL DEFAULT '0',
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `alias` varchar(2048) NOT NULL DEFAULT '',
+  `parent_id` int(11) NOT NULL DEFAULT '0',
+  `lft` int(11) NOT NULL DEFAULT '0',
+  `rgt` int(11) NOT NULL DEFAULT '0',
+  `level` int(1) unsigned NOT NULL DEFAULT '0',
+  `description` text,
+  `access` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `hidden` tinyint(1) NOT NULL DEFAULT '0',
+  `in_hidden` tinyint(1) NOT NULL DEFAULT '0',
+  `password` varchar(100) NOT NULL DEFAULT '',
+  `owner` int(11) DEFAULT '0',
+  `thumbnail` int(11) DEFAULT NULL,
+  `img_position` int(10) DEFAULT '0',
+  `catpath` varchar(2048) NOT NULL DEFAULT '',
+  `params` text NOT NULL,
+  `metakey` text NOT NULL,
+  `metadesc` text NOT NULL,
+  `exclude_toplists` int(1) NOT NULL,
+  `exclude_search` int(1) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `hu0fn_joomgallery_catg`
+--
+
+INSERT INTO `hu0fn_joomgallery_catg` (`cid`, `asset_id`, `name`, `alias`, `parent_id`, `lft`, `rgt`, `level`, `description`, `access`, `published`, `hidden`, `in_hidden`, `password`, `owner`, `thumbnail`, `img_position`, `catpath`, `params`, `metakey`, `metadesc`, `exclude_toplists`, `exclude_search`) VALUES
+(1, 0, 'ROOT', 'root', 0, 0, 8, 0, NULL, 1, 1, 0, 0, '', 0, NULL, 0, '', '', '', '', 0, 0),
+(2, 89, 'Категория 1', '1', 1, 5, 6, 1, '', 1, 1, 0, 0, '', 0, 8, -1, '_1_2', '', '', '', 0, 0),
+(3, 90, 'Категория 2', '2', 1, 3, 4, 1, '', 1, 1, 0, 0, '', 0, 8, -1, '_2_3', '', '', '', 0, 0),
+(4, 97, 'Категория 3', '3', 1, 1, 2, 1, '', 1, 1, 0, 0, '', 0, 8, -1, '_3_4', '', '', '', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `hu0fn_joomgallery_comments`
+--
+
+CREATE TABLE IF NOT EXISTS `hu0fn_joomgallery_comments` (
+  `cmtid` int(11) NOT NULL,
+  `cmtpic` int(11) NOT NULL DEFAULT '0',
+  `cmtip` varchar(15) NOT NULL DEFAULT '',
+  `userid` int(11) unsigned NOT NULL DEFAULT '0',
+  `cmtname` varchar(50) NOT NULL DEFAULT '',
+  `cmttext` text NOT NULL,
+  `cmtdate` datetime NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `approved` tinyint(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `hu0fn_joomgallery_config`
+--
+
+CREATE TABLE IF NOT EXISTS `hu0fn_joomgallery_config` (
+  `id` int(1) NOT NULL,
+  `group_id` int(11) NOT NULL,
+  `ordering` int(11) NOT NULL,
+  `jg_pathimages` varchar(100) NOT NULL,
+  `jg_pathoriginalimages` varchar(100) NOT NULL,
+  `jg_paththumbs` varchar(100) NOT NULL,
+  `jg_pathftpupload` varchar(100) NOT NULL,
+  `jg_pathtemp` varchar(100) NOT NULL,
+  `jg_wmpath` varchar(100) NOT NULL,
+  `jg_wmfile` varchar(50) NOT NULL,
+  `jg_use_real_paths` int(1) NOT NULL,
+  `jg_checkupdate` int(1) NOT NULL,
+  `jg_filenamewithjs` int(1) NOT NULL,
+  `jg_filenamereplace` text NOT NULL,
+  `jg_thumbcreation` varchar(5) NOT NULL,
+  `jg_fastgd2thumbcreation` int(1) NOT NULL,
+  `jg_impath` varchar(50) NOT NULL,
+  `jg_resizetomaxwidth` int(1) NOT NULL,
+  `jg_maxwidth` int(5) NOT NULL,
+  `jg_picturequality` int(3) NOT NULL,
+  `jg_useforresizedirection` int(1) NOT NULL,
+  `jg_cropposition` int(1) NOT NULL,
+  `jg_thumbwidth` int(5) NOT NULL,
+  `jg_thumbheight` int(5) NOT NULL,
+  `jg_thumbquality` int(3) NOT NULL,
+  `jg_uploadorder` int(1) NOT NULL,
+  `jg_useorigfilename` int(1) NOT NULL,
+  `jg_filenamenumber` int(1) NOT NULL,
+  `jg_delete_original` int(1) NOT NULL,
+  `jg_msg_upload_type` int(1) NOT NULL,
+  `jg_msg_upload_recipients` text NOT NULL,
+  `jg_msg_download_type` int(1) NOT NULL,
+  `jg_msg_download_recipients` text NOT NULL,
+  `jg_msg_zipdownload` int(1) NOT NULL,
+  `jg_msg_comment_type` int(1) NOT NULL,
+  `jg_msg_comment_recipients` text NOT NULL,
+  `jg_msg_comment_toowner` int(1) NOT NULL,
+  `jg_msg_nametag_type` int(1) NOT NULL,
+  `jg_msg_nametag_recipients` text NOT NULL,
+  `jg_msg_nametag_totaggeduser` int(1) NOT NULL,
+  `jg_msg_nametag_toowner` int(1) NOT NULL,
+  `jg_msg_report_type` int(1) NOT NULL,
+  `jg_msg_report_recipients` text NOT NULL,
+  `jg_msg_report_toowner` int(1) NOT NULL,
+  `jg_msg_rejectimg_type` int(1) NOT NULL,
+  `jg_msg_global_from` int(1) NOT NULL,
+  `jg_realname` int(1) NOT NULL,
+  `jg_contentpluginsenabled` int(1) NOT NULL,
+  `jg_itemid` varchar(10) NOT NULL,
+  `jg_ajaxcategoryselection` int(1) NOT NULL,
+  `jg_disableunrequiredchecks` int(1) NOT NULL,
+  `jg_use_listbox_max_user_count` int(1) NOT NULL,
+  `jg_userspace` int(1) NOT NULL,
+  `jg_useruploaddefaultcat` int(1) NOT NULL,
+  `jg_approve` int(1) NOT NULL,
+  `jg_unregistered_permissions` int(1) NOT NULL,
+  `jg_maxusercat` int(5) NOT NULL,
+  `jg_maxuserimage` int(9) NOT NULL,
+  `jg_maxuserimage_timespan` int(9) NOT NULL,
+  `jg_maxfilesize` int(9) NOT NULL,
+  `jg_usercatacc` int(1) NOT NULL,
+  `jg_usercatthumbalign` int(1) NOT NULL,
+  `jg_useruploadsingle` int(1) NOT NULL,
+  `jg_maxuploadfields` int(3) NOT NULL,
+  `jg_useruploadajax` int(1) NOT NULL,
+  `jg_useruploadbatch` int(1) NOT NULL,
+  `jg_useruploadjava` int(1) NOT NULL,
+  `jg_useruseorigfilename` int(1) NOT NULL,
+  `jg_useruploadnumber` int(1) NOT NULL,
+  `jg_special_gif_upload` int(1) NOT NULL,
+  `jg_delete_original_user` int(1) NOT NULL,
+  `jg_newpiccopyright` int(1) NOT NULL,
+  `jg_newpicnote` int(1) NOT NULL,
+  `jg_redirect_after_upload` int(1) NOT NULL,
+  `jg_edit_metadata` int(1) NOT NULL,
+  `jg_download` int(1) NOT NULL,
+  `jg_download_unreg` int(1) NOT NULL,
+  `jg_download_hint` int(1) NOT NULL,
+  `jg_downloadfile` int(1) NOT NULL,
+  `jg_downloadwithwatermark` int(1) NOT NULL,
+  `jg_showrating` int(1) NOT NULL,
+  `jg_maxvoting` int(1) NOT NULL,
+  `jg_ratingcalctype` int(1) NOT NULL,
+  `jg_ratingdisplaytype` int(1) NOT NULL,
+  `jg_ajaxrating` int(1) NOT NULL,
+  `jg_votingonlyonce` int(1) NOT NULL,
+  `jg_votingonlyreg` int(1) NOT NULL,
+  `jg_showcomment` int(1) NOT NULL,
+  `jg_anoncomment` int(1) NOT NULL,
+  `jg_namedanoncomment` int(1) NOT NULL,
+  `jg_anonapprovecom` int(1) NOT NULL,
+  `jg_approvecom` int(1) NOT NULL,
+  `jg_bbcodesupport` int(1) NOT NULL,
+  `jg_smiliesupport` int(1) NOT NULL,
+  `jg_anismilie` int(1) NOT NULL,
+  `jg_smiliescolor` varchar(10) NOT NULL,
+  `jg_report_images` int(1) NOT NULL,
+  `jg_report_unreg` int(1) NOT NULL,
+  `jg_report_hint` int(1) NOT NULL,
+  `jg_alternative_layout` varchar(255) NOT NULL,
+  `jg_anchors` int(1) NOT NULL,
+  `jg_tooltips` int(1) NOT NULL,
+  `jg_dyncrop` int(1) NOT NULL,
+  `jg_dyncropposition` int(1) NOT NULL,
+  `jg_dyncropwidth` int(5) NOT NULL,
+  `jg_dyncropheight` int(5) NOT NULL,
+  `jg_dyncropbgcol` varchar(12) NOT NULL,
+  `jg_hideemptycats` int(1) NOT NULL,
+  `jg_skipcatview` int(1) NOT NULL,
+  `jg_imgalign` int(3) NOT NULL,
+  `jg_showrestrictedcats` int(1) NOT NULL,
+  `jg_showrestrictedhint` int(1) NOT NULL,
+  `jg_firstorder` varchar(20) NOT NULL,
+  `jg_secondorder` varchar(20) NOT NULL,
+  `jg_thirdorder` varchar(20) NOT NULL,
+  `jg_pagetitle_cat` text NOT NULL,
+  `jg_pagetitle_detail` text NOT NULL,
+  `jg_showgalleryhead` int(1) NOT NULL,
+  `jg_showpathway` int(1) NOT NULL,
+  `jg_completebreadcrumbs` int(1) NOT NULL,
+  `jg_search` int(1) NOT NULL,
+  `jg_searchcols` int(1) NOT NULL,
+  `jg_searchthumbalign` int(1) NOT NULL,
+  `jg_searchtextalign` int(1) NOT NULL,
+  `jg_showsearchdownload` int(1) NOT NULL,
+  `jg_showsearchfavourite` int(1) NOT NULL,
+  `jg_search_report_images` int(1) NOT NULL,
+  `jg_showsearcheditorlinks` int(1) NOT NULL,
+  `jg_showallpics` int(1) NOT NULL,
+  `jg_showallhits` int(1) NOT NULL,
+  `jg_showbacklink` int(1) NOT NULL,
+  `jg_suppresscredits` int(1) NOT NULL,
+  `jg_showuserpanel` int(1) NOT NULL,
+  `jg_showuserpanel_hint` int(1) NOT NULL,
+  `jg_showuserpanel_unreg` int(1) NOT NULL,
+  `jg_showallpicstoadmin` int(1) NOT NULL,
+  `jg_showminithumbs` int(1) NOT NULL,
+  `jg_openjs_padding` int(3) NOT NULL,
+  `jg_openjs_background` varchar(12) NOT NULL,
+  `jg_dhtml_border` varchar(12) NOT NULL,
+  `jg_show_title_in_popup` int(1) NOT NULL,
+  `jg_show_description_in_popup` int(1) NOT NULL,
+  `jg_lightbox_speed` int(3) NOT NULL,
+  `jg_lightbox_slide_all` int(1) NOT NULL,
+  `jg_resize_js_image` int(1) NOT NULL,
+  `jg_disable_rightclick_original` int(1) NOT NULL,
+  `jg_showgallerysubhead` int(1) NOT NULL,
+  `jg_showallcathead` int(1) NOT NULL,
+  `jg_colcat` int(1) NOT NULL,
+  `jg_catperpage` int(1) NOT NULL,
+  `jg_ordercatbyalpha` int(1) NOT NULL,
+  `jg_showgallerypagenav` int(1) NOT NULL,
+  `jg_showcatcount` int(1) NOT NULL,
+  `jg_showcatthumb` int(1) NOT NULL,
+  `jg_showrandomcatthumb` int(1) NOT NULL,
+  `jg_ctalign` int(1) NOT NULL,
+  `jg_showtotalcatimages` int(1) NOT NULL,
+  `jg_showtotalcathits` int(1) NOT NULL,
+  `jg_showcatasnew` int(1) NOT NULL,
+  `jg_catdaysnew` int(3) NOT NULL,
+  `jg_showdescriptioningalleryview` int(1) NOT NULL,
+  `jg_uploadicongallery` int(1) NOT NULL,
+  `jg_showsubsingalleryview` int(1) NOT NULL,
+  `jg_category_rss` int(9) NOT NULL,
+  `jg_category_rss_icon` varchar(10) NOT NULL,
+  `jg_uploadiconcategory` int(1) NOT NULL,
+  `jg_showcathead` int(1) NOT NULL,
+  `jg_usercatorder` int(1) NOT NULL,
+  `jg_usercatorderlist` varchar(50) NOT NULL,
+  `jg_showcatdescriptionincat` int(1) NOT NULL,
+  `jg_showpagenav` int(1) NOT NULL,
+  `jg_showpiccount` int(1) NOT NULL,
+  `jg_perpage` int(3) NOT NULL,
+  `jg_catthumbalign` int(1) NOT NULL,
+  `jg_colnumb` int(3) NOT NULL,
+  `jg_detailpic_open` varchar(50) NOT NULL,
+  `jg_lightboxbigpic` int(1) NOT NULL,
+  `jg_showtitle` int(1) NOT NULL,
+  `jg_showpicasnew` int(1) NOT NULL,
+  `jg_daysnew` int(3) NOT NULL,
+  `jg_showhits` int(1) NOT NULL,
+  `jg_showdownloads` int(1) NOT NULL,
+  `jg_showauthor` int(1) NOT NULL,
+  `jg_showowner` int(1) NOT NULL,
+  `jg_showcatcom` int(1) NOT NULL,
+  `jg_showcatrate` int(1) NOT NULL,
+  `jg_showcatdescription` int(1) NOT NULL,
+  `jg_showcategorydownload` int(1) NOT NULL,
+  `jg_showcategoryfavourite` int(1) NOT NULL,
+  `jg_category_report_images` int(1) NOT NULL,
+  `jg_showcategoryeditorlinks` int(1) NOT NULL,
+  `jg_showsubcathead` int(1) NOT NULL,
+  `jg_showsubcatcount` int(1) NOT NULL,
+  `jg_colsubcat` int(3) NOT NULL,
+  `jg_subperpage` int(3) NOT NULL,
+  `jg_showpagenavsubs` int(1) NOT NULL,
+  `jg_subcatthumbalign` int(1) NOT NULL,
+  `jg_showsubthumbs` int(1) NOT NULL,
+  `jg_showrandomsubthumb` int(1) NOT NULL,
+  `jg_showdescriptionincategoryview` int(1) NOT NULL,
+  `jg_ordersubcatbyalpha` int(1) NOT NULL,
+  `jg_showtotalsubcatimages` int(1) NOT NULL,
+  `jg_showtotalsubcathits` int(1) NOT NULL,
+  `jg_uploadiconsubcat` int(1) NOT NULL,
+  `jg_showdetailpage` int(1) NOT NULL,
+  `jg_disabledetailpage` int(1) NOT NULL,
+  `jg_showdetailnumberofpics` int(1) NOT NULL,
+  `jg_cursor_navigation` int(1) NOT NULL,
+  `jg_disable_rightclick_detail` int(1) NOT NULL,
+  `jg_detail_report_images` int(1) NOT NULL,
+  `jg_showdetaileditorlinks` int(1) NOT NULL,
+  `jg_showdetailtitle` int(1) NOT NULL,
+  `jg_showdetail` int(1) NOT NULL,
+  `jg_showdetailaccordion` int(1) NOT NULL,
+  `jg_accordionduration` int(3) NOT NULL,
+  `jg_accordiondisplay` int(3) NOT NULL,
+  `jg_accordionopacity` int(1) NOT NULL,
+  `jg_accordionalwayshide` int(1) NOT NULL,
+  `jg_accordioninitialeffect` int(1) NOT NULL,
+  `jg_showdetaildescription` int(1) NOT NULL,
+  `jg_showdetaildatum` int(1) NOT NULL,
+  `jg_showdetailhits` int(1) NOT NULL,
+  `jg_showdetaildownloads` int(1) NOT NULL,
+  `jg_showdetailrating` int(1) NOT NULL,
+  `jg_showdetailfilesize` int(1) NOT NULL,
+  `jg_showdetailauthor` int(1) NOT NULL,
+  `jg_showoriginalfilesize` int(1) NOT NULL,
+  `jg_showdetaildownload` int(1) NOT NULL,
+  `jg_watermark` int(1) NOT NULL,
+  `jg_watermarkpos` int(1) NOT NULL,
+  `jg_watermarkzoom` int(1) NOT NULL,
+  `jg_watermarksize` int(1) NOT NULL,
+  `jg_bigpic` int(1) NOT NULL,
+  `jg_bigpic_unreg` int(1) NOT NULL,
+  `jg_bigpic_open` varchar(50) NOT NULL,
+  `jg_bbcodelink` int(1) NOT NULL,
+  `jg_showcommentsunreg` int(1) NOT NULL,
+  `jg_showcommentsarea` int(1) NOT NULL,
+  `jg_send2friend` int(1) NOT NULL,
+  `jg_minis` int(1) NOT NULL,
+  `jg_motionminis` int(1) NOT NULL,
+  `jg_motionminiWidth` int(3) NOT NULL,
+  `jg_motionminiHeight` int(3) NOT NULL,
+  `jg_motionminiLimit` int(2) NOT NULL,
+  `jg_miniWidth` int(3) NOT NULL,
+  `jg_miniHeight` int(3) NOT NULL,
+  `jg_minisprop` int(1) NOT NULL,
+  `jg_nameshields` int(1) NOT NULL,
+  `jg_nameshields_others` int(1) NOT NULL,
+  `jg_nameshields_unreg` int(1) NOT NULL,
+  `jg_show_nameshields_unreg` int(1) NOT NULL,
+  `jg_nameshields_height` int(3) NOT NULL,
+  `jg_nameshields_width` int(3) NOT NULL,
+  `jg_slideshow` int(1) NOT NULL,
+  `jg_slideshow_timer` int(3) NOT NULL,
+  `jg_slideshow_transition` int(1) NOT NULL,
+  `jg_slideshow_transtime` int(3) NOT NULL,
+  `jg_slideshow_maxdimauto` int(1) NOT NULL,
+  `jg_slideshow_width` int(3) NOT NULL,
+  `jg_slideshow_heigth` int(3) NOT NULL,
+  `jg_slideshow_infopane` int(1) NOT NULL,
+  `jg_slideshow_carousel` int(1) NOT NULL,
+  `jg_slideshow_arrows` int(1) NOT NULL,
+  `jg_slideshow_repeat` int(1) NOT NULL,
+  `jg_showexifdata` int(1) NOT NULL,
+  `jg_showgeotagging` int(1) NOT NULL,
+  `jg_geotaggingkey` text NOT NULL,
+  `jg_subifdtags` text NOT NULL,
+  `jg_ifdotags` text NOT NULL,
+  `jg_gpstags` text NOT NULL,
+  `jg_showiptcdata` int(1) NOT NULL,
+  `jg_iptctags` text NOT NULL,
+  `jg_showtoplist` int(1) NOT NULL,
+  `jg_toplist` int(3) NOT NULL,
+  `jg_topthumbalign` int(1) NOT NULL,
+  `jg_toptextalign` int(1) NOT NULL,
+  `jg_toplistcols` int(3) NOT NULL,
+  `jg_whereshowtoplist` int(1) NOT NULL,
+  `jg_showrate` int(1) NOT NULL,
+  `jg_showlatest` int(1) NOT NULL,
+  `jg_showcom` int(1) NOT NULL,
+  `jg_showthiscomment` int(1) NOT NULL,
+  `jg_showmostviewed` int(1) NOT NULL,
+  `jg_showtoplistdownload` int(1) NOT NULL,
+  `jg_showtoplistfavourite` int(1) NOT NULL,
+  `jg_toplist_report_images` int(1) NOT NULL,
+  `jg_showtoplisteditorlinks` int(1) NOT NULL,
+  `jg_favourites` int(1) NOT NULL,
+  `jg_favouritesshownotauth` int(1) NOT NULL,
+  `jg_maxfavourites` int(5) NOT NULL,
+  `jg_zipdownload` int(1) NOT NULL,
+  `jg_usefavouritesforpubliczip` int(1) NOT NULL,
+  `jg_usefavouritesforzip` int(1) NOT NULL,
+  `jg_allimagesofcategory` int(1) NOT NULL,
+  `jg_showfavouritesdownload` int(1) NOT NULL,
+  `jg_showfavouriteseditorlinks` int(1) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `hu0fn_joomgallery_config`
+--
+
+INSERT INTO `hu0fn_joomgallery_config` (`id`, `group_id`, `ordering`, `jg_pathimages`, `jg_pathoriginalimages`, `jg_paththumbs`, `jg_pathftpupload`, `jg_pathtemp`, `jg_wmpath`, `jg_wmfile`, `jg_use_real_paths`, `jg_checkupdate`, `jg_filenamewithjs`, `jg_filenamereplace`, `jg_thumbcreation`, `jg_fastgd2thumbcreation`, `jg_impath`, `jg_resizetomaxwidth`, `jg_maxwidth`, `jg_picturequality`, `jg_useforresizedirection`, `jg_cropposition`, `jg_thumbwidth`, `jg_thumbheight`, `jg_thumbquality`, `jg_uploadorder`, `jg_useorigfilename`, `jg_filenamenumber`, `jg_delete_original`, `jg_msg_upload_type`, `jg_msg_upload_recipients`, `jg_msg_download_type`, `jg_msg_download_recipients`, `jg_msg_zipdownload`, `jg_msg_comment_type`, `jg_msg_comment_recipients`, `jg_msg_comment_toowner`, `jg_msg_nametag_type`, `jg_msg_nametag_recipients`, `jg_msg_nametag_totaggeduser`, `jg_msg_nametag_toowner`, `jg_msg_report_type`, `jg_msg_report_recipients`, `jg_msg_report_toowner`, `jg_msg_rejectimg_type`, `jg_msg_global_from`, `jg_realname`, `jg_contentpluginsenabled`, `jg_itemid`, `jg_ajaxcategoryselection`, `jg_disableunrequiredchecks`, `jg_use_listbox_max_user_count`, `jg_userspace`, `jg_useruploaddefaultcat`, `jg_approve`, `jg_unregistered_permissions`, `jg_maxusercat`, `jg_maxuserimage`, `jg_maxuserimage_timespan`, `jg_maxfilesize`, `jg_usercatacc`, `jg_usercatthumbalign`, `jg_useruploadsingle`, `jg_maxuploadfields`, `jg_useruploadajax`, `jg_useruploadbatch`, `jg_useruploadjava`, `jg_useruseorigfilename`, `jg_useruploadnumber`, `jg_special_gif_upload`, `jg_delete_original_user`, `jg_newpiccopyright`, `jg_newpicnote`, `jg_redirect_after_upload`, `jg_edit_metadata`, `jg_download`, `jg_download_unreg`, `jg_download_hint`, `jg_downloadfile`, `jg_downloadwithwatermark`, `jg_showrating`, `jg_maxvoting`, `jg_ratingcalctype`, `jg_ratingdisplaytype`, `jg_ajaxrating`, `jg_votingonlyonce`, `jg_votingonlyreg`, `jg_showcomment`, `jg_anoncomment`, `jg_namedanoncomment`, `jg_anonapprovecom`, `jg_approvecom`, `jg_bbcodesupport`, `jg_smiliesupport`, `jg_anismilie`, `jg_smiliescolor`, `jg_report_images`, `jg_report_unreg`, `jg_report_hint`, `jg_alternative_layout`, `jg_anchors`, `jg_tooltips`, `jg_dyncrop`, `jg_dyncropposition`, `jg_dyncropwidth`, `jg_dyncropheight`, `jg_dyncropbgcol`, `jg_hideemptycats`, `jg_skipcatview`, `jg_imgalign`, `jg_showrestrictedcats`, `jg_showrestrictedhint`, `jg_firstorder`, `jg_secondorder`, `jg_thirdorder`, `jg_pagetitle_cat`, `jg_pagetitle_detail`, `jg_showgalleryhead`, `jg_showpathway`, `jg_completebreadcrumbs`, `jg_search`, `jg_searchcols`, `jg_searchthumbalign`, `jg_searchtextalign`, `jg_showsearchdownload`, `jg_showsearchfavourite`, `jg_search_report_images`, `jg_showsearcheditorlinks`, `jg_showallpics`, `jg_showallhits`, `jg_showbacklink`, `jg_suppresscredits`, `jg_showuserpanel`, `jg_showuserpanel_hint`, `jg_showuserpanel_unreg`, `jg_showallpicstoadmin`, `jg_showminithumbs`, `jg_openjs_padding`, `jg_openjs_background`, `jg_dhtml_border`, `jg_show_title_in_popup`, `jg_show_description_in_popup`, `jg_lightbox_speed`, `jg_lightbox_slide_all`, `jg_resize_js_image`, `jg_disable_rightclick_original`, `jg_showgallerysubhead`, `jg_showallcathead`, `jg_colcat`, `jg_catperpage`, `jg_ordercatbyalpha`, `jg_showgallerypagenav`, `jg_showcatcount`, `jg_showcatthumb`, `jg_showrandomcatthumb`, `jg_ctalign`, `jg_showtotalcatimages`, `jg_showtotalcathits`, `jg_showcatasnew`, `jg_catdaysnew`, `jg_showdescriptioningalleryview`, `jg_uploadicongallery`, `jg_showsubsingalleryview`, `jg_category_rss`, `jg_category_rss_icon`, `jg_uploadiconcategory`, `jg_showcathead`, `jg_usercatorder`, `jg_usercatorderlist`, `jg_showcatdescriptionincat`, `jg_showpagenav`, `jg_showpiccount`, `jg_perpage`, `jg_catthumbalign`, `jg_colnumb`, `jg_detailpic_open`, `jg_lightboxbigpic`, `jg_showtitle`, `jg_showpicasnew`, `jg_daysnew`, `jg_showhits`, `jg_showdownloads`, `jg_showauthor`, `jg_showowner`, `jg_showcatcom`, `jg_showcatrate`, `jg_showcatdescription`, `jg_showcategorydownload`, `jg_showcategoryfavourite`, `jg_category_report_images`, `jg_showcategoryeditorlinks`, `jg_showsubcathead`, `jg_showsubcatcount`, `jg_colsubcat`, `jg_subperpage`, `jg_showpagenavsubs`, `jg_subcatthumbalign`, `jg_showsubthumbs`, `jg_showrandomsubthumb`, `jg_showdescriptionincategoryview`, `jg_ordersubcatbyalpha`, `jg_showtotalsubcatimages`, `jg_showtotalsubcathits`, `jg_uploadiconsubcat`, `jg_showdetailpage`, `jg_disabledetailpage`, `jg_showdetailnumberofpics`, `jg_cursor_navigation`, `jg_disable_rightclick_detail`, `jg_detail_report_images`, `jg_showdetaileditorlinks`, `jg_showdetailtitle`, `jg_showdetail`, `jg_showdetailaccordion`, `jg_accordionduration`, `jg_accordiondisplay`, `jg_accordionopacity`, `jg_accordionalwayshide`, `jg_accordioninitialeffect`, `jg_showdetaildescription`, `jg_showdetaildatum`, `jg_showdetailhits`, `jg_showdetaildownloads`, `jg_showdetailrating`, `jg_showdetailfilesize`, `jg_showdetailauthor`, `jg_showoriginalfilesize`, `jg_showdetaildownload`, `jg_watermark`, `jg_watermarkpos`, `jg_watermarkzoom`, `jg_watermarksize`, `jg_bigpic`, `jg_bigpic_unreg`, `jg_bigpic_open`, `jg_bbcodelink`, `jg_showcommentsunreg`, `jg_showcommentsarea`, `jg_send2friend`, `jg_minis`, `jg_motionminis`, `jg_motionminiWidth`, `jg_motionminiHeight`, `jg_motionminiLimit`, `jg_miniWidth`, `jg_miniHeight`, `jg_minisprop`, `jg_nameshields`, `jg_nameshields_others`, `jg_nameshields_unreg`, `jg_show_nameshields_unreg`, `jg_nameshields_height`, `jg_nameshields_width`, `jg_slideshow`, `jg_slideshow_timer`, `jg_slideshow_transition`, `jg_slideshow_transtime`, `jg_slideshow_maxdimauto`, `jg_slideshow_width`, `jg_slideshow_heigth`, `jg_slideshow_infopane`, `jg_slideshow_carousel`, `jg_slideshow_arrows`, `jg_slideshow_repeat`, `jg_showexifdata`, `jg_showgeotagging`, `jg_geotaggingkey`, `jg_subifdtags`, `jg_ifdotags`, `jg_gpstags`, `jg_showiptcdata`, `jg_iptctags`, `jg_showtoplist`, `jg_toplist`, `jg_topthumbalign`, `jg_toptextalign`, `jg_toplistcols`, `jg_whereshowtoplist`, `jg_showrate`, `jg_showlatest`, `jg_showcom`, `jg_showthiscomment`, `jg_showmostviewed`, `jg_showtoplistdownload`, `jg_showtoplistfavourite`, `jg_toplist_report_images`, `jg_showtoplisteditorlinks`, `jg_favourites`, `jg_favouritesshownotauth`, `jg_maxfavourites`, `jg_zipdownload`, `jg_usefavouritesforpubliczip`, `jg_usefavouritesforzip`, `jg_allimagesofcategory`, `jg_showfavouritesdownload`, `jg_showfavouriteseditorlinks`) VALUES
+(1, 1, 1, 'images/joomgallery/details/', 'images/joomgallery/originals/', 'images/joomgallery/thumbnails/', 'administrator/components/com_joomgallery/temp/ftp_upload/', 'administrator/components/com_joomgallery/temp/', 'media/joomgallery/images/', 'watermark.png', 0, 1, 1, 'Š|S,Œ|O,Ž|Z,š|s,œ|oe,ž|z,Ÿ|Y,¥|Y,µ|u,À|A,Á|A,Â|A,Ã|A,Ä|AE,Å|A,Æ|A,Ç|C,È|E,É|E,Ê|E,Ë|E,Ì|I,Í|I,Î|I,Ï|I,Ð|D,Ñ|N,Ò|O,Ó|O,Ô|O,Õ|O,Ö|OE,Ø|O,Ù|U,Ú|U,Û|U,Ü|UE,Ý|Y,à|a,á|a,â|a,ã|a,ä|ae,å|a,æ|a,ç|c,è|e,é|e,ê|e,ë|e,ì|i,í|i,î|i,ï|i,ð|o,ñ|n,ò|o,ó|o,ô|o,õ|o,ö|oe,ø|o,ù|u,ú|u,û|u,ü|ue,ý|y,ÿ|y,ß|ss,ă|a,ş|s,ţ|t,ț|t,Ț|T,Ș|S,ș|s,Ş|S', 'gd2', 1, '', 1, 400, 100, 0, 2, 360, 220, 100, 2, 0, 1, 0, 2, '-1', 2, '-1', 0, 2, '-1', 0, 2, '-1', 1, 0, 2, '-1', 0, 1, 0, 0, 1, '', 0, 0, 25, 1, 0, 0, 0, 10, 500, 0, 2000000, 1, 1, 1, 3, 1, 1, 1, 0, 1, 1, 2, 1, 1, 1, 0, 1, 1, 1, 2, 1, 1, 5, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 'grey', 1, 1, 1, '_:bootone', 1, 1, 0, 2, 100, 100, '#ffffff', 0, 0, 0, 1, 1, 'ordering ASC', 'imgdate DESC', 'imgtitle DESC', '#page_title - [! COM_JOOMGALLERY_COMMON_CATEGORY!]: #cat', '#page_title - [! COM_JOOMGALLERY_COMMON_CATEGORY!]: #cat - [! COM_JOOMGALLERY_COMMON_IMAGE!]:  #img', 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 3, 1, 3, 1, 1, 1, 0, 1, 1, 10, '#ffffff', '#808080', 1, 1, 5, 1, 1, 1, 0, 0, 3, 9, 0, 3, 0, 1, 1, 3, 1, 0, 0, 7, 0, 0, 0, 10, '0', 0, 1, 0, 'date,title', 0, 3, 0, 9, 1, 3, '0', 1, 0, 0, 10, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 3, 9, 3, 3, 2, 3, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 300, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 9, 0, 15, 1, 1, '6', 3, 1, 2, 1, 1, 2, 400, 50, 0, 28, 28, 2, 0, 1, 1, 0, 10, 6, 1, 6000, 0, 2000, 0, 640, 480, 0, 0, 0, 0, 0, 0, '', '', '', '', 0, '', 0, 12, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `hu0fn_joomgallery_countstop`
+--
+
+CREATE TABLE IF NOT EXISTS `hu0fn_joomgallery_countstop` (
+  `cspicid` int(11) NOT NULL DEFAULT '0',
+  `csip` varchar(20) NOT NULL,
+  `cssessionid` varchar(200) DEFAULT NULL,
+  `cstime` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `hu0fn_joomgallery_countstop`
+--
+
+INSERT INTO `hu0fn_joomgallery_countstop` (`cspicid`, `csip`, `cssessionid`, `cstime`) VALUES
+(4, '127.0.0.1', 'cqeyeX4Ou4bm1PSVbFZeZfN4S8bsZ3R3', '2016-06-13 10:05:23');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `hu0fn_joomgallery_image_details`
+--
+
+CREATE TABLE IF NOT EXISTS `hu0fn_joomgallery_image_details` (
+  `id` int(11) NOT NULL,
+  `details_key` varchar(255) NOT NULL,
+  `details_value` text NOT NULL,
+  `ordering` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `hu0fn_joomgallery_maintenance`
+--
+
+CREATE TABLE IF NOT EXISTS `hu0fn_joomgallery_maintenance` (
+  `id` int(11) NOT NULL,
+  `refid` int(11) NOT NULL,
+  `catid` int(11) NOT NULL,
+  `owner` int(11) NOT NULL,
+  `title` text NOT NULL,
+  `thumb` varchar(255) NOT NULL,
+  `img` varchar(255) NOT NULL,
+  `orig` varchar(255) NOT NULL,
+  `thumborphan` int(11) NOT NULL,
+  `imgorphan` int(11) NOT NULL,
+  `origorphan` int(11) NOT NULL,
+  `type` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `hu0fn_joomgallery_nameshields`
+--
+
+CREATE TABLE IF NOT EXISTS `hu0fn_joomgallery_nameshields` (
+  `nid` int(11) NOT NULL,
+  `npicid` int(11) NOT NULL DEFAULT '0',
+  `nuserid` int(11) unsigned NOT NULL DEFAULT '0',
+  `nxvalue` int(11) NOT NULL DEFAULT '0',
+  `nyvalue` int(11) NOT NULL DEFAULT '0',
+  `by` int(11) NOT NULL DEFAULT '0',
+  `nuserip` varchar(15) NOT NULL DEFAULT '0',
+  `ndate` datetime NOT NULL,
+  `nzindex` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `hu0fn_joomgallery_orphans`
+--
+
+CREATE TABLE IF NOT EXISTS `hu0fn_joomgallery_orphans` (
+  `id` int(11) NOT NULL,
+  `fullpath` varchar(255) NOT NULL,
+  `type` varchar(7) NOT NULL,
+  `refid` int(11) NOT NULL,
+  `title` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `hu0fn_joomgallery_users`
+--
+
+CREATE TABLE IF NOT EXISTS `hu0fn_joomgallery_users` (
+  `uid` int(11) NOT NULL,
+  `uuserid` int(11) NOT NULL DEFAULT '0',
+  `piclist` text,
+  `layout` int(1) NOT NULL,
+  `time` datetime NOT NULL,
+  `zipname` varchar(70) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `hu0fn_joomgallery_votes`
+--
+
+CREATE TABLE IF NOT EXISTS `hu0fn_joomgallery_votes` (
+  `voteid` int(11) NOT NULL,
+  `picid` int(11) NOT NULL DEFAULT '0',
+  `userid` int(11) unsigned NOT NULL DEFAULT '0',
+  `userip` varchar(15) NOT NULL DEFAULT '0',
+  `datevoted` datetime NOT NULL,
+  `vote` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `hu0fn_jshopping_addons`
 --
 
@@ -1136,7 +1712,14 @@ CREATE TABLE IF NOT EXISTS `hu0fn_jshopping_addons` (
   `version` varchar(255) NOT NULL,
   `uninstall` varchar(255) NOT NULL,
   `params` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `hu0fn_jshopping_addons`
+--
+
+INSERT INTO `hu0fn_jshopping_addons` (`id`, `alias`, `name`, `key`, `usekey`, `version`, `uninstall`, `params`) VALUES
+(1, 'second_description_for_product', 'JoomShopping Second Description For Product', '', 0, '1.0.1', '/components/com_jshopping/addons/second_description_for_product/uninstall.php', '');
 
 -- --------------------------------------------------------
 
@@ -1238,20 +1821,20 @@ CREATE TABLE IF NOT EXISTS `hu0fn_jshopping_categories` (
 --
 
 INSERT INTO `hu0fn_jshopping_categories` (`category_id`, `category_image`, `category_parent_id`, `category_publish`, `category_ordertype`, `category_template`, `ordering`, `category_add_date`, `products_page`, `products_row`, `access`, `name_en-GB`, `alias_en-GB`, `short_description_en-GB`, `description_en-GB`, `meta_title_en-GB`, `meta_description_en-GB`, `meta_keyword_en-GB`, `name_ru-RU`, `alias_ru-RU`, `short_description_ru-RU`, `description_ru-RU`, `meta_title_ru-RU`, `meta_description_ru-RU`, `meta_keyword_ru-RU`) VALUES
-(1, 'double.jpg', 0, 1, 1, NULL, 2, '2016-06-09 08:17:46', 12, 3, 1, '', '', '', '', '', '', '', 'Система водоотвода из нержавеющей стали', 'sistema-vodootvoda-iz-nerzhaveyushchej-stali', '', '', '', '', ''),
-(2, 'single.jpg', 0, 1, 1, NULL, 3, '2016-06-09 08:18:20', 12, 3, 1, '', '', '', '', '', '', '', 'Мойки и Мебель из нержавеющей стали для торговли и производства', 'mojki-i-mebel-iz-nerzhaveyushchej-stali-dlya-torgovli-i-proizvodstva', '', '', '', '', ''),
-(3, 'single1.jpg', 0, 1, 1, NULL, 4, '2016-06-09 08:18:40', 12, 3, 1, '', '', '', '', '', '', '', 'Нестандартное оборудование по чертежам и эскизам заказчика', 'nestandartnoe-oborudovanie-po-chertezham-i-eskizam-zakazchika', '', '', '', '', ''),
-(4, 'single2.jpg', 0, 1, 1, NULL, 5, '2016-06-09 08:18:53', 12, 3, 1, '', '', '', '', '', '', '', 'Решетки и решетчатый настил', 'reshetki-i-reshetchatyj-nastil', '', '', '', '', ''),
-(5, 'single3.jpg', 0, 1, 1, NULL, 6, '2016-06-09 08:19:17', 12, 3, 1, '', '', '', '', '', '', '', 'Товары для дачи, ландшафта и отдыха:', 'tovary-dlya-dachi-landshafta-i-otdykha', '', '', '', '', ''),
-(6, 'single4.jpg', 0, 1, 1, NULL, 15, '2016-06-09 08:19:33', 12, 3, 1, '', '', '', '', '', '', '', 'Складские позиции и уцененная продукция', 'skladskie-pozitsii-i-utsenennaya-produktsiya', '', '', '', '', ''),
-(7, 'single5.jpg', 0, 1, 1, NULL, 8, '2016-06-09 08:19:50', 12, 3, 1, '', '', '', '', '', '', '', 'Металлопрокат (листовая нержавеющая сталь)', 'metalloprokat-listovaya-nerzhaveyushchaya-stal', '', '', '', '', ''),
-(8, 'single6.jpg', 0, 1, 1, NULL, 9, '2016-06-09 08:20:08', 12, 3, 1, '', '', '', '', '', '', '', 'Услуги металлообработки', 'uslugi-metalloobrabotki', '', '', '', '', ''),
-(9, 'single7.jpg', 0, 1, 1, NULL, 10, '2016-06-09 08:20:23', 12, 3, 1, '', '', '', '', '', '', '', 'Велопарковки и ограждения из нержавеющей стали', 'veloparkovki-i-ograzhdeniya-iz-nerzhaveyushchej-stali', '', '', '', '', ''),
-(10, NULL, 5, 1, 1, NULL, 2, '2016-06-09 10:48:49', 12, 3, 1, '', '', '', '', '', '', '', 'Категория товаров 1', 'kategoriya-tovarov-1', '', '', '', '', ''),
-(11, NULL, 5, 1, 1, NULL, 3, '2016-06-09 10:49:05', 12, 3, 1, '', '', '', '', '', '', '', 'Категория товаров 2', 'kategoriya-tovarov-2', '', '', '', '', ''),
-(12, NULL, 1, 1, 1, NULL, 1, '2016-06-09 10:49:31', 12, 3, 1, '', '', '', '', '', '', '', 'Категория товаров 1', '', '', '', '', '', ''),
-(13, NULL, 1, 1, 1, NULL, 2, '2016-06-09 10:49:51', 12, 3, 1, '', '', '', '', '', '', '', 'Категория товаров 2', '', '', '', '', '', ''),
-(14, NULL, 6, 1, 1, NULL, 1, '2016-06-09 10:50:03', 12, 3, 1, '', '', '', '', '', '', '', 'Категория товаров 1', '', '', '', '', '', '');
+(1, 'vodootvod.png', 0, 1, 1, 'module', 6, '2016-06-09 08:17:46', 12, 3, 1, '', '', '', '', '', '', '', 'Система водоотвода из нержавеющей стали', 'sistema-vodootvoda-iz-nerzhaveyushchej-stali', '', '<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>', '', '', ''),
+(2, 'nerjaveika.png', 0, 1, 1, NULL, 9, '2016-06-09 08:18:20', 12, 3, 1, '', '', '', '', '', '', '', 'Мойки и Мебель из нержавеющей стали для торговли и производства', 'mojki-i-mebel-iz-nerzhaveyushchej-stali-dlya-torgovli-i-proizvodstva', '', '<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>', '', '', ''),
+(3, 'eskizi.png', 0, 1, 1, NULL, 11, '2016-06-09 08:18:40', 12, 3, 1, '', '', '', '', '', '', '', 'Нестандартное оборудование по чертежам и эскизам заказчика', 'nestandartnoe-oborudovanie-po-chertezham-i-eskizam-zakazchika', '', '', '', '', ''),
+(4, 'reshetki.png', 0, 1, 1, NULL, 13, '2016-06-09 08:18:53', 12, 3, 1, '', '', '', '', '', '', '', 'Решетки и решетчатый настил', 'reshetki-i-reshetchatyj-nastil', '', '', '', '', ''),
+(5, 'dacha.png', 0, 1, 1, NULL, 15, '2016-06-09 08:19:17', 12, 3, 1, '', '', '', '', '', '', '', 'Товары для дачи, ландшафта и отдыха:', 'tovary-dlya-dachi-landshafta-i-otdykha', '', '', '', '', ''),
+(6, 'single4.jpg', 0, 1, 1, NULL, 22, '2016-06-09 08:19:33', 12, 3, 1, '', '', '', '', '', '', '', 'Складские позиции и уцененная продукция', 'skladskie-pozitsii-i-utsenennaya-produktsiya', '', '', '', '', ''),
+(7, 'list.png', 0, 1, 1, NULL, 19, '2016-06-09 08:19:50', 12, 3, 1, '', '', '', '', '', '', '', 'Металлопрокат (листовая нержавеющая сталь)', 'metalloprokat-listovaya-nerzhaveyushchaya-stal', '', '', '', '', ''),
+(8, 'metal.png', 0, 1, 1, NULL, 21, '2016-06-09 08:20:08', 12, 3, 1, '', '', '', '', '', '', '', 'Услуги металлообработки', 'uslugi-metalloobrabotki', '', '', '', '', ''),
+(9, 'ogrady.png', 0, 1, 1, NULL, 28, '2016-06-09 08:20:23', 12, 3, 1, '', '', '', '', '', '', '', 'Велопарковки и ограждения из нержавеющей стали', 'veloparkovki-i-ograzhdeniya-iz-nerzhaveyushchej-stali', '', '', '', '', ''),
+(10, NULL, 5, 1, 1, NULL, 3, '2016-06-09 10:48:49', 12, 3, 1, '', '', '', '', '', '', '', 'Категория товаров 1', 'kategoriya-tovarov-1', '', '<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>', '', '', ''),
+(11, NULL, 5, 1, 1, NULL, 4, '2016-06-09 10:49:05', 12, 3, 1, '', '', '', '', '', '', '', 'Категория товаров 2', 'kategoriya-tovarov-2', '', '<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>', '', '', ''),
+(12, NULL, 1, 1, 1, NULL, 2, '2016-06-09 10:49:31', 12, 3, 1, '', '', '', '', '', '', '', 'Категория товаров 1', '', '', '<p>Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p>Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p>Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p>Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p>Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>', '', '', ''),
+(13, NULL, 1, 1, 1, NULL, 4, '2016-06-09 10:49:51', 12, 3, 1, '', '', '', '', '', '', '', 'Категория товаров 2', '', '', '<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>', '', '', ''),
+(14, NULL, 6, 1, 1, NULL, 2, '2016-06-09 10:50:03', 12, 3, 1, '', '', '', '', '', '', '', 'Категория товаров 1', '', '', '<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>\r\n<p style="font-size: 12.16px; line-height: 15.808px;">Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. </p>', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -1407,7 +1990,7 @@ CREATE TABLE IF NOT EXISTS `hu0fn_jshopping_config` (
 --
 
 INSERT INTO `hu0fn_jshopping_config` (`id`, `count_products_to_page`, `count_products_to_row`, `count_category_to_row`, `image_category_width`, `image_category_height`, `image_product_width`, `image_product_height`, `image_product_full_width`, `image_product_full_height`, `image_product_original_width`, `image_product_original_height`, `video_product_width`, `video_product_height`, `adminLanguage`, `defaultLanguage`, `mainCurrency`, `decimal_count`, `decimal_symbol`, `thousand_separator`, `currency_format`, `use_rabatt_code`, `enable_wishlist`, `default_status_order`, `store_address_format`, `store_date_format`, `contact_email`, `allow_reviews_prod`, `allow_reviews_only_registered`, `allow_reviews_manuf`, `max_mark`, `summ_null_shipping`, `without_shipping`, `without_payment`, `pdf_parameters`, `next_order_number`, `shop_user_guest`, `hide_product_not_avaible_stock`, `show_buy_in_category`, `user_as_catalog`, `show_tax_in_product`, `show_tax_product_in_cart`, `show_plus_shipping_in_product`, `hide_buy_not_avaible_stock`, `show_sort_product`, `show_count_select_products`, `order_send_pdf_client`, `order_send_pdf_admin`, `show_delivery_time`, `securitykey`, `demo_type`, `product_show_manufacturer_logo`, `product_show_manufacturer`, `product_show_weight`, `max_count_order_one_product`, `min_count_order_one_product`, `min_price_order`, `max_price_order`, `hide_tax`, `licensekod`, `product_attribut_first_value_empty`, `show_hits`, `show_registerform_in_logintemplate`, `admin_show_product_basic_price`, `admin_show_attributes`, `admin_show_delivery_time`, `admin_show_languages`, `use_different_templates_cat_prod`, `admin_show_product_video`, `admin_show_product_related`, `admin_show_product_files`, `admin_show_product_bay_price`, `admin_show_product_labels`, `sorting_country_in_alphabet`, `hide_text_product_not_available`, `show_weight_order`, `discount_use_full_sum`, `show_cart_all_step_checkout`, `use_plugin_content`, `display_price_admin`, `display_price_front`, `product_list_show_weight`, `product_list_show_manufacturer`, `use_extend_tax_rule`, `use_extend_display_price_rule`, `fields_register`, `template`, `show_product_code`, `show_product_code_in_cart`, `savelog`, `savelogpaymentdata`, `product_list_show_min_price`, `product_count_related_in_row`, `category_sorting`, `product_sorting`, `product_sorting_direction`, `show_product_list_filters`, `admin_show_product_extra_field`, `product_list_display_extra_fields`, `filter_display_extra_fields`, `product_hide_extra_fields`, `cart_display_extra_fields`, `default_country`, `show_return_policy_in_email_order`, `client_allow_cancel_order`, `admin_show_vendors`, `vendor_order_message_type`, `admin_not_send_email_order_vendor_order`, `not_redirect_in_cart_after_buy`, `product_show_vendor`, `product_show_vendor_detail`, `product_list_show_vendor`, `admin_show_freeattributes`, `product_show_button_back`, `calcule_tax_after_discount`, `product_list_show_product_code`, `radio_attr_value_vertical`, `attr_display_addprice`, `use_ssl`, `product_list_show_price_description`, `display_button_print`, `hide_shipping_step`, `hide_payment_step`, `image_resize_type`, `use_extend_attribute_data`, `product_list_show_price_default`, `product_list_show_qty_stock`, `product_show_qty_stock`, `displayprice`, `use_decimal_qty`, `ext_tax_rule_for`, `display_reviews_without_confirm`, `manufacturer_sorting`, `admin_show_units`, `main_unit_weight`, `create_alias_product_category_auto`, `delivery_order_depends_delivery_product`, `show_delivery_time_step5`, `other_config`, `shop_mode`) VALUES
-(1, 12, 3, 1, 160, 0, 100, 0, 200, 0, 0, 0, 320, 240, 'ru-RU', 'ru-RU', 1, 2, '.', '', 2, 0, 0, 1, '%storename %address %city %zip', '%d.%m.%Y', 'bolonikov@medialine.by', 1, 1, 0, 10, '-1.00', 1, 1, '208:65:208:30', 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, '0738e7eae7c26c7adf893efcf47a5d78', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'a:3:{s:8:"register";a:15:{s:5:"title";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:6:"l_name";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:10:"firma_name";a:1:{s:7:"display";s:1:"1";}s:6:"street";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:3:"zip";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:4:"city";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:5:"state";a:1:{s:7:"display";s:1:"1";}s:7:"country";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:5:"phone";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:3:"fax";a:1:{s:7:"display";s:1:"1";}s:6:"f_name";a:2:{s:7:"require";i:1;s:7:"display";i:1;}s:5:"email";a:2:{s:7:"require";i:1;s:7:"display";i:1;}s:6:"u_name";a:2:{s:7:"require";i:1;s:7:"display";i:1;}s:8:"password";a:2:{s:7:"require";i:1;s:7:"display";i:1;}s:10:"password_2";a:2:{s:7:"require";i:1;s:7:"display";i:1;}}s:7:"address";a:22:{s:5:"title";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:6:"l_name";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:10:"firma_name";a:1:{s:7:"display";s:1:"1";}s:6:"street";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:3:"zip";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:4:"city";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:5:"state";a:1:{s:7:"display";s:1:"1";}s:7:"country";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:5:"phone";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:3:"fax";a:1:{s:7:"display";s:1:"1";}s:7:"d_title";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:8:"d_f_name";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:8:"d_l_name";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:12:"d_firma_name";a:1:{s:7:"display";s:1:"1";}s:8:"d_street";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:5:"d_zip";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:6:"d_city";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:7:"d_state";a:1:{s:7:"display";s:1:"1";}s:9:"d_country";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:7:"d_phone";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:6:"f_name";a:2:{s:7:"require";i:1;s:7:"display";i:1;}s:5:"email";a:2:{s:7:"require";i:1;s:7:"display";i:1;}}s:11:"editaccount";a:22:{s:5:"title";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:6:"l_name";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:10:"firma_name";a:1:{s:7:"display";s:1:"1";}s:6:"street";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:3:"zip";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:4:"city";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:5:"state";a:1:{s:7:"display";s:1:"1";}s:7:"country";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:5:"phone";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:3:"fax";a:1:{s:7:"display";s:1:"1";}s:7:"d_title";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:8:"d_f_name";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:8:"d_l_name";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:12:"d_firma_name";a:1:{s:7:"display";s:1:"1";}s:8:"d_street";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:5:"d_zip";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:6:"d_city";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:7:"d_state";a:1:{s:7:"display";s:1:"1";}s:9:"d_country";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:7:"d_phone";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:6:"f_name";a:2:{s:7:"require";i:1;s:7:"display";i:1;}s:5:"email";a:2:{s:7:"require";i:1;s:7:"display";i:1;}}}', 'astal', 1, 0, 1, 1, 0, 3, 1, 1, 0, 0, 1, '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 'a:32:{s:3:"tax";s:1:"0";s:5:"stock";s:1:"0";s:17:"admin_show_weight";N;s:23:"auto_backup_addon_files";s:1:"1";s:23:"tax_on_delivery_address";s:1:"0";s:17:"cart_back_to_shop";s:4:"list";s:32:"product_button_back_use_end_list";s:1:"0";s:21:"display_tax_id_in_pdf";s:1:"0";s:26:"product_price_qty_discount";s:1:"2";s:16:"rating_starparts";s:1:"2";s:31:"show_list_price_shipping_weight";s:1:"0";s:23:"product_price_precision";s:1:"2";s:26:"cart_decimal_qty_precision";s:1:"2";s:25:"default_frontend_currency";s:1:"0";s:27:"product_file_upload_via_ftp";s:1:"0";s:25:"product_file_upload_count";s:1:"1";s:26:"product_image_upload_count";s:2:"10";s:26:"product_video_upload_count";s:1:"3";s:33:"show_insert_code_in_product_video";s:1:"0";s:29:"max_number_download_sale_file";s:1:"3";s:26:"max_day_download_sale_file";s:3:"365";s:34:"order_display_new_digital_products";s:1:"1";s:24:"display_user_groups_info";s:1:"1";s:18:"display_user_group";s:1:"0";s:20:"load_jquery_lightbox";s:1:"0";s:15:"load_javascript";s:1:"0";s:8:"load_css";s:1:"0";s:49:"list_products_calc_basic_price_from_product_price";s:1:"0";s:21:"hide_from_basic_price";s:1:"0";s:35:"calc_basic_price_from_product_price";s:1:"0";s:38:"user_discount_not_apply_prod_old_price";s:1:"0";s:6:"advert";s:1:"0";}', 0);
+(1, 12, 3, 1, 450, 0, 450, 0, 450, 0, 0, 0, 320, 240, 'ru-RU', 'ru-RU', 1, 2, '.', '', 2, 0, 0, 1, '%storename %address %city %zip', '%d.%m.%Y', 'bolonikov@medialine.by', 0, 0, 0, 10, '-1.00', 1, 1, '208:65:208:30', 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, '0738e7eae7c26c7adf893efcf47a5d78', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'a:3:{s:8:"register";a:15:{s:5:"title";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:6:"l_name";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:10:"firma_name";a:1:{s:7:"display";s:1:"1";}s:6:"street";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:3:"zip";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:4:"city";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:5:"state";a:1:{s:7:"display";s:1:"1";}s:7:"country";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:5:"phone";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:3:"fax";a:1:{s:7:"display";s:1:"1";}s:6:"f_name";a:2:{s:7:"require";i:1;s:7:"display";i:1;}s:5:"email";a:2:{s:7:"require";i:1;s:7:"display";i:1;}s:6:"u_name";a:2:{s:7:"require";i:1;s:7:"display";i:1;}s:8:"password";a:2:{s:7:"require";i:1;s:7:"display";i:1;}s:10:"password_2";a:2:{s:7:"require";i:1;s:7:"display";i:1;}}s:7:"address";a:22:{s:5:"title";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:6:"l_name";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:10:"firma_name";a:1:{s:7:"display";s:1:"1";}s:6:"street";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:3:"zip";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:4:"city";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:5:"state";a:1:{s:7:"display";s:1:"1";}s:7:"country";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:5:"phone";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:3:"fax";a:1:{s:7:"display";s:1:"1";}s:7:"d_title";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:8:"d_f_name";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:8:"d_l_name";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:12:"d_firma_name";a:1:{s:7:"display";s:1:"1";}s:8:"d_street";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:5:"d_zip";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:6:"d_city";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:7:"d_state";a:1:{s:7:"display";s:1:"1";}s:9:"d_country";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:7:"d_phone";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:6:"f_name";a:2:{s:7:"require";i:1;s:7:"display";i:1;}s:5:"email";a:2:{s:7:"require";i:1;s:7:"display";i:1;}}s:11:"editaccount";a:22:{s:5:"title";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:6:"l_name";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:10:"firma_name";a:1:{s:7:"display";s:1:"1";}s:6:"street";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:3:"zip";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:4:"city";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:5:"state";a:1:{s:7:"display";s:1:"1";}s:7:"country";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:5:"phone";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:3:"fax";a:1:{s:7:"display";s:1:"1";}s:7:"d_title";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:8:"d_f_name";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:8:"d_l_name";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:12:"d_firma_name";a:1:{s:7:"display";s:1:"1";}s:8:"d_street";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:5:"d_zip";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:6:"d_city";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:7:"d_state";a:1:{s:7:"display";s:1:"1";}s:9:"d_country";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:7:"d_phone";a:2:{s:7:"display";s:1:"1";s:7:"require";s:1:"1";}s:6:"f_name";a:2:{s:7:"require";i:1;s:7:"display";i:1;}s:5:"email";a:2:{s:7:"require";i:1;s:7:"display";i:1;}}}', 'astal', 0, 0, 1, 1, 0, 3, 1, 1, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 'a:53:{s:3:"tax";s:1:"0";s:5:"stock";s:1:"0";s:17:"admin_show_weight";N;s:23:"auto_backup_addon_files";s:1:"1";s:23:"tax_on_delivery_address";s:1:"0";s:17:"cart_back_to_shop";s:4:"list";s:32:"product_button_back_use_end_list";s:1:"0";s:21:"display_tax_id_in_pdf";s:1:"0";s:26:"product_price_qty_discount";s:1:"2";s:16:"rating_starparts";s:1:"2";s:31:"show_list_price_shipping_weight";s:1:"0";s:23:"product_price_precision";s:1:"2";s:26:"cart_decimal_qty_precision";s:1:"2";s:25:"default_frontend_currency";s:1:"0";s:27:"product_file_upload_via_ftp";s:1:"0";s:25:"product_file_upload_count";s:1:"1";s:26:"product_image_upload_count";s:2:"10";s:26:"product_video_upload_count";s:1:"3";s:33:"show_insert_code_in_product_video";s:1:"0";s:29:"max_number_download_sale_file";s:1:"3";s:26:"max_day_download_sale_file";s:3:"365";s:34:"order_display_new_digital_products";s:1:"1";s:24:"display_user_groups_info";s:1:"1";s:18:"display_user_group";s:1:"0";s:20:"load_jquery_lightbox";s:1:"0";s:15:"load_javascript";s:1:"0";s:8:"load_css";s:1:"0";s:49:"list_products_calc_basic_price_from_product_price";s:1:"0";s:21:"hide_from_basic_price";s:1:"0";s:35:"calc_basic_price_from_product_price";s:1:"0";s:38:"user_discount_not_apply_prod_old_price";s:1:"0";s:6:"advert";s:1:"0";s:30:"count_products_to_page_tophits";s:2:"12";s:32:"count_products_to_page_toprating";s:2:"12";s:28:"count_products_to_page_label";s:2:"12";s:33:"count_products_to_page_bestseller";s:2:"12";s:29:"count_products_to_page_random";s:2:"12";s:27:"count_products_to_page_last";s:2:"12";s:29:"count_products_to_row_tophits";s:1:"3";s:31:"count_products_to_row_toprating";s:1:"3";s:27:"count_products_to_row_label";s:1:"3";s:32:"count_products_to_row_bestseller";s:1:"3";s:28:"count_products_to_row_random";s:1:"3";s:26:"count_products_to_row_last";s:1:"3";s:29:"display_short_descr_multiline";s:1:"0";s:25:"count_manufacturer_to_row";s:1:"2";s:31:"attribut_dep_sorting_in_product";s:16:"V.value_ordering";s:33:"attribut_nodep_sorting_in_product";s:16:"V.value_ordering";s:23:"product_hide_price_null";s:1:"0";s:13:"image_quality";s:3:"100";s:16:"image_fill_color";s:8:"16777215";s:11:"video_html5";s:1:"0";s:16:"video_html5_type";s:0:"";}', 0);
 
 -- --------------------------------------------------------
 
@@ -2215,7 +2798,17 @@ CREATE TABLE IF NOT EXISTS `hu0fn_jshopping_products` (
   `meta_title_ru-RU` varchar(255) NOT NULL,
   `meta_description_ru-RU` text NOT NULL,
   `meta_keyword_ru-RU` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `hu0fn_jshopping_products`
+--
+
+INSERT INTO `hu0fn_jshopping_products` (`product_id`, `parent_id`, `product_ean`, `product_quantity`, `unlimited`, `product_availability`, `product_date_added`, `date_modify`, `product_publish`, `product_tax_id`, `currency_id`, `product_template`, `product_url`, `product_old_price`, `product_buy_price`, `product_price`, `min_price`, `different_prices`, `product_weight`, `image`, `product_manufacturer_id`, `product_is_add_price`, `add_price_unit_id`, `average_rating`, `reviews_count`, `delivery_times_id`, `hits`, `weight_volume_units`, `basic_price_unit_id`, `label_id`, `vendor_id`, `access`, `name_en-GB`, `alias_en-GB`, `short_description_en-GB`, `description_en-GB`, `meta_title_en-GB`, `meta_description_en-GB`, `meta_keyword_en-GB`, `name_ru-RU`, `alias_ru-RU`, `short_description_ru-RU`, `description_ru-RU`, `meta_title_ru-RU`, `meta_description_ru-RU`, `meta_keyword_ru-RU`) VALUES
+(1, 0, '', '0.00', 0, '', '2016-06-14 06:23:34', '2016-06-14 09:12:02', 1, 0, 1, 'default', '', '0.0000', '0.0000', '0.000000', '0.00', 0, '0.0000', 'product.jpg', 0, 0, 3, 0.00, 0, 0, 227, '0.0000', 0, 0, 0, 1, '', '', '', '{second_description}', '', '', '', 'Лотки канализационные ЛК', 'lotki-kanalizatsionnye-lk', '', '<ol>\r\n<li>Материал изготовления: нержавеющая сталь AISI 304 — лучший материал для канализационных систем, на предприятиях с повышенными требования-ми к соблюдению санитарно-гигиеническим нормам.</li>\r\n<li>срок службы до 50 лет</li>\r\n</ol>\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td>Лотки канализационные ЛК предназначены для прокладки канализационных коммуникаций, для приема и отвода сточных вод в канализационную систему.</td>\r\n</tr>\r\n<tr>\r\n<td>Лоток канализационный представляет собой канал, который монтируется в пол для транспортировки сточных вод к трапам или непосредственно в канализационную систему.</td>\r\n</tr>\r\n<tr>\r\n<td>Лотки оснащены регулируемыми опорами для выставления лотка по уровню. Лотки изготавливаются различных типоразмеров в зависимости от предъявляемых требований (различная ширина сечения, длинна, толщина металла).</td>\r\n</tr>\r\n</tbody>\r\n</table>{second_description}<table>\r\n<tbody>\r\n<tr>\r\n<td> </td>\r\n<td>Артикул</td>\r\n<td>А, мм</td>\r\n<td>В, мм</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-120</td>\r\n<td>225 104 020</td>\r\n<td>100</td>\r\n<td>900</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-110</td>\r\n<td>225 204 020</td>\r\n<td>200</td>\r\n<td>800</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-100</td>\r\n<td>225 304 020</td>\r\n<td>300</td>\r\n<td>700</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-90</td>\r\n<td>225 404 020</td>\r\n<td>400</td>\r\n<td>600</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-80</td>\r\n<td>225 504 020</td>\r\n<td>500</td>\r\n<td>500</td>\r\n</tr>\r\n</tbody>\r\n</table>', '', '', ''),
+(2, 0, '', '0.00', 0, '', '2016-06-14 08:12:35', '2016-06-14 08:15:45', 1, 0, 1, 'default', '', '0.0000', '0.0000', '0.000000', '0.00', 0, '0.0000', 'product11.jpg', 0, 0, 3, 0.00, 0, 0, 0, '0.0000', 0, 0, 0, 1, '', '', '', '{second_description}', '', '', '', 'Лоток канализационный щелевой', 'lotok-kanalizatsionnyj-shchelevoj', '', '<ol>\r\n<li>Материал изготовления: нержавеющая сталь AISI 304 — лучший материал для канализационных систем, на предприятиях с повышенными требования-ми к соблюдению санитарно-гигиеническим нормам.</li>\r\n<li>срок службы до 50 лет</li>\r\n</ol>\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td>Лотки канализационные ЛК предназначены для прокладки канализационных коммуникаций, для приема и отвода сточных вод в канализационную систему.</td>\r\n</tr>\r\n<tr>\r\n<td>Лоток канализационный представляет собой канал, который монтируется в пол для транспортировки сточных вод к трапам или непосредственно в канализационную систему.</td>\r\n</tr>\r\n<tr>\r\n<td>Лотки оснащены регулируемыми опорами для выставления лотка по уровню. Лотки изготавливаются различных типоразмеров в зависимости от предъявляемых требований (различная ширина сечения, длинна, толщина металла).</td>\r\n</tr>\r\n</tbody>\r\n</table>{second_description}<table>\r\n<tbody>\r\n<tr>\r\n<td> </td>\r\n<td>Артикул</td>\r\n<td>А, мм</td>\r\n<td>В, мм</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-120</td>\r\n<td>225 104 020</td>\r\n<td>100</td>\r\n<td>900</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-110</td>\r\n<td>225 204 020</td>\r\n<td>200</td>\r\n<td>800</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-100</td>\r\n<td>225 304 020</td>\r\n<td>300</td>\r\n<td>700</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-90</td>\r\n<td>225 404 020</td>\r\n<td>400</td>\r\n<td>600</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-80</td>\r\n<td>225 504 020</td>\r\n<td>500</td>\r\n<td>500</td>\r\n</tr>\r\n</tbody>\r\n</table>', '', '', ''),
+(3, 0, '', '0.00', 0, '', '2016-06-14 08:12:39', '2016-06-14 08:16:48', 1, 0, 1, 'default', '', '0.0000', '0.0000', '0.000000', '0.00', 0, '0.0000', 'product21.jpg', 0, 0, 3, 0.00, 0, 0, 0, '0.0000', 0, 0, 0, 1, '', '', '', '{second_description}', '', '', '', 'Лоток канализационный щелевой (прямой)', 'lotok-kanalizatsionnyj-shchelevoj-pryamoj', '', '<ol>\r\n<li>Материал изготовления: нержавеющая сталь AISI 304 — лучший материал для канализационных систем, на предприятиях с повышенными требования-ми к соблюдению санитарно-гигиеническим нормам.</li>\r\n<li>срок службы до 50 лет</li>\r\n</ol>\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td>Лотки канализационные ЛК предназначены для прокладки канализационных коммуникаций, для приема и отвода сточных вод в канализационную систему.</td>\r\n</tr>\r\n<tr>\r\n<td>Лоток канализационный представляет собой канал, который монтируется в пол для транспортировки сточных вод к трапам или непосредственно в канализационную систему.</td>\r\n</tr>\r\n<tr>\r\n<td>Лотки оснащены регулируемыми опорами для выставления лотка по уровню. Лотки изготавливаются различных типоразмеров в зависимости от предъявляемых требований (различная ширина сечения, длинна, толщина металла).</td>\r\n</tr>\r\n</tbody>\r\n</table>{second_description}<table>\r\n<tbody>\r\n<tr>\r\n<td> </td>\r\n<td>Артикул</td>\r\n<td>А, мм</td>\r\n<td>В, мм</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-120</td>\r\n<td>225 104 020</td>\r\n<td>100</td>\r\n<td>900</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-110</td>\r\n<td>225 204 020</td>\r\n<td>200</td>\r\n<td>800</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-100</td>\r\n<td>225 304 020</td>\r\n<td>300</td>\r\n<td>700</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-90</td>\r\n<td>225 404 020</td>\r\n<td>400</td>\r\n<td>600</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-80</td>\r\n<td>225 504 020</td>\r\n<td>500</td>\r\n<td>500</td>\r\n</tr>\r\n</tbody>\r\n</table>', '', '', ''),
+(4, 0, '', '0.00', 0, '', '2016-06-14 08:12:39', '2016-06-14 08:12:39', 1, 0, 1, 'default', '', '0.0000', '0.0000', '0.000000', '0.00', 0, '0.0000', 'product.jpg', 0, 0, 3, 0.00, 0, 0, 1, '0.0000', 0, 0, 0, 1, '', '', '', '{second_description}', '', '', '', 'Лотки канализационные ЛК', 'lotki-kanalizatsionnye-lk160614111235160614111239', '', '<ol>\r\n<li>Материал изготовления: нержавеющая сталь AISI 304 — лучший материал для канализационных систем, на предприятиях с повышенными требования-ми к соблюдению санитарно-гигиеническим нормам.</li>\r\n<li>срок службы до 50 лет</li>\r\n</ol>\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td>Лотки канализационные ЛК предназначены для прокладки канализационных коммуникаций, для приема и отвода сточных вод в канализационную систему.</td>\r\n</tr>\r\n<tr>\r\n<td>Лоток канализационный представляет собой канал, который монтируется в пол для транспортировки сточных вод к трапам или непосредственно в канализационную систему.</td>\r\n</tr>\r\n<tr>\r\n<td>Лотки оснащены регулируемыми опорами для выставления лотка по уровню. Лотки изготавливаются различных типоразмеров в зависимости от предъявляемых требований (различная ширина сечения, длинна, толщина металла).</td>\r\n</tr>\r\n</tbody>\r\n</table>{second_description}<table>\r\n<tbody>\r\n<tr>\r\n<td> </td>\r\n<td>Артикул</td>\r\n<td>А, мм</td>\r\n<td>В, мм</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-120</td>\r\n<td>225 104 020</td>\r\n<td>100</td>\r\n<td>900</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-110</td>\r\n<td>225 204 020</td>\r\n<td>200</td>\r\n<td>800</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-100</td>\r\n<td>225 304 020</td>\r\n<td>300</td>\r\n<td>700</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-90</td>\r\n<td>225 404 020</td>\r\n<td>400</td>\r\n<td>600</td>\r\n</tr>\r\n<tr>\r\n<td>ЛК1-80</td>\r\n<td>225 504 020</td>\r\n<td>500</td>\r\n<td>500</td>\r\n</tr>\r\n</tbody>\r\n</table>', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -2312,7 +2905,14 @@ CREATE TABLE IF NOT EXISTS `hu0fn_jshopping_products_files` (
   `file` varchar(255) NOT NULL,
   `file_descr` varchar(255) NOT NULL,
   `ordering` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `hu0fn_jshopping_products_files`
+--
+
+INSERT INTO `hu0fn_jshopping_products_files` (`id`, `product_id`, `demo`, `demo_descr`, `file`, `file_descr`, `ordering`) VALUES
+(1, 1, 'test.docx', '', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -2338,7 +2938,27 @@ CREATE TABLE IF NOT EXISTS `hu0fn_jshopping_products_images` (
   `image_name` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `ordering` tinyint(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `hu0fn_jshopping_products_images`
+--
+
+INSERT INTO `hu0fn_jshopping_products_images` (`image_id`, `product_id`, `image_name`, `name`, `ordering`) VALUES
+(1, 1, 'product.jpg', '', 1),
+(2, 1, 'product1.jpg', '', 2),
+(3, 1, 'product2.jpg', '', 3),
+(4, 2, 'product.jpg', '', 1),
+(5, 2, 'product1.jpg', '', 2),
+(6, 2, 'product2.jpg', '', 3),
+(7, 3, 'product.jpg', '', 1),
+(8, 3, 'product1.jpg', '', 2),
+(9, 3, 'product2.jpg', '', 3),
+(10, 4, 'product.jpg', '', 1),
+(11, 4, 'product1.jpg', '', 2),
+(12, 4, 'product2.jpg', '', 3),
+(13, 2, 'product11.jpg', '', 4),
+(14, 3, 'product21.jpg', '', 4);
 
 -- --------------------------------------------------------
 
@@ -2377,7 +2997,16 @@ CREATE TABLE IF NOT EXISTS `hu0fn_jshopping_products_relations` (
   `id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `product_related_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `hu0fn_jshopping_products_relations`
+--
+
+INSERT INTO `hu0fn_jshopping_products_relations` (`id`, `product_id`, `product_related_id`) VALUES
+(4, 1, 2),
+(5, 1, 3),
+(6, 1, 4);
 
 -- --------------------------------------------------------
 
@@ -2409,6 +3038,20 @@ CREATE TABLE IF NOT EXISTS `hu0fn_jshopping_products_to_categories` (
   `category_id` int(11) NOT NULL,
   `product_ordering` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `hu0fn_jshopping_products_to_categories`
+--
+
+INSERT INTO `hu0fn_jshopping_products_to_categories` (`product_id`, `category_id`, `product_ordering`) VALUES
+(1, 12, 1),
+(1, 13, 1),
+(2, 12, 2),
+(2, 13, 2),
+(3, 12, 3),
+(3, 13, 3),
+(4, 12, 4),
+(4, 13, 4);
 
 -- --------------------------------------------------------
 
@@ -3288,14 +3931,14 @@ CREATE TABLE IF NOT EXISTS `hu0fn_menu` (
   `home` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'Indicates if this menu item is the home or default page.',
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `client_id` tinyint(4) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=124 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=140 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `hu0fn_menu`
 --
 
 INSERT INTO `hu0fn_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `link`, `type`, `published`, `parent_id`, `level`, `component_id`, `checked_out`, `checked_out_time`, `browserNav`, `access`, `img`, `template_style_id`, `params`, `lft`, `rgt`, `home`, `language`, `client_id`) VALUES
-(1, '', 'Menu_Item_Root', 'root', '', '', '', '', 1, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, 0, '', 0, '', 0, 87, 0, '*', 0),
+(1, '', 'Menu_Item_Root', 'root', '', '', '', '', 1, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, 0, '', 0, '', 0, 119, 0, '*', 0),
 (2, 'menu', 'com_banners', 'Banners', '', 'Banners', 'index.php?option=com_banners', 'component', 0, 1, 1, 4, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners', 0, '', 1, 10, 0, '*', 1),
 (3, 'menu', 'com_banners', 'Banners', '', 'Banners/Banners', 'index.php?option=com_banners', 'component', 0, 2, 2, 4, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners', 0, '', 2, 3, 0, '*', 1),
 (4, 'menu', 'com_banners_categories', 'Categories', '', 'Banners/Categories', 'index.php?option=com_categories&extension=com_banners', 'component', 0, 2, 2, 6, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners-cat', 0, '', 4, 5, 0, '*', 1),
@@ -3317,7 +3960,7 @@ INSERT INTO `hu0fn_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `l
 (21, 'main', 'com_postinstall', 'Post-installation messages', '', 'Post-installation messages', 'index.php?option=com_postinstall', 'component', 0, 1, 1, 32, 0, '0000-00-00 00:00:00', 0, 1, 'class:postinstall', 0, '', 39, 40, 0, '*', 1),
 (101, 'mainmenu', 'Продукция и услуги', 'home', '', 'home', 'index.php?option=com_jshopping&view=category', 'component', 1, 1, 1, 10011, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"1","page_heading":"Продукция и услуги","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 41, 42, 1, '*', 0),
 (102, 'verkhnee-menyu', 'О нас', 'o-nas', '', 'o-nas', 'index.php?option=com_content&view=article&id=1', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"show_title":"","link_titles":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_tags":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 43, 44, 0, '*', 0),
-(103, 'verkhnee-menyu', 'Фотогалерея', 'fotogalereya', '', 'fotogalereya', 'index.php?option=com_content&view=article&id=1', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"show_title":"","link_titles":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_tags":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 45, 46, 0, '*', 0),
+(103, 'verkhnee-menyu', 'Фотогалерея', 'fotogalereya', '', 'fotogalereya', 'index.php?option=com_joomgallery&view=gallery&layout=bootone', 'component', 1, 1, 1, 10016, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"1","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 45, 46, 0, '*', 0),
 (104, 'verkhnee-menyu', 'Доставка', 'dostavka', '', 'dostavka', 'index.php?option=com_content&view=article&id=1', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"show_title":"","link_titles":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_tags":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 47, 48, 0, '*', 0),
 (105, 'verkhnee-menyu', 'Гарантия', 'garantiya', '', 'garantiya', 'index.php?option=com_content&view=article&id=1', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"show_title":"","link_titles":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_tags":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 49, 50, 0, '*', 0),
 (106, 'verkhnee-menyu', 'Контакты', 'kontakty', '', 'kontakty', 'index.php?option=com_content&view=article&id=1', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"show_title":"","link_titles":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_tags":"","show_noauth":"","urls_position":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 51, 52, 0, '*', 0),
@@ -3337,7 +3980,23 @@ INSERT INTO `hu0fn_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `l
 (120, 'main', 'configuration', 'configuration', '', 'joomshopping/configuration', 'index.php?option=com_jshopping&controller=config', 'component', 0, 114, 2, 10011, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_jshopping/images/jshop_configuration_s.png', 0, '{}', 78, 79, 0, '', 1),
 (121, 'main', 'install-and-update', 'install-and-update', '', 'joomshopping/install-and-update', 'index.php?option=com_jshopping&controller=update', 'component', 0, 114, 2, 10011, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_jshopping/images/jshop_update_s.png', 0, '{}', 80, 81, 0, '', 1),
 (122, 'main', 'about-as', 'about-as', '', 'joomshopping/about-as', 'index.php?option=com_jshopping&controller=info', 'component', 0, 114, 2, 10011, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_jshopping/images/jshop_info_s.png', 0, '{}', 82, 83, 0, '', 1),
-(123, 'nizhnee-menyu', 'Новости', 'novosti', '', 'novosti', 'index.php?option=com_content&view=category&layout=blog&id=8', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"layout_type":"blog","show_category_heading_title_text":"","show_category_title":"1","show_description":"","show_description_image":"","maxLevel":"","show_empty_categories":"","show_no_articles":"","show_subcat_desc":"","show_cat_num_articles":"","show_cat_tags":"","page_subheading":"","num_leading_articles":"0","num_intro_articles":"9","num_columns":"3","num_links":"0","multi_column_order":"","show_subcategory_content":"","orderby_pri":"","orderby_sec":"","order_date":"","show_pagination":"","show_pagination_results":"","show_featured":"","show_title":"","link_titles":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"1","show_item_navigation":"","show_vote":"","show_readmore":"","show_readmore_title":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_tags":"","show_noauth":"","show_feed_link":"","feed_summary":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 85, 86, 0, '*', 0);
+(123, 'nizhnee-menyu', 'Новости', 'novosti', '', 'novosti', 'index.php?option=com_content&view=category&layout=blog&id=8', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"layout_type":"blog","show_category_heading_title_text":"","show_category_title":"1","show_description":"","show_description_image":"","maxLevel":"","show_empty_categories":"","show_no_articles":"","show_subcat_desc":"","show_cat_num_articles":"","show_cat_tags":"","page_subheading":"","num_leading_articles":"0","num_intro_articles":"9","num_columns":"3","num_links":"0","multi_column_order":"","show_subcategory_content":"","orderby_pri":"","orderby_sec":"","order_date":"","show_pagination":"","show_pagination_results":"","show_featured":"","show_title":"","link_titles":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"1","show_item_navigation":"","show_vote":"","show_readmore":"","show_readmore_title":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_tags":"","show_noauth":"","show_feed_link":"","feed_summary":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 85, 86, 0, '*', 0),
+(124, 'main', 'COM_JOOMGALLERY', 'com-joomgallery', '', 'com-joomgallery', 'index.php?option=com_joomgallery', 'component', 0, 1, 1, 10016, 0, '0000-00-00 00:00:00', 0, 1, '../media/joomgallery/images/joom_main.png', 0, '{}', 87, 114, 0, '', 1),
+(125, 'main', 'COM_JOOMGALLERY_CATEGORY_MANAGER', 'com-joomgallery-category-manager', '', 'com-joomgallery/com-joomgallery-category-manager', 'index.php?option=com_joomgallery&controller=categories', 'component', 0, 124, 2, 10016, 0, '0000-00-00 00:00:00', 0, 1, 'media/joomgallery/images/joom_categories.png', 0, '{}', 88, 89, 0, '', 1),
+(126, 'main', 'COM_JOOMGALLERY_IMAGE_MANAGER', 'com-joomgallery-image-manager', '', 'com-joomgallery/com-joomgallery-image-manager', 'index.php?option=com_joomgallery&controller=images', 'component', 0, 124, 2, 10016, 0, '0000-00-00 00:00:00', 0, 1, 'media/joomgallery/images/joom_pictures.png', 0, '{}', 90, 91, 0, '', 1),
+(127, 'main', 'COM_JOOMGALLERY_COMMENTS_MANAGER', 'com-joomgallery-comments-manager', '', 'com-joomgallery/com-joomgallery-comments-manager', 'index.php?option=com_joomgallery&controller=comments', 'component', 0, 124, 2, 10016, 0, '0000-00-00 00:00:00', 0, 1, 'media/joomgallery/images/joom_comments.png', 0, '{}', 92, 93, 0, '', 1),
+(128, 'main', 'COM_JOOMGALLERY_IMAGE_UPLOAD', 'com-joomgallery-image-upload', '', 'com-joomgallery/com-joomgallery-image-upload', 'index.php?option=com_joomgallery&controller=upload', 'component', 0, 124, 2, 10016, 0, '0000-00-00 00:00:00', 0, 1, 'media/joomgallery/images/joom_pictureupload.png', 0, '{}', 94, 95, 0, '', 1),
+(129, 'main', 'COM_JOOMGALLERY_AJAX_UPLOAD', 'com-joomgallery-ajax-upload', '', 'com-joomgallery/com-joomgallery-ajax-upload', 'index.php?option=com_joomgallery&controller=ajaxupload', 'component', 0, 124, 2, 10016, 0, '0000-00-00 00:00:00', 0, 1, 'media/joomgallery/images/joom_ajaxupload.png', 0, '{}', 96, 97, 0, '', 1),
+(130, 'main', 'COM_JOOMGALLERY_BATCH_UPLOAD', 'com-joomgallery-batch-upload', '', 'com-joomgallery/com-joomgallery-batch-upload', 'index.php?option=com_joomgallery&controller=batchupload', 'component', 0, 124, 2, 10016, 0, '0000-00-00 00:00:00', 0, 1, 'media/joomgallery/images/joom_batchupload.png', 0, '{}', 98, 99, 0, '', 1),
+(131, 'main', 'COM_JOOMGALLERY_FTP_UPLOAD', 'com-joomgallery-ftp-upload', '', 'com-joomgallery/com-joomgallery-ftp-upload', 'index.php?option=com_joomgallery&controller=ftpupload', 'component', 0, 124, 2, 10016, 0, '0000-00-00 00:00:00', 0, 1, 'media/joomgallery/images/joom_ftpupload.png', 0, '{}', 100, 101, 0, '', 1),
+(132, 'main', 'COM_JOOMGALLERY_JAVA_UPLOAD', 'com-joomgallery-java-upload', '', 'com-joomgallery/com-joomgallery-java-upload', 'index.php?option=com_joomgallery&controller=jupload', 'component', 0, 124, 2, 10016, 0, '0000-00-00 00:00:00', 0, 1, 'media/joomgallery/images/joom_jupload.png', 0, '{}', 102, 103, 0, '', 1),
+(133, 'main', 'COM_JOOMGALLERY_CONFIGURATION_MANAGER', 'com-joomgallery-configuration-manager', '', 'com-joomgallery/com-joomgallery-configuration-manager', 'index.php?option=com_joomgallery&controller=config', 'component', 0, 124, 2, 10016, 0, '0000-00-00 00:00:00', 0, 1, 'media/joomgallery/images/joom_config.png', 0, '{}', 104, 105, 0, '', 1),
+(134, 'main', 'COM_JOOMGALLERY_CUSTOMIZE_CSS', 'com-joomgallery-customize-css', '', 'com-joomgallery/com-joomgallery-customize-css', 'index.php?option=com_joomgallery&controller=cssedit', 'component', 0, 124, 2, 10016, 0, '0000-00-00 00:00:00', 0, 1, 'media/joomgallery/images/joom_css.png', 0, '{}', 106, 107, 0, '', 1),
+(135, 'main', 'COM_JOOMGALLERY_MIGRATION_MANAGER', 'com-joomgallery-migration-manager', '', 'com-joomgallery/com-joomgallery-migration-manager', 'index.php?option=com_joomgallery&controller=migration', 'component', 0, 124, 2, 10016, 0, '0000-00-00 00:00:00', 0, 1, 'media/joomgallery/images/joom_migration.png', 0, '{}', 108, 109, 0, '', 1),
+(136, 'main', 'COM_JOOMGALLERY_MAINTENANCE_MANAGER', 'com-joomgallery-maintenance-manager', '', 'com-joomgallery/com-joomgallery-maintenance-manager', 'index.php?option=com_joomgallery&controller=maintenance', 'component', 0, 124, 2, 10016, 0, '0000-00-00 00:00:00', 0, 1, 'media/joomgallery/images/joom_maintenance.png', 0, '{}', 110, 111, 0, '', 1),
+(137, 'main', 'COM_JOOMGALLERY_HELP', 'com-joomgallery-help', '', 'com-joomgallery/com-joomgallery-help', 'index.php?option=com_joomgallery&controller=help', 'component', 0, 124, 2, 10016, 0, '0000-00-00 00:00:00', 0, 1, 'media/joomgallery/images/joom_information.png', 0, '{}', 112, 113, 0, '', 1),
+(138, 'skrytoe-menyu', 'Каталог', 'katalog', '', 'katalog', 'index.php?option=com_jshopping&view=category', 'component', 1, 1, 1, 10011, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"page_catalog","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 115, 116, 0, '*', 0),
+(139, 'skrytoe-menyu', 'Поиск', 'poisk', '', 'poisk', 'index.php?option=com_search&view=search', 'component', 1, 1, 1, 19, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"search_phrases":"","search_areas":"","show_date":"","searchphrase":"0","ordering":"newest","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 117, 118, 0, '*', 0);
 
 -- --------------------------------------------------------
 
@@ -3350,7 +4009,7 @@ CREATE TABLE IF NOT EXISTS `hu0fn_menu_types` (
   `menutype` varchar(24) COLLATE utf8mb4_unicode_ci NOT NULL,
   `title` varchar(48) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `hu0fn_menu_types`
@@ -3360,7 +4019,8 @@ INSERT INTO `hu0fn_menu_types` (`id`, `menutype`, `title`, `description`) VALUES
 (1, 'mainmenu', 'Main Menu', 'The main menu for the site'),
 (2, 'verkhnee-menyu', 'Верхнее меню', ''),
 (3, 'nizhnee-menyu', 'Нижнее меню', ''),
-(4, 'nizhnee-menyu-dopolnitel', 'Нижнее меню (дополнительное)', '');
+(4, 'nizhnee-menyu-dopolnitel', 'Нижнее меню (дополнительное)', ''),
+(5, 'skrytoe-menyu', 'Скрытое меню', '');
 
 -- --------------------------------------------------------
 
@@ -3417,14 +4077,14 @@ CREATE TABLE IF NOT EXISTS `hu0fn_modules` (
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `client_id` tinyint(4) NOT NULL DEFAULT '0',
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=105 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=112 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `hu0fn_modules`
 --
 
 INSERT INTO `hu0fn_modules` (`id`, `asset_id`, `title`, `note`, `content`, `ordering`, `position`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `published`, `module`, `access`, `showtitle`, `params`, `client_id`, `language`) VALUES
-(1, 39, 'Main Menu', '', '', 1, 'position-7', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 1, 1, '{"menutype":"mainmenu","startLevel":"0","endLevel":"0","showAllChildren":"0","tag_id":"","class_sfx":"","window_open":"","layout":"","moduleclass_sfx":"_menu","cache":"1","cache_time":"900","cachemode":"itemid"}', 0, '*'),
+(1, 39, 'Main Menu', '', '', 1, 'position-7', 0, '0000-00-00 00:00:00', '2016-06-14 13:20:55', '0000-00-00 00:00:00', -2, 'mod_menu', 1, 1, '{"menutype":"mainmenu","startLevel":"0","endLevel":"0","showAllChildren":"0","tag_id":"","class_sfx":"","window_open":"","layout":"","moduleclass_sfx":"_menu","cache":"1","cache_time":"900","cachemode":"itemid"}', 0, '*'),
 (2, 40, 'Login', '', '', 1, 'login', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_login', 1, 1, '', 1, '*'),
 (3, 41, 'Popular Articles', '', '', 3, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_popular', 3, 1, '{"count":"5","catid":"","user_id":"0","layout":"_:default","moduleclass_sfx":"","cache":"0"}', 1, '*'),
 (4, 42, 'Recently Added Articles', '', '', 4, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_latest', 3, 1, '{"count":"5","ordering":"c_dsc","catid":"","user_id":"0","layout":"_:default","moduleclass_sfx":"","cache":"0"}', 1, '*'),
@@ -3435,28 +4095,34 @@ INSERT INTO `hu0fn_modules` (`id`, `asset_id`, `title`, `note`, `content`, `orde
 (13, 47, 'Admin Submenu', '', '', 1, 'submenu', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_submenu', 3, 1, '', 1, '*'),
 (14, 48, 'User Status', '', '', 2, 'status', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_status', 3, 1, '', 1, '*'),
 (15, 49, 'Title', '', '', 1, 'title', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_title', 3, 1, '', 1, '*'),
-(16, 50, 'Login Form', '', '', 7, 'position-7', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_login', 1, 1, '{"greeting":"1","name":"0"}', 0, '*'),
-(17, 51, 'Хлебные крошки', '', '', 1, 'before_content', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_breadcrumbs', 1, 0, '{"showHere":"0","showHome":"1","homeText":"","showLast":"1","separator":" ","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"itemid","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
+(16, 50, 'Login Form', '', '', 7, 'position-7', 0, '0000-00-00 00:00:00', '2016-06-14 13:20:55', '0000-00-00 00:00:00', -2, 'mod_login', 1, 1, '{"greeting":"1","name":"0"}', 0, '*'),
+(17, 51, 'Хлебные крошки', '', '', 2, 'before_content', 684, '2016-06-14 11:44:05', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_breadcrumbs', 1, 0, '{"showHere":"0","showHome":"1","homeText":"","showLast":"1","separator":" ","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"itemid","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (79, 52, 'Multilanguage status', '', '', 1, 'status', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 'mod_multilangstatus', 3, 1, '{"layout":"_:default","moduleclass_sfx":"","cache":"0"}', 1, '*'),
 (86, 53, 'Joomla Version', '', '', 1, 'footer', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_version', 3, 1, '{"format":"short","product":"1","layout":"_:default","moduleclass_sfx":"","cache":"0"}', 1, '*'),
 (87, 54, 'Логотип (хеадер)', '', '<p><a href="http://astal/"><img src="images/site/logo.jpg" alt="" /> ASTAL.BY</a></p>', 1, 'header_left', 684, '2016-06-03 14:25:15', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_custom', 1, 0, '{"prepare_content":"0","backgroundimage":"","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"static","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (88, 55, 'Контакты в шапке', '', '', 1, 'header_center', 684, '2016-06-07 09:04:26', '2016-06-03 14:11:28', '0000-00-00 00:00:00', 1, 'mod_contacts_gr', 1, 0, '{"contacts":"{\\"contact_type\\":[\\"landline\\",\\"mts\\",\\"velcom\\"],\\"contact_text\\":[\\"(017) 210-08-87\\",\\"+375 (25) 504-04-04\\",\\"+375 (25) 502-02-02\\"]}","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
-(89, 56, 'Модуль формы обратной связи (шапка)', '', '', 1, 'header_right', 684, '2016-06-10 08:17:41', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_form_gr', 1, 0, '{"head":"Заказать обратный звонок","recipient":"sergeibolonikov@gmail.com","button_text":"Отправить","mail_head":"Обратный звонок в шапке сайта","thanks":"Спасибо! Наш менеджер свяжется с Вами!","captcha_key":"","captcha_secret_key":"","file_text":"","field":"{\\"type\\":[\\"text\\",\\"text\\",\\"text\\"],\\"title\\":[\\"Имя\\",\\"E-mail\\",\\"Сообщение\\"],\\"required\\":[\\"1\\",\\"1\\",null]}","modal_on":"1","modal_btn_text":"Заказать обратный звонок","modal_btn_class":"icon-phone-call","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
+(89, 56, 'Модуль формы обратной связи (шапка)', '', '', 1, 'header_right', 684, '2016-06-14 13:21:25', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_form_gr', 1, 0, '{"head":"Заказать обратный звонок","recipient":"sergeibolonikov@gmail.com","button_text":"Отправить","mail_head":"Обратный звонок в шапке сайта","thanks":"Спасибо! Наш менеджер свяжется с Вами!","captcha_key":"","captcha_secret_key":"","file_text":"","field":"{\\"type\\":[\\"text\\",\\"text\\",\\"textarea\\"],\\"title\\":[\\"\\",\\"\\",\\"\\"],\\"placeholder\\":[\\"Имя\\",\\"E-mail\\",\\"Сообщение\\"],\\"required\\":[\\"1\\",\\"1\\",null]}","modal_on":"1","modal_btn_text":"Заказать обратный звонок","modal_btn_class":"icon-phone-call","layout":"_:default","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (90, 57, 'Меню (шапка)', '', '', 1, 'header_bottom_left', 684, '2016-06-07 09:04:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 1, 0, '{"menutype":"verkhnee-menyu","base":"","startLevel":"1","endLevel":"0","showAllChildren":"1","tag_id":"","class_sfx":"","window_open":"","layout":"astal:top","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"itemid","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (91, 59, 'поиск', '', '', 2, 'header_bottom_right', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_search', 1, 0, '{"label":"","width":"","text":"Поиск по сайту","button":"1","button_pos":"right","imagebutton":"1","button_text":"","opensearch":"1","opensearch_title":"","set_itemid":"0","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"itemid","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (92, 60, 'Слайдер', '', '', 1, 'before_content_without_container', 684, '2016-06-07 11:40:40', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_slider_gr', 1, 0, '{"slider":"{\\"img\\":[\\"images\\/slider\\/slide.jpg\\",\\"images\\/slider\\/slide1.jpg\\"],\\"text1\\":[\\"Производство изделий из\\",\\"\\"],\\"text2\\":[\\"нержавеющей стали\\",\\"\\"]}","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (93, 61, 'Модуль информации', '', '', 1, 'after_content_without_container', 684, '2016-06-08 05:58:10', '2016-06-07 13:59:25', '0000-00-00 00:00:00', 1, 'mod_info_gr', 1, 0, '{"name1":"О компании  ООО А-сталь","text1":"<p>Предприятие ООО «А-сталь» в январе 2010 года запустило собственное производство изделий из нержавеющей стали, используя многолетний опыт работы, накопленный в области водоотведения с профессиональными системами. <\\/p>","name2":"Гарантии","text2":"<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.<\\/p>","readmore":"\\/","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
-(94, 66, 'Новости', '', '', 1, 'after_content', 684, '2016-06-10 12:52:13', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_articles_news', 1, 0, '{"catid":["8"],"image":"0","item_title":"1","link_titles":"1","item_heading":"h5","showLastSeparator":"0","readmore":"0","count":"3","ordering":"a.publish_up","direction":"1","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"itemid","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
+(94, 66, 'Новости', '', '', 1, 'after_content', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_articles_news', 1, 0, '{"catid":["8"],"image":"0","item_title":"1","link_titles":"1","item_heading":"h5","showLastSeparator":"0","readmore":"0","count":"3","ordering":"a.publish_up","direction":"1","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"itemid","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (95, 67, 'Логотип (футер)', '', '<p><a href="http://astal/">ASTAL.BY</a></p>', 1, 'footer_top', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_custom', 1, 0, '{"prepare_content":"0","backgroundimage":"","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"static","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (96, 68, 'Нижнее меню', '', '', 1, 'footer_left', 684, '2016-06-08 09:23:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 1, 0, '{"menutype":"nizhnee-menyu","base":"","startLevel":"1","endLevel":"0","showAllChildren":"0","tag_id":"","class_sfx":"","window_open":"","layout":"astal:bottom","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"itemid","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (97, 69, 'Нижнее меню (дополнительное)', '', '', 1, 'footer_center', 684, '2016-06-08 14:01:03', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 1, 0, '{"menutype":"nizhnee-menyu-dopolnitel","base":"","startLevel":"1","endLevel":"0","showAllChildren":"0","tag_id":"","class_sfx":"","window_open":"","layout":"astal:bottom","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"itemid","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (98, 70, 'Модуль формы обратной связи (футер)', '', '', 1, 'footer_center', 684, '2016-06-08 10:44:22', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_form_gr', 1, 0, '{"head":"Заказать обратный звонок","recipient":"sergeibolonikov@gmail.com","button_text":"Отправить","mail_head":"Обратный звонок в шапке сайта","thanks":"Спасибо! Наш менеджер свяжется с Вами!","captcha_key":"","captcha_secret_key":"","file_text":"","field":"{\\"type\\":[\\"text\\",\\"text\\",\\"text\\"],\\"title\\":[\\"Имя\\",\\"E-mail\\",\\"Сообщение\\"],\\"required\\":[\\"1\\",\\"1\\",null]}","modal_on":"1","modal_btn_text":"Заказать обратный звонок","modal_btn_class":"icon-phone-call","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (99, 71, 'Cоциальные кнопки', '', '', 1, 'footer_center', 684, '2016-06-08 12:00:04', '2016-06-08 11:03:35', '0000-00-00 00:00:00', 1, 'mod_social_gr', 1, 0, '{"social":"{\\"color\\":[\\"4c75a3\\",\\"41abe1\\",\\"F6881F\\",\\"3c5899\\"],\\"social_type\\":[\\"vk\\",\\"twitter\\",\\"odnoklassniki\\",\\"facebook\\"],\\"url\\":[\\"\\/\\",\\"\\/\\",\\"\\/\\",\\"\\/\\"]}","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (100, 72, 'Контакты (футер)', '', '', 1, 'footer_right', 684, '2016-06-08 14:03:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_contacts_gr', 1, 0, '{"contacts":"{\\"contact_type\\":[\\"landline\\",\\"landline\\",\\"landline\\",\\"address\\",\\"address\\"],\\"contact_text\\":[\\"+375 25 502-02-02\\",\\"+375 25 502-02-02\\",\\"+375 25 502-02-02\\",\\"222160, РБ, г.Жодино, ул.Сухогрядская, 11-38.\\",\\"Производство\\/склад: г. Жодино, ул. Зеленоборская 1\\"],\\"mapx\\":[\\"\\",\\"\\",\\"\\",\\"54.087928\\",\\"\\"],\\"mapy\\":[\\"\\",\\"\\",\\"\\",\\"28.299285\\",\\"\\"],\\"zoom\\":[\\"\\",\\"\\",\\"\\",\\"14\\",\\"\\"]}","layout":"_:footer","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
-(101, 73, 'Модуль второго меню', '', '', 1, 'before_content', 684, '2016-06-09 06:32:30', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_second_menu_gr', 1, 0, '{"menu":"{\\"text\\":[\\"Системы водоотвода из нержавеющей стали \\",\\"Велопарковки и ограждения из нержавеющей стали\\",\\"Металлопрокат (листовая нержавеющая сталь) \\",\\"Металлопрокат (листовая нержавеющая сталь)\\",\\"Решетки и решетчатый настил\\",\\"Мойки и Мебель из нержавеющей стали для торговли и производства\\",\\"Складские позиции и уцененная продукция\\",\\"Нестандартное оборудование по чертежам и эскизам заказчика\\",\\"Услуги металлообработки\\"],\\"url\\":[\\"\\/\\",\\"\\/\\",\\"\\/\\",\\"\\/\\",\\"\\/\\",\\"\\/\\",\\"\\/\\",\\"\\/\\",\\"\\/\\"]}","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
+(101, 73, 'Модуль второго меню', '', '', 1, 'before_content', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_second_menu_gr', 1, 0, '{"menu":"{\\"text\\":[\\"Системы водоотвода из нержавеющей стали \\",\\"Велопарковки и ограждения из нержавеющей стали\\",\\"Металлопрокат (листовая нержавеющая сталь) \\",\\"Металлопрокат (листовая нержавеющая сталь)\\",\\"Решетки и решетчатый настил\\",\\"Мойки и Мебель из нержавеющей стали для торговли и производства\\",\\"Складские позиции и уцененная продукция\\",\\"Нестандартное оборудование по чертежам и эскизам заказчика\\",\\"Услуги металлообработки\\"],\\"url\\":[\\"\\/\\",\\"\\/\\",\\"\\/\\",\\"\\/\\",\\"\\/\\",\\"\\/\\",\\"\\/\\",\\"\\/\\",\\"\\/\\"]}","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (102, 75, 'Страница контактов', '', '', 1, 'content', 0, '0000-00-00 00:00:00', '2016-06-10 06:42:26', '0000-00-00 00:00:00', 1, 'mod_page_contacts_gr', 1, 0, '{"block1":"<p>ООО \\"А-сталь\\"<\\/p>\\r\\n<p>Юридический адрес: РБ, 222160, Минская область, г. Жодино, ул. Сухогрядская, д. 11, ком. 38<\\/p>","contacts":"{\\"contact_type\\":[\\"velcom\\",\\"velcom\\",\\"velcom\\"],\\"contact_text\\":[\\"+375 (25) 5020202\\",\\"+375 (25) 5040404\\",\\"+375 (25) 5040404\\"]}","block3":"<p>Тел.\\/факс.: +375 1775 7-21-85<\\/p>\\r\\n<p>                     +375 1775 5-07-44<\\/p>\\r\\n<p>Тел.\\/факс бухгалетрии: +375 1775 7-21-09<\\/p>","block4":"<p>skype: oooastal<\\/p>\\r\\n<p>e-mail: <a href=\\"mailto:oooastal@gmail.com\\">oooastal@gmail.com<\\/a><\\/p>","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (103, 76, 'Карта в контактах', '', '', 1, 'after_content_without_container', 0, '0000-00-00 00:00:00', '2016-06-10 07:15:11', '0000-00-00 00:00:00', 1, 'mod_yandexmap', 1, 0, '{"latitude":"54.087928","longitude":"28.299285","zoom":"12","marker_image":"images\\/site\\/marker.png","marker_width":"40","marker_height":"65","marker_offset_x":"-20","marker_offset_y":"-65","marker_link_text":"Подробнее","markers_list":"{\\"marker_latitude\\":[\\"54.087928\\"],\\"marker_longitude\\":[\\"28.299285\\"],\\"marker_text\\":[\\"Юридический адрес: РБ, 222160, Минская область, г. Жодино, ул. Сухогрядская, д. 11, ком. 38\\"],\\"marker_link\\":[\\"\\"]}","map_width":"100%","map_height":"400px","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"static","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
-(104, 77, 'Форма обратной связи', '', '', 1, 'after_content', 684, '2016-06-10 08:17:45', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_form_gr', 1, 0, '{"head":"Форма обратной связи","recipient":"sergeibolonikov@gmail.com","button_text":"Отправить","mail_head":"Форма обратной связи astal","thanks":"Спасибо! Наш менеджер свяжется с Вами.","captcha_key":"","captcha_secret_key":"","file_on":"1","file_text":"Прикрепить файл","field":"{\\"type\\":[\\"text\\",\\"text\\",\\"textarea\\"],\\"title\\":[\\"\\",\\"\\",\\"\\"],\\"placeholder\\":[\\"Введите Ваше имя\\",\\"Ваш e-mail или телефон\\",\\"Текст вашего сообщения\\"],\\"required\\":[\\"1\\",\\"1\\",\\"1\\"]}","modal_btn_text":"","modal_btn_class":"","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*');
+(104, 77, 'Форма обратной связи', '', '', 1, 'after_content', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_form_gr', 1, 0, '{"head":"Форма обратной связи","recipient":"sergeibolonikov@gmail.com","button_text":"Отправить","mail_head":"Форма обратной связи astal","thanks":"Спасибо! Наш менеджер свяжется с Вами.","captcha_key":"","captcha_secret_key":"","file_on":"1","file_text":"Прикрепить файл","field":"{\\"type\\":[\\"text\\",\\"text\\",\\"textarea\\"],\\"title\\":[\\"\\",\\"\\",\\"\\"],\\"placeholder\\":[\\"Введите Ваше имя\\",\\"Ваш e-mail или телефон\\",\\"Текст вашего сообщения\\"],\\"required\\":[\\"1\\",\\"1\\",\\"1\\"]}","modal_btn_text":"","modal_btn_class":"","layout":"_:default","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
+(105, 87, 'JoomGallery News', '', '', 1, 'joom_cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_feed', 1, 1, 'cache=1\n    cache_time=15\n    moduleclass_sfx=\n    rssurl=http://www.en.joomgallery.net/feed/rss.html\n    rssrtl=0\n    rsstitle=1\n    rssdesc=0\n    rssimage=1\n    rssitems=3\n    rssitemdesc=1\n    word_count=200', 1, '*'),
+(107, 102, 'Категории на главной', '', '', 1, 'content', 0, '0000-00-00 00:00:00', '2016-06-13 11:04:41', '0000-00-00 00:00:00', 1, 'mod_jshopping_categories_gr', 1, 0, '{"show_image":"1","sort":"id","ordering":"asc","moduleclass_sfx":"","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
+(108, 103, 'Форма запроса коммерческого предложения', '', '', 1, 'jshop_product', 684, '2016-06-14 10:23:04', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_form_gr', 1, 0, '{"head":"Запросить коммерческое предложение","recipient":"sergeibolonikov@gmail.com","button_text":"Отправить","mail_head":"Запросить коммерческое предложение","thanks":"Спасибо! Наш менеджер свяжется с Вами!","captcha_key":"","captcha_secret_key":"","file_text":"","field":"{\\"type\\":[\\"text\\",\\"text\\",\\"text\\"],\\"title\\":[\\"\\",\\"\\",\\"\\"],\\"placeholder\\":[\\"Имя\\",\\"Email или телефон\\",\\"Сообщение\\"],\\"required\\":[\\"1\\",\\"1\\",null]}","modal_on":"1","modal_btn_text":"Запросить коммерческое предложение","modal_btn_class":"","layout":"_:request","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
+(109, 104, 'Картинка в шапке каталога', '', '<p><img src="images/site/catalog_head.jpg" alt="" /></p>', 1, 'before_content_without_container', 0, '0000-00-00 00:00:00', '2016-06-14 11:32:03', '0000-00-00 00:00:00', -2, 'mod_custom', 1, 0, '{"prepare_content":"0","backgroundimage":"","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"static","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
+(110, 105, 'Модуль вывода картинки бекграундом', '', '', 1, 'before_content_without_container', 0, '0000-00-00 00:00:00', '2016-06-14 11:31:03', '0000-00-00 00:00:00', 1, 'mod_background_gr', 1, 0, '{"img":"images\\/site\\/catalog_head.jpg","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
+(111, 106, 'Модуль схемы', '', '', 1, 'jshop_category', 684, '2016-06-15 08:57:02', '2016-06-15 06:26:28', '0000-00-00 00:00:00', 1, 'mod_scheme_gr', 1, 0, '{"url-cell-sort":"\\/","desc-cell-sort":"<p>Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности<\\/p>","url-cell-trap":"\\/","desc-cell-trap":"<p>Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. <\\/p>","url-trap":"\\/","desc-trap":"<p>Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности <\\/p>","url-lotok-all":"\\/","desc-lotok-all":"<p>Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах. Применяются также в тех случаях, когда санитарные и технологические правила требуют выполнения водоотводящих систем из нержавеющей стали для поддержания высоких гигиенических параметров продукционных помещений. <\\/p>","url-lotok":"\\/","desc-lotok":"<p>Водоотводящие системы этого типа применяются в предприятиях пищевой промышленности (пивзаводы, молокозаводы, мясоперерабатывающие комбинаты), химической промышленности, на больших кухнях, в больницах и других обьектах.<\\/p>","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*');
 
 -- --------------------------------------------------------
 
@@ -3499,17 +4165,23 @@ INSERT INTO `hu0fn_modules_menu` (`moduleid`, `menuid`) VALUES
 (92, 101),
 (93, 101),
 (94, 101),
-(94, 123),
 (95, 0),
 (96, 0),
 (97, 0),
 (98, 0),
 (99, 0),
 (100, 0),
-(101, 0),
+(101, 101),
+(101, 138),
 (102, 106),
 (103, 106),
-(104, 106);
+(104, 106),
+(105, 0),
+(107, 101),
+(108, 0),
+(109, 138),
+(110, 138),
+(111, 0);
 
 -- --------------------------------------------------------
 
@@ -3630,7 +4302,8 @@ CREATE TABLE IF NOT EXISTS `hu0fn_schemas` (
 --
 
 INSERT INTO `hu0fn_schemas` (`extension_id`, `version_id`) VALUES
-(700, '3.5.1-2016-03-29');
+(700, '3.5.1-2016-03-29'),
+(10016, '3.3.0');
 
 -- --------------------------------------------------------
 
@@ -3653,8 +4326,8 @@ CREATE TABLE IF NOT EXISTS `hu0fn_session` (
 --
 
 INSERT INTO `hu0fn_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-('5u4cgktpct8e89ed5ljn2m5k24', 1, 0, '1465563134', 'joomla|s:2444:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjoyOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxMTtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE0NjU1NjMwOTc7czo0OiJsYXN0IjtpOjE0NjU1NjMxMzM7czozOiJub3ciO2k6MTQ2NTU2MzEzMzt9czo1OiJ0b2tlbiI7czozMjoidWpNZjdxbENxSUp2WjZqcUpuNDUxaVpDdHJoQkVRSUwiO31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjI6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoxMzoiY29tX2luc3RhbGxlciI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo3OiJtZXNzYWdlIjtzOjA6IiI7czoxNzoiZXh0ZW5zaW9uX21lc3NhZ2UiO3M6MDoiIjt9czoxMToiY29tX21vZHVsZXMiO086ODoic3RkQ2xhc3MiOjI6e3M6NDoiZWRpdCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo2OiJtb2R1bGUiO086ODoic3RkQ2xhc3MiOjI6e3M6MjoiaWQiO2E6MTp7aTowO2k6OTQ7fXM6NDoiZGF0YSI7Tjt9fXM6MzoiYWRkIjtPOjg6InN0ZENsYXNzIjoxOntzOjY6Im1vZHVsZSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoxMjoiZXh0ZW5zaW9uX2lkIjtOO3M6NjoicGFyYW1zIjtOO319fX1zOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjU6IkpVc2VyIjoyODp7czo5OiIAKgBpc1Jvb3QiO2I6MTtzOjI6ImlkIjtzOjM6IjY4NCI7czo0OiJuYW1lIjtzOjEwOiJTdXBlciBVc2VyIjtzOjg6InVzZXJuYW1lIjtzOjU6ImFkbWluIjtzOjU6ImVtYWlsIjtzOjIyOiJib2xvbmlrb3ZAbWVkaWFsaW5lLmJ5IjtzOjg6InBhc3N3b3JkIjtzOjYwOiIkMnkkMTAkSU1malFsQ0RueG1mVjdvM0loNWsxLnl5Z2s1b1VYazVENURSekZnTE9TRmZNYVVnSXJ2SmkiO3M6MTQ6InBhc3N3b3JkX2NsZWFyIjtzOjA6IiI7czo1OiJibG9jayI7czoxOiIwIjtzOjk6InNlbmRFbWFpbCI7czoxOiIxIjtzOjEyOiJyZWdpc3RlckRhdGUiO3M6MTk6IjIwMTYtMDYtMDMgMTE6MDQ6MzYiO3M6MTM6Imxhc3R2aXNpdERhdGUiO3M6MTk6IjIwMTYtMDYtMTAgMTE6NDI6NTYiO3M6MTA6ImFjdGl2YXRpb24iO3M6MToiMCI7czo2OiJwYXJhbXMiO3M6MDoiIjtzOjY6Imdyb3VwcyI7YToxOntpOjg7czoxOiI4Ijt9czo1OiJndWVzdCI7aTowO3M6MTM6Imxhc3RSZXNldFRpbWUiO3M6MTk6IjAwMDAtMDAtMDAgMDA6MDA6MDAiO3M6MTA6InJlc2V0Q291bnQiO3M6MToiMCI7czoxMjoicmVxdWlyZVJlc2V0IjtzOjE6IjAiO3M6MTA6IgAqAF9wYXJhbXMiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mjp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjowOnt9czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fXM6MTQ6IgAqAF9hdXRoR3JvdXBzIjthOjI6e2k6MDtpOjE7aToxO2k6ODt9czoxNDoiACoAX2F1dGhMZXZlbHMiO2E6NTp7aTowO2k6MTtpOjE7aToxO2k6MjtpOjI7aTozO2k6MztpOjQ7aTo2O31zOjE1OiIAKgBfYXV0aEFjdGlvbnMiO047czoxMjoiACoAX2Vycm9yTXNnIjtOO3M6MTM6IgAqAHVzZXJIZWxwZXIiO086MTg6IkpVc2VyV3JhcHBlckhlbHBlciI6MDp7fXM6MTA6IgAqAF9lcnJvcnMiO2E6MDp7fXM6MzoiYWlkIjtpOjA7czo2OiJvdHBLZXkiO3M6MDoiIjtzOjQ6Im90ZXAiO3M6MDoiIjt9czoxMToiYXBwbGljYXRpb24iO086ODoic3RkQ2xhc3MiOjE6e3M6NToicXVldWUiO047fX19czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==";', 684, 'admin'),
-('hmpvkflih6sej7md45hu4fr5h4', 0, 1, '1465563343', 'joomla|s:1748:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjoyOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo4OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjI6e3M6NzoiY291bnRlciI7aToxMzA7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNDY1NTU1NjUyO3M6NDoibGFzdCI7aToxNDY1NTYzMzM1O3M6Mzoibm93IjtpOjE0NjU1NjMzNDM7fX1zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjI6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6MDp7fXM6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086NToiSlVzZXIiOjI2OntzOjk6IgAqAGlzUm9vdCI7YjowO3M6MjoiaWQiO2k6MDtzOjQ6Im5hbWUiO047czo4OiJ1c2VybmFtZSI7TjtzOjU6ImVtYWlsIjtOO3M6ODoicGFzc3dvcmQiO047czoxNDoicGFzc3dvcmRfY2xlYXIiO3M6MDoiIjtzOjU6ImJsb2NrIjtOO3M6OToic2VuZEVtYWlsIjtpOjA7czoxMjoicmVnaXN0ZXJEYXRlIjtOO3M6MTM6Imxhc3R2aXNpdERhdGUiO047czoxMDoiYWN0aXZhdGlvbiI7TjtzOjY6InBhcmFtcyI7TjtzOjY6Imdyb3VwcyI7YToxOntpOjA7czoxOiI5Ijt9czo1OiJndWVzdCI7aToxO3M6MTM6Imxhc3RSZXNldFRpbWUiO047czoxMDoicmVzZXRDb3VudCI7TjtzOjEyOiJyZXF1aXJlUmVzZXQiO047czoxMDoiACoAX3BhcmFtcyI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjoyOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjA6e31zOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czoxNDoiACoAX2F1dGhHcm91cHMiO2E6Mjp7aTowO2k6MTtpOjE7aTo5O31zOjE0OiIAKgBfYXV0aExldmVscyI7YTozOntpOjA7aToxO2k6MTtpOjE7aToyO2k6NTt9czoxNToiACoAX2F1dGhBY3Rpb25zIjtOO3M6MTI6IgAqAF9lcnJvck1zZyI7TjtzOjEzOiIAKgB1c2VySGVscGVyIjtPOjE4OiJKVXNlcldyYXBwZXJIZWxwZXIiOjA6e31zOjEwOiIAKgBfZXJyb3JzIjthOjA6e31zOjM6ImFpZCI7aTowO31zOjE5OiJqc19pZF9jdXJyZW5jeV9vcmlnIjtzOjE6IjEiO3M6MTQ6ImpzX2lkX2N1cnJlbmN5IjtzOjE6IjEiO3M6MTk6ImpzX2hpc3Rvcnlfc2VsX2xhbmciO3M6NToicnUtUlUiO3M6MTU6ImpzX3ByZXZfdXNlcl9pZCI7aTowO3M6MjI6ImpzaG9wX2NoZWNrZWRfbGFuZ3VhZ2UiO2E6Mjp7aTowO3M6NToiZW4tR0IiO2k6MTtzOjU6InJ1LVJVIjt9fX1zOjk6InNlcGFyYXRvciI7czoxOiIuIjt9";', 0, '');
+('32fs8n55ikpd2163mu456v4ag0', 1, 0, '1465982350', 'joomla|s:3208:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjoyOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToyODtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE0NjU5ODIxMjM7czo0OiJsYXN0IjtpOjE0NjU5ODIzNDY7czozOiJub3ciO2k6MTQ2NTk4MjM1MDt9czo1OiJ0b2tlbiI7czozMjoiUmI3bW1BM1gzWHF4dDA3dnhodEVpcnBzWW83UkpFNkkiO31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjI6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6NDp7czoxMzoiY29tX2luc3RhbGxlciI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo3OiJtZXNzYWdlIjtzOjA6IiI7czoxNzoiZXh0ZW5zaW9uX21lc3NhZ2UiO3M6MDoiIjt9czoxMzoiY29tX2xhbmd1YWdlcyI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo5OiJvdmVycmlkZXMiO086ODoic3RkQ2xhc3MiOjI6e3M6NjoiZmlsdGVyIjtPOjg6InN0ZENsYXNzIjoyOntzOjY6ImNsaWVudCI7czoxOiIwIjtzOjg6Imxhbmd1YWdlIjtzOjU6InJ1LVJVIjt9czoxMDoibGltaXRzdGFydCI7aTowO31zOjQ6ImVkaXQiO086ODoic3RkQ2xhc3MiOjE6e3M6ODoib3ZlcnJpZGUiO086ODoic3RkQ2xhc3MiOjE6e3M6NDoiZGF0YSI7Tjt9fX1zOjExOiJjb21fbW9kdWxlcyI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo0OiJlZGl0IjtPOjg6InN0ZENsYXNzIjoxOntzOjY6Im1vZHVsZSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoyOiJpZCI7YTowOnt9czo0OiJkYXRhIjtOO319czozOiJhZGQiO086ODoic3RkQ2xhc3MiOjE6e3M6NjoibW9kdWxlIjtPOjg6InN0ZENsYXNzIjoyOntzOjEyOiJleHRlbnNpb25faWQiO047czo2OiJwYXJhbXMiO047fX19czo5OiJjb21fbWVudXMiO086ODoic3RkQ2xhc3MiOjI6e3M6NDoiZWRpdCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJpdGVtIjtPOjg6InN0ZENsYXNzIjozOntzOjQ6InR5cGUiO047czo0OiJsaW5rIjtOO3M6NDoiZGF0YSI7Tjt9fXM6NToiaXRlbXMiO086ODoic3RkQ2xhc3MiOjM6e3M6ODoibWVudXR5cGUiO3M6MTM6InNrcnl0b2UtbWVueXUiO3M6MTA6ImxpbWl0c3RhcnQiO2k6MDtzOjQ6Imxpc3QiO2E6NDp7czo5OiJkaXJlY3Rpb24iO3M6MzoiYXNjIjtzOjU6ImxpbWl0IjtzOjI6IjIwIjtzOjg6Im9yZGVyaW5nIjtzOjU6ImEubGZ0IjtzOjU6InN0YXJ0IjtkOjA7fX19fXM6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086NToiSlVzZXIiOjI4OntzOjk6IgAqAGlzUm9vdCI7YjoxO3M6MjoiaWQiO3M6MzoiNjg0IjtzOjQ6Im5hbWUiO3M6MTA6IlN1cGVyIFVzZXIiO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjI6ImJvbG9uaWtvdkBtZWRpYWxpbmUuYnkiO3M6ODoicGFzc3dvcmQiO3M6NjA6IiQyeSQxMCRJTWZqUWxDRG54bWZWN28zSWg1azEueXlnazVvVVhrNUQ1RFJ6RmdMT1NGZk1hVWdJcnZKaSI7czoxNDoicGFzc3dvcmRfY2xlYXIiO3M6MDoiIjtzOjU6ImJsb2NrIjtzOjE6IjAiO3M6OToic2VuZEVtYWlsIjtzOjE6IjEiO3M6MTI6InJlZ2lzdGVyRGF0ZSI7czoxOToiMjAxNi0wNi0wMyAxMTowNDozNiI7czoxMzoibGFzdHZpc2l0RGF0ZSI7czoxOToiMjAxNi0wNi0xNSAwODozNzozOSI7czoxMDoiYWN0aXZhdGlvbiI7czoxOiIwIjtzOjY6InBhcmFtcyI7czowOiIiO3M6NjoiZ3JvdXBzIjthOjE6e2k6ODtzOjE6IjgiO31zOjU6Imd1ZXN0IjtpOjA7czoxMzoibGFzdFJlc2V0VGltZSI7czoxOToiMDAwMC0wMC0wMCAwMDowMDowMCI7czoxMDoicmVzZXRDb3VudCI7czoxOiIwIjtzOjEyOiJyZXF1aXJlUmVzZXQiO3M6MToiMCI7czoxMDoiACoAX3BhcmFtcyI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjoyOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjA6e31zOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czoxNDoiACoAX2F1dGhHcm91cHMiO2E6Mjp7aTowO2k6MTtpOjE7aTo4O31zOjE0OiIAKgBfYXV0aExldmVscyI7YTo1OntpOjA7aToxO2k6MTtpOjE7aToyO2k6MjtpOjM7aTozO2k6NDtpOjY7fXM6MTU6IgAqAF9hdXRoQWN0aW9ucyI7TjtzOjEyOiIAKgBfZXJyb3JNc2ciO047czoxMzoiACoAdXNlckhlbHBlciI7TzoxODoiSlVzZXJXcmFwcGVySGVscGVyIjowOnt9czoxMDoiACoAX2Vycm9ycyI7YTowOnt9czozOiJhaWQiO2k6MDtzOjY6Im90cEtleSI7czowOiIiO3M6NDoib3RlcCI7czowOiIiO31zOjExOiJhcHBsaWNhdGlvbiI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJxdWV1ZSI7Tjt9fX1zOjk6InNlcGFyYXRvciI7czoxOiIuIjt9";', 684, 'admin'),
+('34t9fd7iatu41gl5pgbjrepu97', 0, 1, '1465982843', 'joomla|s:2004:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjoyOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjoxMDp7czo3OiJzZXNzaW9uIjtPOjg6InN0ZENsYXNzIjoyOntzOjc6ImNvdW50ZXIiO2k6MTkzO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTQ2NTk3MTU4NDtzOjQ6Imxhc3QiO2k6MTQ2NTk4MjgzNDtzOjM6Im5vdyI7aToxNDY1OTgyODQyO319czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjoyOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjA6e31zOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjU6IkpVc2VyIjoyNjp7czo5OiIAKgBpc1Jvb3QiO2I6MDtzOjI6ImlkIjtpOjA7czo0OiJuYW1lIjtOO3M6ODoidXNlcm5hbWUiO047czo1OiJlbWFpbCI7TjtzOjg6InBhc3N3b3JkIjtOO3M6MTQ6InBhc3N3b3JkX2NsZWFyIjtzOjA6IiI7czo1OiJibG9jayI7TjtzOjk6InNlbmRFbWFpbCI7aTowO3M6MTI6InJlZ2lzdGVyRGF0ZSI7TjtzOjEzOiJsYXN0dmlzaXREYXRlIjtOO3M6MTA6ImFjdGl2YXRpb24iO047czo2OiJwYXJhbXMiO047czo2OiJncm91cHMiO2E6MTp7aTowO3M6MToiOSI7fXM6NToiZ3Vlc3QiO2k6MTtzOjEzOiJsYXN0UmVzZXRUaW1lIjtOO3M6MTA6InJlc2V0Q291bnQiO047czoxMjoicmVxdWlyZVJlc2V0IjtOO3M6MTA6IgAqAF9wYXJhbXMiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mjp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjowOnt9czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fXM6MTQ6IgAqAF9hdXRoR3JvdXBzIjthOjI6e2k6MDtpOjE7aToxO2k6OTt9czoxNDoiACoAX2F1dGhMZXZlbHMiO2E6Mzp7aTowO2k6MTtpOjE7aToxO2k6MjtpOjU7fXM6MTU6IgAqAF9hdXRoQWN0aW9ucyI7TjtzOjEyOiIAKgBfZXJyb3JNc2ciO047czoxMzoiACoAdXNlckhlbHBlciI7TzoxODoiSlVzZXJXcmFwcGVySGVscGVyIjowOnt9czoxMDoiACoAX2Vycm9ycyI7YTowOnt9czozOiJhaWQiO2k6MDt9czoxOToianNfaWRfY3VycmVuY3lfb3JpZyI7czoxOiIxIjtzOjE0OiJqc19pZF9jdXJyZW5jeSI7czoxOiIxIjtzOjE5OiJqc19oaXN0b3J5X3NlbF9sYW5nIjtzOjU6InJ1LVJVIjtzOjE1OiJqc19wcmV2X3VzZXJfaWQiO2k6MDtzOjIyOiJqc2hvcF9jaGVja2VkX2xhbmd1YWdlIjthOjI6e2k6MDtzOjU6ImVuLUdCIjtpOjE7czo1OiJydS1SVSI7fXM6MjY6ImpzaG9wX2VuZF9wYWdlX2J1eV9wcm9kdWN0IjtzOjUzOiIva2F0YWxvZy9zaXN0ZW1hLXZvZG9vdHZvZGEtaXotbmVyemhhdmV5dXNoY2hlai1zdGFsaSI7czoyNzoianNob3BfZW5kX3BhZ2VfbGlzdF9wcm9kdWN0IjtzOjUzOiIva2F0YWxvZy9zaXN0ZW1hLXZvZG9vdHZvZGEtaXotbmVyemhhdmV5dXNoY2hlai1zdGFsaSI7fX1zOjk6InNlcGFyYXRvciI7czoxOiIuIjt9";', 0, '');
 
 -- --------------------------------------------------------
 
@@ -3868,18 +4541,19 @@ CREATE TABLE IF NOT EXISTS `hu0fn_update_sites` (
   `enabled` int(11) DEFAULT '0',
   `last_check_timestamp` bigint(20) DEFAULT '0',
   `extra_query` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT ''
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Update Sites';
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Update Sites';
 
 --
 -- Дамп данных таблицы `hu0fn_update_sites`
 --
 
 INSERT INTO `hu0fn_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`) VALUES
-(1, 'Joomla! Core', 'collection', 'http://update.joomla.org/core/list.xml', 1, 1465563120, ''),
-(2, 'Joomla! Extension Directory', 'collection', 'http://update.joomla.org/jed/list.xml', 1, 1465563120, ''),
+(1, 'Joomla! Core', 'collection', 'http://update.joomla.org/core/list.xml', 1, 1465982129, ''),
+(2, 'Joomla! Extension Directory', 'collection', 'http://update.joomla.org/jed/list.xml', 1, 1465982129, ''),
 (3, 'Accredited Joomla! Translations', 'collection', 'http://update.joomla.org/language/translationlist_3.xml', 1, 0, ''),
 (4, 'Joomla! Update Component Update Site', 'extension', 'http://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 0, ''),
-(5, 'WebInstaller Update Site', 'extension', 'http://appscdn.joomla.org/webapps/jedapps/webinstaller.xml', 1, 0, '');
+(5, 'WebInstaller Update Site', 'extension', 'http://appscdn.joomla.org/webapps/jedapps/webinstaller.xml', 1, 0, ''),
+(6, 'JoomGallery Update Service', 'collection', 'http://www.en.joomgallery.net/components/com_newversion/xml/extensions3.xml', 1, 0, '');
 
 -- --------------------------------------------------------
 
@@ -3902,7 +4576,8 @@ INSERT INTO `hu0fn_update_sites_extensions` (`update_site_id`, `extension_id`) V
 (3, 600),
 (3, 10002),
 (4, 28),
-(5, 10010);
+(5, 10010),
+(6, 10016);
 
 -- --------------------------------------------------------
 
@@ -3963,7 +4638,7 @@ CREATE TABLE IF NOT EXISTS `hu0fn_users` (
 --
 
 INSERT INTO `hu0fn_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-(684, 'Super User', 'admin', 'bolonikov@medialine.by', '$2y$10$IMfjQlCDnxmfV7o3Ih5k1.yygk5oUXk5D5DRzFgLOSFfMaUgIrvJi', 0, 1, '2016-06-03 11:04:36', '2016-06-10 12:51:49', '0', '', '0000-00-00 00:00:00', 0, '', '', 0);
+(684, 'Super User', 'admin', 'bolonikov@medialine.by', '$2y$10$IMfjQlCDnxmfV7o3Ih5k1.yygk5oUXk5D5DRzFgLOSFfMaUgIrvJi', 0, 1, '2016-06-03 11:04:36', '2016-06-15 09:15:25', '0', '', '0000-00-00 00:00:00', 0, '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -4405,6 +5080,86 @@ ALTER TABLE `hu0fn_finder_tokens_aggregate`
 ALTER TABLE `hu0fn_finder_types`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `title` (`title`);
+
+--
+-- Индексы таблицы `hu0fn_joomgallery`
+--
+ALTER TABLE `hu0fn_joomgallery`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idx_catid` (`catid`),
+  ADD KEY `idx_owner` (`owner`);
+
+--
+-- Индексы таблицы `hu0fn_joomgallery_category_details`
+--
+ALTER TABLE `hu0fn_joomgallery_category_details`
+  ADD PRIMARY KEY (`id`,`details_key`);
+
+--
+-- Индексы таблицы `hu0fn_joomgallery_catg`
+--
+ALTER TABLE `hu0fn_joomgallery_catg`
+  ADD PRIMARY KEY (`cid`),
+  ADD KEY `idx_parent_id` (`parent_id`);
+
+--
+-- Индексы таблицы `hu0fn_joomgallery_comments`
+--
+ALTER TABLE `hu0fn_joomgallery_comments`
+  ADD PRIMARY KEY (`cmtid`),
+  ADD KEY `idx_cmtpic` (`cmtpic`);
+
+--
+-- Индексы таблицы `hu0fn_joomgallery_config`
+--
+ALTER TABLE `hu0fn_joomgallery_config`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `hu0fn_joomgallery_countstop`
+--
+ALTER TABLE `hu0fn_joomgallery_countstop`
+  ADD KEY `idx_cspicid` (`cspicid`);
+
+--
+-- Индексы таблицы `hu0fn_joomgallery_image_details`
+--
+ALTER TABLE `hu0fn_joomgallery_image_details`
+  ADD PRIMARY KEY (`id`,`details_key`);
+
+--
+-- Индексы таблицы `hu0fn_joomgallery_maintenance`
+--
+ALTER TABLE `hu0fn_joomgallery_maintenance`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `hu0fn_joomgallery_nameshields`
+--
+ALTER TABLE `hu0fn_joomgallery_nameshields`
+  ADD PRIMARY KEY (`nid`),
+  ADD KEY `idx_picid` (`npicid`);
+
+--
+-- Индексы таблицы `hu0fn_joomgallery_orphans`
+--
+ALTER TABLE `hu0fn_joomgallery_orphans`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fullpath` (`fullpath`);
+
+--
+-- Индексы таблицы `hu0fn_joomgallery_users`
+--
+ALTER TABLE `hu0fn_joomgallery_users`
+  ADD PRIMARY KEY (`uid`),
+  ADD KEY `idx_uid` (`uuserid`);
+
+--
+-- Индексы таблицы `hu0fn_joomgallery_votes`
+--
+ALTER TABLE `hu0fn_joomgallery_votes`
+  ADD PRIMARY KEY (`voteid`),
+  ADD KEY `idx_picid` (`picid`);
 
 --
 -- Индексы таблицы `hu0fn_jshopping_addons`
@@ -5146,7 +5901,7 @@ ALTER TABLE `hu0fn_viewlevels`
 -- AUTO_INCREMENT для таблицы `hu0fn_assets`
 --
 ALTER TABLE `hu0fn_assets`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',AUTO_INCREMENT=87;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',AUTO_INCREMENT=107;
 --
 -- AUTO_INCREMENT для таблицы `hu0fn_banners`
 --
@@ -5181,7 +5936,7 @@ ALTER TABLE `hu0fn_content_types`
 -- AUTO_INCREMENT для таблицы `hu0fn_extensions`
 --
 ALTER TABLE `hu0fn_extensions`
-  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10016;
+  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10025;
 --
 -- AUTO_INCREMENT для таблицы `hu0fn_finder_filters`
 --
@@ -5208,10 +5963,55 @@ ALTER TABLE `hu0fn_finder_terms`
 ALTER TABLE `hu0fn_finder_types`
   MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT для таблицы `hu0fn_joomgallery`
+--
+ALTER TABLE `hu0fn_joomgallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT для таблицы `hu0fn_joomgallery_catg`
+--
+ALTER TABLE `hu0fn_joomgallery_catg`
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT для таблицы `hu0fn_joomgallery_comments`
+--
+ALTER TABLE `hu0fn_joomgallery_comments`
+  MODIFY `cmtid` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT для таблицы `hu0fn_joomgallery_config`
+--
+ALTER TABLE `hu0fn_joomgallery_config`
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT для таблицы `hu0fn_joomgallery_maintenance`
+--
+ALTER TABLE `hu0fn_joomgallery_maintenance`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT для таблицы `hu0fn_joomgallery_nameshields`
+--
+ALTER TABLE `hu0fn_joomgallery_nameshields`
+  MODIFY `nid` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT для таблицы `hu0fn_joomgallery_orphans`
+--
+ALTER TABLE `hu0fn_joomgallery_orphans`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT для таблицы `hu0fn_joomgallery_users`
+--
+ALTER TABLE `hu0fn_joomgallery_users`
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT для таблицы `hu0fn_joomgallery_votes`
+--
+ALTER TABLE `hu0fn_joomgallery_votes`
+  MODIFY `voteid` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT для таблицы `hu0fn_jshopping_addons`
 --
 ALTER TABLE `hu0fn_jshopping_addons`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT для таблицы `hu0fn_jshopping_attr`
 --
@@ -5336,7 +6136,7 @@ ALTER TABLE `hu0fn_jshopping_payment_trx_data`
 -- AUTO_INCREMENT для таблицы `hu0fn_jshopping_products`
 --
 ALTER TABLE `hu0fn_jshopping_products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT для таблицы `hu0fn_jshopping_products_attr`
 --
@@ -5366,7 +6166,7 @@ ALTER TABLE `hu0fn_jshopping_products_extra_field_values`
 -- AUTO_INCREMENT для таблицы `hu0fn_jshopping_products_files`
 --
 ALTER TABLE `hu0fn_jshopping_products_files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT для таблицы `hu0fn_jshopping_products_free_attr`
 --
@@ -5376,7 +6176,7 @@ ALTER TABLE `hu0fn_jshopping_products_free_attr`
 -- AUTO_INCREMENT для таблицы `hu0fn_jshopping_products_images`
 --
 ALTER TABLE `hu0fn_jshopping_products_images`
-  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT для таблицы `hu0fn_jshopping_products_option`
 --
@@ -5391,7 +6191,7 @@ ALTER TABLE `hu0fn_jshopping_products_prices`
 -- AUTO_INCREMENT для таблицы `hu0fn_jshopping_products_relations`
 --
 ALTER TABLE `hu0fn_jshopping_products_relations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT для таблицы `hu0fn_jshopping_products_reviews`
 --
@@ -5466,12 +6266,12 @@ ALTER TABLE `hu0fn_languages`
 -- AUTO_INCREMENT для таблицы `hu0fn_menu`
 --
 ALTER TABLE `hu0fn_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=124;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=140;
 --
 -- AUTO_INCREMENT для таблицы `hu0fn_menu_types`
 --
 ALTER TABLE `hu0fn_menu_types`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT для таблицы `hu0fn_messages`
 --
@@ -5481,7 +6281,7 @@ ALTER TABLE `hu0fn_messages`
 -- AUTO_INCREMENT для таблицы `hu0fn_modules`
 --
 ALTER TABLE `hu0fn_modules`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=105;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=112;
 --
 -- AUTO_INCREMENT для таблицы `hu0fn_newsfeeds`
 --
@@ -5531,7 +6331,7 @@ ALTER TABLE `hu0fn_updates`
 -- AUTO_INCREMENT для таблицы `hu0fn_update_sites`
 --
 ALTER TABLE `hu0fn_update_sites`
-  MODIFY `update_site_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `update_site_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT для таблицы `hu0fn_usergroups`
 --
