@@ -20,17 +20,15 @@ $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/boot
 $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/slick.css');
 $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/colorbox.css');
 $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=cyrillic');
-//$document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/style.css');
-/*$postData = JFactory::getApplication()->input;
-print_r($postData);*/
+$document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/style.css');
+$document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/custom.css');
 ?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" >
 <head>
 	<jdoc:include type="head" />
-	<link rel="stylesheet/less" type="text/css" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/style.less" />
-	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.min.js"></script>
+	<link rel="icon" type="image/vnd.microsoft.icon" href="/templates/<?php echo $this->template; ?>/favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <?php $app = JFactory::getApplication();
