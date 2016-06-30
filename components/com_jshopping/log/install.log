@@ -5,3 +5,25 @@ Start install: C:\OpenServer\domains\astal\tmp\addon_second_description_for_prod
 2016-06-14 09:10:35 Copy file: /plugins/jshoppingadmin/second_description_for_product/second_description_for_product.xml
 2016-06-14 09:10:35 Copy file: /plugins/jshoppingproducts/second_description_for_product/second_description_for_product.php
 2016-06-14 09:10:35 Copy file: /plugins/jshoppingproducts/second_description_for_product/second_description_for_product.xml
+2016-06-20 14:58:17 
+Start install: C:\OpenServer\domains\astal\tmp\addon_second_short_description_for_category_1.0.0.zip
+2016-06-20 14:58:17 Copy file: /components/com_jshopping/addons/second_short_description_for_category/config.tmpl.php
+2016-06-20 14:58:17 Copy file: /components/com_jshopping/addons/second_short_description_for_category/uninstall.php
+2016-06-20 14:58:17 Copy file: /components/com_jshopping/lang/addon_second_short_description_for_category/de-DE.php
+2016-06-20 14:58:17 Copy file: /components/com_jshopping/lang/addon_second_short_description_for_category/en-GB.php
+2016-06-20 14:58:17 Copy file: /components/com_jshopping/lang/addon_second_short_description_for_category/ru-RU.php
+2016-06-20 14:58:17 Copy file: /plugins/jshoppingadmin/second_short_description_for_category/second_short_description_for_category.php
+2016-06-20 14:58:17 Copy file: /plugins/jshoppingadmin/second_short_description_for_category/second_short_description_for_category.xml
+2016-06-20 14:58:17 Copy file: /plugins/jshoppingproducts/second_short_description_for_category/second_short_description_for_category.php
+2016-06-20 14:58:17 Copy file: /plugins/jshoppingproducts/second_short_description_for_category/second_short_description_for_category.xml
+2016-06-20 15:00:05 
+Start install: C:\OpenServer\domains\astal\tmp\addon_second_short_description_for_category_1.0.0.zip
+2016-06-20 15:00:05 Copy file: /components/com_jshopping/addons/second_short_description_for_category/config.tmpl.php
+2016-06-20 15:00:05 Copy file: /components/com_jshopping/addons/second_short_description_for_category/uninstall.php
+2016-06-20 15:00:05 Copy file: /components/com_jshopping/lang/addon_second_short_description_for_category/de-DE.php
+2016-06-20 15:00:05 Copy file: /components/com_jshopping/lang/addon_second_short_description_for_category/en-GB.php
+2016-06-20 15:00:05 Copy file: /components/com_jshopping/lang/addon_second_short_description_for_category/ru-RU.php
+2016-06-20 15:00:05 Copy file: /plugins/jshoppingadmin/second_short_description_for_category/second_short_description_for_category.php
+2016-06-20 15:00:05 Copy file: /plugins/jshoppingadmin/second_short_description_for_category/second_short_description_for_category.xml
+2016-06-20 15:00:05 Copy file: /plugins/jshoppingproducts/second_short_description_for_category/second_short_description_for_category.php
+2016-06-20 15:00:05 Copy file: /plugins/jshoppingproducts/second_short_description_for_category/second_short_description_for_category.xml
